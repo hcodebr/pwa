@@ -1,4 +1,3 @@
-const body = document.querySelector('body')
 const btnOpen = document.getElementById('btn-open')
 const closeMenu = document.querySelectorAll('[data-close="menu"]')
 const btnFooter = document.querySelector('#footer button')
