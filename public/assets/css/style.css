@@ -1,0 +1,730 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/OpenSans-SemiBold.ttf"), format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/OpenSans-Bold.ttf"), format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/OpenSans-ExtraBold.ttf"), format("truetype");
+}
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --black-10: #0000001a;
+  --dark-0: #333333;
+  --dark-1: #000000BF;
+  --gray: #79756C;
+  --gray-0: #707070;
+  --gray-1: #7E7E7E;
+  --gray-2: #9A9A99;
+  --gray-3: #CCCCCC;
+  --gray-4: #00000029;
+  --gray-5: #E5E3DFBF;
+  --gray-6: #F8F8F8;
+  --gray-7: #E5E3DF;
+  --red: #E32119;
+  --green: #00994D;
+  --green-hover: darken(#00994D, 30%);
+  --green-active: darken(#00994D, 30%);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--bg-color);
+}
+
+a {
+  color: var(--red);
+}
+a:hover {
+  color: var(--black);
+}
+
+hr .italy {
+  background-image: url("../images/bg-italy.svg");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 18px;
+  margin: 0;
+  border: none;
+}
+
+form {
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+}
+form .fields {
+  flex-direction: column;
+}
+form .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1em;
+}
+form .field label {
+  color: var(--gray-3);
+  font-size: 14px;
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  top: 10px;
+  transition: color 0.3s ease-in-out;
+}
+form .field input, form .field textarea {
+  line-height: 1.5em;
+  padding: 10px;
+  padding-top: 30px;
+  font-size: 14px;
+  color: var(--gray5);
+  outline: none;
+  font-family: "Open Sans";
+  border: var(--gray-3) 2px solid;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.3s ease-in-out;
+}
+form .field input:focus, form .field textarea:focus {
+  border-color: var(--green);
+}
+form .field input:focus + label, form .field textarea:focus + label {
+  color: var(--green);
+}
+form .actions {
+  flex-direction: column;
+  align-content: center;
+}
+form .actions a {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  color: var(--gray-0);
+}
+form button {
+  width: 100%;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 0.5em 1em;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+}
+form button:hover {
+  background-color: var(--green-hover);
+}
+form button:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 992px) {
+  form .fields {
+    flex-direction: row;
+  }
+  form .fields .field {
+    margin-right: 1em;
+  }
+  form .fields .field:last-child {
+    margin-right: 0;
+  }
+  form .fields .field textarea {
+    min-height: 250px;
+  }
+  form .actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  form .actions a {
+    text-align: right;
+  }
+  form button {
+    max-width: 340px;
+  }
+}
+#header {
+  min-width: 320px;
+  width: 100%;
+  height: 60px;
+  background-color: var(--gray-5);
+  position: relative;
+  z-index: 3;
+}
+#header .menu {
+  transition: right 0.5s ease-in-out;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--gray-7);
+  position: fixed;
+  right: -300px;
+  top: 0;
+  z-index: 4;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#header .menu.logged .menus .hide-guest {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#header .menu.logged footer > div {
+  display: flex;
+}
+#header .menu.logged footer > a {
+  display: none;
+}
+#header .menu .btn-register {
+  margin: 15px;
+  display: flex;
+  text-decoration: none;
+  width: calc(100% - 30px);
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 0.5em 1em;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+}
+#header .menu .btn-register:hover {
+  background-color: var(--green-hover);
+}
+#header .menu .btn-register:active {
+  background-color: var(--green-active);
+}
+#header .menu hr {
+  width: 100%;
+  border-bottom: none;
+  border-color: var(--black-10);
+  margin: 0;
+}
+#header .menu .footer {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#header .menu .footer > div {
+  display: none;
+  padding: 15px;
+  width: 100%;
+  align-items: center;
+}
+#header .menu .footer > div picture {
+  margin-right: 10px;
+}
+#header .menu .footer > div picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#header .menu .footer > div > div {
+  flex-direction: column;
+  flex: 1;
+}
+#header .menu .footer > div a {
+  color: var(--dark-0);
+  text-decoration: none;
+  font-size: 16px;
+}
+#header .menu .footer > div a small {
+  color: var(--gray-2);
+  font-size: 12px;
+}
+#header .menu .menus {
+  margin-top: 208px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#header .menu .menus .hide-guest {
+  display: none;
+}
+#header .menu .menus hr {
+  margin: 15px 0;
+}
+#header .menu .menus ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+}
+#header .menu .menus ul li {
+  padding: 14px 0;
+  width: 100%;
+  list-style: none;
+  justify-content: center;
+}
+#header .menu .menus ul li a {
+  text-decoration: none;
+  color: var(--dark-0);
+}
+#header button {
+  background: none;
+  border: none;
+  padding: 13px;
+  outline: none;
+}
+#header #btn-open, #header #btn-close {
+  position: absolute;
+  right: 0;
+}
+#header .logo {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  right: calc(50vw - 60px);
+  top: 15px;
+  z-index: 5;
+  width: 120px;
+}
+#header .overlay {
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+
+.open-menu {
+  overflow: hidden;
+}
+.open-menu #header .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-1);
+  z-index: 4;
+  display: flex;
+}
+.open-menu #header .menu {
+  right: 0px;
+}
+.open-menu #header .logo {
+  left: initial;
+  right: 87px;
+}
+
+@media (min-width: 1200px) {
+  #header {
+    height: 100px;
+  }
+  #header .logo {
+    right: calc(100vw - 200px);
+    top: 17px;
+    transition: none;
+  }
+  #header #btn-open, #header #btn-close {
+    display: none;
+  }
+  #header .menu {
+    width: 100%;
+    height: initial;
+    background-color: initial;
+    position: static;
+    right: initial;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 200px;
+  }
+  #header .menu > div {
+    width: 100%;
+  }
+  #header .menu .btn-register {
+    width: 200px;
+    margin: 1.55em;
+  }
+  #header .menu .btn-register:hover {
+    background-color: var(--green-hover);
+  }
+  #header .menu .btn-register:active {
+    background-color: var(--green-active);
+  }
+  #header .menu ul {
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  #header .menu ul li {
+    flex: 1;
+    max-width: 200px;
+  }
+  #header .menu ul li a {
+    font-size: 1.25em;
+  }
+  #header .menu ul li a:hover {
+    color: var(--black);
+  }
+  #header .menu .menus {
+    margin-top: 0;
+    flex-direction: row;
+  }
+  #header .menu .menus hr {
+    display: none;
+  }
+  #header .menu .menus ul {
+    flex-direction: row;
+  }
+  #header .menu .menus ul li {
+    font-size: 0.7rem;
+  }
+  #header .menu .footer {
+    width: initial;
+    justify-content: center;
+  }
+  #header .menu .footer hr {
+    display: none;
+  }
+  #header .menu .footer > div {
+    height: 100px;
+  }
+}
+#footer {
+  width: 100%;
+  min-width: 320px;
+  position: relative;
+  background-color: var(--dark-0);
+  color: var(--gray-3);
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+}
+#footer button {
+  position: absolute;
+  right: 20px;
+  background: var(--gray-6);
+  color: var(--dark-0);
+  box-shadow: var(--black) 0 3px 6px;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 13px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  top: -35px;
+  z-index: 1;
+  cursor: pointer;
+}
+#footer button:hover {
+  background-color: var(--white);
+}
+#footer .columns {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#footer .links {
+  display: none;
+}
+#footer ul {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+#footer li {
+  list-style: none;
+  padding: 0.5em 0;
+  font-size: 16px;
+}
+#footer li.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+#footer .social {
+  align-items: center;
+}
+#footer .social a {
+  margin-right: 1em;
+}
+#footer .social img {
+  height: 24px;
+}
+#footer .logo {
+  margin: 2em 0;
+}
+#footer p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  #footer {
+    padding-bottom: 0;
+  }
+  #footer .columns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer .links {
+    display: flex;
+  }
+  #footer .links a {
+    color: var(--white50);
+    text-decoration: none;
+  }
+  #footer .links a:hover {
+    color: var(--white);
+  }
+  #footer li {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  #footer p {
+    font-size: 14px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #footer {
+    color: var(--black50);
+  }
+  #footer .links a {
+    color: var(--black50);
+  }
+  #footer .links a:hover {
+    color: var(--black);
+  }
+  #footer button {
+    background: var(--black50);
+    color: var(--gray-6);
+    box-shadow: var(--white) 0 3px 6px;
+  }
+}
+#home {
+  flex-direction: column;
+  margin-top: -80px;
+}
+#home hr {
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+#home header {
+  width: 100%;
+  min-width: 320px;
+  min-height: 675px;
+  height: 100vh;
+  background-image: url("../images/ferrari-vermelha-1200.webp");
+  background-size: cover;
+  background-position-x: 80%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2em;
+}
+#home header h1 {
+  color: var(--white);
+  font-size: 4em;
+  font-weight: bold;
+  text-align: right;
+  margin: 0.4em 0;
+  line-height: 1.25em;
+}
+#home header a {
+  border: var(--white) 2px solid;
+  border-radius: 8px;
+  padding: 10px 32px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#home .gallery {
+  min-width: 320px;
+  flex-direction: column;
+}
+#home .gallery figure {
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  position: relative;
+}
+#home .gallery figure img {
+  width: 100%;
+}
+#home .gallery figure figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background-color: var(--black75);
+  color: var(--white);
+  padding: 0.3em 1em;
+}
+#home .gallery figure figcaption h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#home .gallery figure figcaption p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--grayC);
+}
+
+@media (min-width: 576px) {
+  #home .gallery {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    margin-top: -100px;
+  }
+  #home hr {
+    top: 100px;
+  }
+  #home header {
+    height: 100vh;
+    max-height: initial;
+    background-image: url("../images/ferrari-vermelha.webp");
+  }
+}
+@media (min-width: 1920px) {
+  #home header {
+    background-image: url("../images/ferrari-vermelha@2x.webp");
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #home header h1 {
+    color: var(--black);
+  }
+  #home header a {
+    border: var(--black) 2px solid;
+    color: var(--black);
+  }
+}
+#contact {
+  flex-direction: column;
+}
+#contact > section {
+  flex-direction: column;
+}
+#contact #map {
+  background-image: url("../images/mapa.png");
+  height: 380px;
+  width: 100%;
+}
+#contact .contacts {
+  margin: 0;
+  margin-top: 30px;
+  padding: 1em;
+  flex-direction: column;
+}
+#contact .contacts li {
+  border: var(--gray-3) 1px solid;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 4em;
+  text-align: center;
+  color: var(--gray6);
+}
+#contact .contacts li img {
+  max-width: 100px;
+  background-color: var(--white);
+  margin: 0 auto;
+  margin-top: -60px;
+  padding: 0 15px;
+}
+#contact .contacts li h3 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+#contact .contacts li p {
+  font-weight: 300;
+  margin: 0;
+  font-size: 25px;
+}
+
+@media (min-width: 992px) {
+  #contact > section {
+    flex-direction: row;
+  }
+  #contact > section form, #contact > section #map {
+    flex: 1;
+  }
+  #contact > section #map {
+    margin: 1em;
+    margin-left: 0;
+  }
+  #contact .contacts {
+    flex-direction: row;
+  }
+  #contact .contacts li {
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+  #contact .contacts li:last-child {
+    margin-right: 0;
+  }
+  #contact hr.divider {
+    background-color: var(--gray-3);
+    height: 1px;
+    width: calc(100% - 2em);
+    margin: 3em 0;
+    border: none;
+    display: flex;
+    align-self: center;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #contact .contacts li {
+    border: var(--black50) 1px solid;
+    color: var(--black50);
+  }
+  #contact .contacts li img {
+    background-color: var(--gray-6);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,106 @@
+#home {
+  flex-direction: column;
+  margin-top: -80px;
+}
+#home hr {
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+#home header {
+  width: 100%;
+  min-width: 320px;
+  min-height: 675px;
+  height: 100vh;
+  background-image: url("../images/ferrari-vermelha-1200.webp");
+  background-size: cover;
+  background-position-x: 80%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2em;
+}
+#home header h1 {
+  color: var(--white);
+  font-size: 4em;
+  font-weight: bold;
+  text-align: right;
+  margin: 0.4em 0;
+  line-height: 1.25em;
+}
+#home header a {
+  border: var(--white) 2px solid;
+  border-radius: 8px;
+  padding: 10px 32px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#home .gallery {
+  min-width: 320px;
+  flex-direction: column;
+}
+#home .gallery figure {
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  position: relative;
+}
+#home .gallery figure img {
+  width: 100%;
+}
+#home .gallery figure figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background-color: var(--black75);
+  color: var(--white);
+  padding: 0.3em 1em;
+}
+#home .gallery figure figcaption h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#home .gallery figure figcaption p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--grayC);
+}
+
+@media (min-width: 576px) {
+  #home .gallery {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    margin-top: -100px;
+  }
+  #home hr {
+    top: 100px;
+  }
+  #home header {
+    height: 100vh;
+    max-height: initial;
+    background-image: url("../images/ferrari-vermelha.webp");
+  }
+}
+@media (min-width: 1920px) {
+  #home header {
+    background-image: url("../images/ferrari-vermelha@2x.webp");
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #home header h1 {
+    color: var(--black);
+  }
+  #home header a {
+    border: var(--black) 2px solid;
+    color: var(--black);
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,22 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --black-10: #0000001a;
+  --dark-0: #333333;
+  --dark-1: #000000BF;
+  --gray: #79756C;
+  --gray-0: #707070;
+  --gray-1: #7E7E7E;
+  --gray-2: #9A9A99;
+  --gray-3: #CCCCCC;
+  --gray-4: #00000029;
+  --gray-5: #E5E3DFBF;
+  --gray-6: #F8F8F8;
+  --gray-7: #E5E3DF;
+  --red: #E32119;
+  --green: #00994D;
+  --green-hover: darken(#00994D, 30%);
+  --green-active: darken(#00994D, 30%);
+}
+
+/*# sourceMappingURL=variables.css.map */

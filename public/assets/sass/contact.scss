@@ -1,0 +1,95 @@
+#contact {
+    flex-direction: column;
+    > section {
+        flex-direction: column;
+    }
+    #map {
+        background-image: url('../images/mapa.png');
+        height: 380px;
+        width: 100%;
+    }
+    .contacts {
+        margin: 0;
+        margin-top: 30px;
+        padding: 1em;
+        flex-direction: column;
+        li {
+            border: var(--gray-3) 1px solid;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1em;
+            margin-bottom: 4em;
+            text-align: center;
+            color: var(--gray6);
+            img {
+                max-width: 100px;
+                background-color: var(--white);
+                margin: 0 auto;
+                margin-top: -60px;
+                padding: 0 15px;
+            }
+            h3 {
+                font-weight: 600;
+                margin: 0;
+                font-size: 24px;
+            }
+            p {
+                font-weight: 300;
+                margin: 0;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    #contact {
+        > section {
+            flex-direction: row;
+            form, #map {
+                flex: 1;
+            }
+            #map {
+                margin: 1em;
+                margin-left: 0;
+            }
+        }
+        .contacts {
+            flex-direction: row;
+            li {
+                margin-right: 1em;
+                margin-bottom: 2em;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        hr {
+            &.divider {
+                background-color: var(--gray-3);
+                height: 1px;
+                width: calc(100% - 2em);
+                margin: 3em 0;
+                border: none;
+                display: flex;
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #contact {
+        .contacts {
+            li {
+                border: var(--black50) 1px solid;
+                color: var(--black50);
+                img {
+                    background-color: var(--gray-6);
+                }
+            }
+        }
+    }
+}

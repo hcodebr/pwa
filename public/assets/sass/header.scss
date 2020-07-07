@@ -1,0 +1,249 @@
+#header {
+    min-width: 320px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--gray-5);
+    position: relative;
+    z-index: 3;
+    .menu {
+        transition: right .5s ease-in-out;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--gray-7);
+        position: fixed;
+        right: -300px;
+        top: 0;
+        z-index: 4;
+        flex-direction: column;
+        justify-content: space-between;
+        &.logged {
+            .menus {
+                .hide-guest {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+            footer {
+                > div {
+                    display: flex;
+                }
+                > a {
+                    display: none;
+                }
+            }
+        }
+        .btn-register {
+            margin: 15px;
+            display: flex;
+            text-decoration: none;
+            width: calc(100% - 30px);
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: .5em 1em;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            outline: none;
+            text-transform: uppercase;
+            &:hover {
+                background-color: var(--green-hover);
+            }
+            &:active {
+                background-color: var(--green-active);
+            }
+        }
+        hr {
+            width: 100%;
+            border-bottom: none;
+            border-color: var(--black-10);
+            margin: 0;
+        }
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            > div {
+                display: none;
+                padding: 15px;
+                width: 100%;
+                align-items: center;
+                picture {
+                    margin-right: 10px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                > div {
+                    flex-direction: column;
+                    flex: 1;
+                }
+                a {
+                    color: var(--dark-0);
+                    text-decoration: none;
+                    font-size: 16px;
+                    small {
+                        color: var(--gray-2);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .menus {
+            margin-top: 208px;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .hide-guest {
+                display: none;
+            }
+            hr {
+                margin: 15px 0;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                flex-direction: column;
+                li {
+                    padding: 14px 0;
+                    width: 100%;
+                    list-style: none;
+                    justify-content: center;
+                    a {
+                        text-decoration: none;
+                        color: var(--dark-0);
+                    }
+                }
+            }
+        }
+    }
+    button {
+        background: none;
+        border: none;
+        padding: 13px;
+        outline: none;
+    }
+    #btn-open, #btn-close {
+        position: absolute;
+        right: 0;
+    }
+    .logo {
+        position: absolute;
+        transition: all 1s ease-in-out;
+        right: calc(50vw - 60px);
+        top: 15px;
+        z-index: 5;
+        width: 120px;
+    }
+    .overlay {
+        transition: all .5s ease-in-out;
+        display: none;
+    }
+}
+
+.open-menu {
+    overflow: hidden;
+    #header  {
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--dark-1);
+            z-index: 4;
+            display: flex;
+        }
+        .menu {
+            right: 0px;
+        }
+        .logo {
+            left: initial;
+            right: 87px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #header {
+        height: 100px;
+        .logo {
+            right: calc(100vw - 200px);
+            top: 17px;
+            transition: none;
+        }
+        #btn-open, #btn-close {
+            display: none;
+        }
+        .menu {
+            width: 100%;
+            height: initial;
+            background-color: initial;
+            position: static;
+            right: initial;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 200px;
+            > div {
+                width: 100%;
+            }
+            .btn-register {
+                width: 200px;
+                margin: 1.55em;
+                &:hover {
+                    background-color: var(--green-hover);
+                }
+                &:active {
+                    background-color: var(--green-active);
+                }
+            }
+            ul {
+                margin: 0;
+                margin-top: 0;
+                padding: 0;
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                li {
+                    flex: 1;
+                    max-width: 200px;
+                    a {
+                        font-size: 1.25em;
+                        &:hover {
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
+            .menus {
+                margin-top: 0;
+                flex-direction: row;
+                hr {
+                    display: none;
+                }
+                ul {
+                    flex-direction: row;
+                    li {
+                        font-size: .7rem;
+                    }
+                }
+            }
+            .footer {
+                width: initial;
+                justify-content: center;
+                hr {
+                    display: none;
+                }
+                > div {
+                    height: 100px;
+                }
+            }
+        }
+    }  
+}

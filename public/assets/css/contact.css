@@ -1,0 +1,87 @@
+#contact {
+  flex-direction: column;
+}
+#contact > section {
+  flex-direction: column;
+}
+#contact #map {
+  background-image: url("../images/mapa.png");
+  height: 380px;
+  width: 100%;
+}
+#contact .contacts {
+  margin: 0;
+  margin-top: 30px;
+  padding: 1em;
+  flex-direction: column;
+}
+#contact .contacts li {
+  border: var(--gray-3) 1px solid;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 4em;
+  text-align: center;
+  color: var(--gray6);
+}
+#contact .contacts li img {
+  max-width: 100px;
+  background-color: var(--white);
+  margin: 0 auto;
+  margin-top: -60px;
+  padding: 0 15px;
+}
+#contact .contacts li h3 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+#contact .contacts li p {
+  font-weight: 300;
+  margin: 0;
+  font-size: 25px;
+}
+
+@media (min-width: 992px) {
+  #contact > section {
+    flex-direction: row;
+  }
+  #contact > section form, #contact > section #map {
+    flex: 1;
+  }
+  #contact > section #map {
+    margin: 1em;
+    margin-left: 0;
+  }
+  #contact .contacts {
+    flex-direction: row;
+  }
+  #contact .contacts li {
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+  #contact .contacts li:last-child {
+    margin-right: 0;
+  }
+  #contact hr.divider {
+    background-color: var(--gray-3);
+    height: 1px;
+    width: calc(100% - 2em);
+    margin: 3em 0;
+    border: none;
+    display: flex;
+    align-self: center;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #contact .contacts li {
+    border: var(--black50) 1px solid;
+    color: var(--black50);
+  }
+  #contact .contacts li img {
+    background-color: var(--gray-6);
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

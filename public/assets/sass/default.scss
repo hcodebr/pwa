@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture {
+    display: flex;
+}
+
+body {
+    margin: 0;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--bg-color);
+}
+
+a {
+    color: var(--red);
+    &:hover {
+        color: var(--black);
+    }
+}
+
+hr {
+    .italy {
+        background-image: url('../images/bg-italy.svg');
+        background-repeat: repeat-x;
+        width: 100%;
+        height: 18px;
+        margin: 0;
+        border: none;
+    }
+}
