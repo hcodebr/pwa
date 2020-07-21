@@ -11,4 +11,10 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 992px) {
+  #service h2 {
+    font-size: 60px;
+  }
+}
+
 /*# sourceMappingURL=service.css.map */

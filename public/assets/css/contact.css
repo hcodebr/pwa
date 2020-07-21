@@ -81,15 +81,6 @@
   #contact .contacts li:last-child {
     margin-right: 0;
   }
-  #contact hr.divider {
-    background-color: var(--gray-3);
-    height: 1px;
-    width: calc(100% - 2em);
-    margin: 3em 0;
-    border: none;
-    display: flex;
-    align-self: center;
-  }
   #contact textarea {
     height: 245px;
   }
