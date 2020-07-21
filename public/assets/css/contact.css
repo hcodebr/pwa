@@ -1,12 +1,26 @@
 #contact {
+  margin: 20px 0;
   flex-direction: column;
+}
+#contact p {
+  font-size: 15px;
+  color: var(--gray-1);
+  font-weight: 600;
+}
+#contact h2 {
+  padding: 0 15px;
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
 }
 #contact > section {
   flex-direction: column;
 }
 #contact #map {
   background-image: url("../images/mapa.png");
-  height: 380px;
+  height: 263px;
   width: 100%;
 }
 #contact .contacts {
@@ -44,6 +58,9 @@
 }
 
 @media (min-width: 992px) {
+  #contact h2 {
+    font-size: 60px;
+  }
   #contact > section {
     flex-direction: row;
   }
@@ -51,8 +68,8 @@
     flex: 1;
   }
   #contact > section #map {
-    margin: 1em;
     margin-left: 0;
+    height: 570px;
   }
   #contact .contacts {
     flex-direction: row;
@@ -72,6 +89,9 @@
     border: none;
     display: flex;
     align-self: center;
+  }
+  #contact textarea {
+    height: 245px;
   }
 }
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,14 @@
+#service {
+  margin: 20px 0;
+  flex-direction: column;
+}
+#service h2 {
+  padding: 0 15px;
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=service.css.map */

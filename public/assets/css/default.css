@@ -32,4 +32,23 @@ hr .italy {
   border: none;
 }
 
+header.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
+  color: var(--green);
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+header.page-title hr {
+  width: 68px;
+  border: none;
+  border-top: 4px solid var(--red);
+  margin: 10px 0;
+}
+
 /*# sourceMappingURL=default.css.map */

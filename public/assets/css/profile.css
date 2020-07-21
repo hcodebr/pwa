@@ -1,0 +1,164 @@
+#profile > nav {
+  display: none;
+}
+#profile main {
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  min-height: calc(100vh - 588px);
+}
+#profile main > section {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+}
+#profile main > section header {
+  margin-bottom: 20px;
+}
+#profile main > section form {
+  padding: 0;
+}
+#profile main > section .profile-photo {
+  flex-direction: column;
+  align-items: center;
+}
+#profile main > section .profile-photo .actions {
+  justify-content: center;
+  margin-top: 20px;
+}
+#profile main > section .profile-photo .actions button {
+  width: 256px;
+}
+#profile main > section #photo {
+  width: 256px;
+  height: 256px;
+}
+#profile main > section .schedules {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+#profile main > section .schedules li {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#profile main > section .schedules li section {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#profile main > section .schedules li section > div {
+  width: 50%;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+}
+#profile main > section .schedules li section > div label {
+  color: var(--gray-2);
+  padding: 10px 0;
+}
+#profile main > section .schedules li section > div span {
+  color: var(--dark-0);
+  padding: 10px 0;
+}
+#profile main > section .schedules button {
+  min-width: 150px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#profile main > section .schedules button.cancel {
+  background-color: var(--red);
+  color: var(--white);
+}
+#profile main > section .schedules button:hover {
+  background-color: var(--red-hover);
+}
+#profile main > section .schedules button:active {
+  background-color: var(--red-active);
+}
+
+@media (min-width: 1200px) {
+  #profile > nav {
+    display: flex;
+    margin-top: 120px;
+    min-width: 300px;
+    padding: 0 15px;
+    border-right: var(--gray-3) 1px solid;
+  }
+  #profile > nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  #profile > nav ul .active a {
+    color: var(--green);
+  }
+  #profile > nav ul a {
+    font-size: 25px;
+    text-decoration: none;
+    display: flex;
+    padding: 15px 0;
+    width: 100%;
+    color: var(--gray-0);
+  }
+  #profile > nav ul a:hover {
+    font-weight: bold;
+  }
+  #profile > nav ul a:active {
+    color: var(--green);
+  }
+  #profile main {
+    flex-direction: row;
+    min-height: calc(100vh - 465px);
+  }
+  #profile main > section {
+    margin: 15px;
+  }
+  #profile main > section .schedules li {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #profile main > section .schedules li section {
+    flex-wrap: nowrap;
+    border-bottom: var(--gray-10) 1px solid;
+  }
+  #profile main > section .schedules li section > div {
+    flex: 1;
+    width: initial;
+  }
+  #profile main > section .schedules li section > div label {
+    display: none;
+  }
+  #profile main > section .schedules li section > div.service {
+    flex: 2;
+  }
+  #profile main > section .schedules li:first-child section > div span {
+    border-top: var(--gray-10) 1px solid;
+  }
+  #profile main > section .schedules li:first-child section > div label {
+    display: flex;
+  }
+  #profile main > section .schedules button {
+    min-width: 100px;
+    font-size: 11px;
+    height: 31px;
+    margin: 6px 0;
+  }
+  #profile main form {
+    max-width: 400px;
+  }
+}
+
+/*# sourceMappingURL=profile.css.map */

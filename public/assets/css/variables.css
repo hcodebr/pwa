@@ -15,10 +15,13 @@
   --gray-7: #E5E3DF;
   --gray-8: #DDDDDD;
   --gray-9: #999999;
+  --gray-10: #EEEEEE;
   --red: #E32119;
+  --red-hover: #E4423B;
+  --red-active: #C91D16;
   --green: #00994D;
-  --green-hover: darken(#00994D, 30%);
-  --green-active: darken(#00994D, 30%);
+  --green-hover: #00BE60;
+  --green-active: #00773C;
 }
 
 /*# sourceMappingURL=variables.css.map */
