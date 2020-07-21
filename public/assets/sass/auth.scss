@@ -1,0 +1,100 @@
+#auth {
+    display: flex;
+    min-width: 300px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .hide {
+        display: none;
+    }
+    > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        a {
+            display: contents;
+            img {
+                position: absolute;
+                width: 100px;
+                top: 40px;
+                z-index: 1;
+            }
+        }
+        p {
+            color: var(--gray-9);
+        }
+        form {
+            margin-top: 170px;
+            position: relative;
+            left: 0;
+            width: 100vw;
+            .message {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    margin-right: 5px;
+                }
+                span {
+                    font-weight: 600;
+                    color: var(--dark-0);
+                }
+            }
+            h1 {
+                text-align: center;
+                color: var(--green);
+                font-size: 28px;
+                font-weight: 600;
+                margin: 10px auto;
+            }
+            hr {
+                border: none;
+                border-top: 4px solid var(--red);
+                width: 68px;
+                margin-bottom: 30px;
+            }
+            .field {
+                width: 100%;
+            }
+            .actions {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: row;
+                button {
+                    width: 170px;
+                    height: 60px;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    #auth {
+        > section {
+            width: 500px;
+            height: initial;
+            a {
+                img {
+                    top: 125px;
+                }
+            }
+            form {
+                border: var(--gray-8) 1px solid;
+                border-radius: 10px;
+                width: 100%;
+                padding: 50px;
+                padding-top: 100px;
+            }
+        }
+    }
+}

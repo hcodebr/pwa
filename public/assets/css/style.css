@@ -43,6 +43,8 @@
   --gray-5: #E5E3DFBF;
   --gray-6: #F8F8F8;
   --gray-7: #E5E3DF;
+  --gray-8: #DDDDDD;
+  --gray-9: #999999;
   --red: #E32119;
   --green: #00994D;
   --green-hover: darken(#00994D, 30%);
@@ -114,7 +116,7 @@ form .field input, form .field textarea {
   color: var(--gray5);
   outline: none;
   font-family: "Open Sans";
-  border: var(--gray-3) 2px solid;
+  border: var(--gray-3) 1px solid;
   border-radius: 5px;
   position: relative;
   z-index: 1;
@@ -724,6 +726,102 @@ form button:active {
   }
   #contact .contacts li img {
     background-color: var(--gray-6);
+  }
+}
+#auth {
+  display: flex;
+  min-width: 300px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#auth .hide {
+  display: none;
+}
+#auth > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#auth > section a {
+  display: contents;
+}
+#auth > section a img {
+  position: absolute;
+  width: 100px;
+  top: 40px;
+  z-index: 1;
+}
+#auth > section p {
+  color: var(--gray-9);
+}
+#auth > section form {
+  margin-top: 170px;
+  position: relative;
+  left: 0;
+  width: 100vw;
+}
+#auth > section form .message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#auth > section form .message img {
+  margin-right: 5px;
+}
+#auth > section form .message span {
+  font-weight: 600;
+  color: var(--dark-0);
+}
+#auth > section form h1 {
+  text-align: center;
+  color: var(--green);
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px auto;
+}
+#auth > section form hr {
+  border: none;
+  border-top: 4px solid var(--red);
+  width: 68px;
+  margin-bottom: 30px;
+}
+#auth > section form .field {
+  width: 100%;
+}
+#auth > section form .actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+#auth > section form .actions button {
+  width: 170px;
+  height: 60px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 500px) {
+  #auth > section {
+    width: 500px;
+    height: initial;
+  }
+  #auth > section a img {
+    top: 125px;
+  }
+  #auth > section form {
+    border: var(--gray-8) 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    padding: 50px;
+    padding-top: 100px;
   }
 }
 
