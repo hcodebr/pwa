@@ -38,17 +38,16 @@
             display: flex;
             text-decoration: none;
             width: calc(100% - 30px);
+            height: 50px;
             background-color: var(--green);
             color: var(--white);
             border: none;
             padding: .5em 1em;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
-            font-weight: bold;
+            font-size: 25px;
             border-radius: 5px;
             outline: none;
-            text-transform: uppercase;
             &:hover {
                 background-color: var(--green-hover);
             }
