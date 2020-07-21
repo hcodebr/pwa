@@ -77,6 +77,13 @@
             flex-direction: row;
             justify-content: space-between;
         }
+        .social {
+            a {
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
         .links {
             display: flex;
             a {

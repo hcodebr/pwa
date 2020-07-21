@@ -78,6 +78,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  #footer .social a:hover {
+    opacity: 0.8;
+  }
   #footer .links {
     display: flex;
   }
