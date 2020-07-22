@@ -12,6 +12,7 @@ const body = document.querySelector('body')
 const btnOpen = document.getElementById('btn-open')
 const closeMenu = document.querySelectorAll('[data-close="menu"]')
 const btnFooter = document.querySelector('#footer button')
+const menuLinks = document.querySelectorAll('.menu a')
 
 btnFooter.addEventListener('click', e => {
     window.scrollTo(0, 0)
@@ -22,6 +23,12 @@ btnOpen.addEventListener('click', e => {
 })
 
 closeMenu.forEach(el => {
+    el.addEventListener('click', e => {
+        body.classList.remove('open-menu')
+    })
+})
+
+menuLinks.forEach(el => {
     el.addEventListener('click', e => {
         body.classList.remove('open-menu')
     })
