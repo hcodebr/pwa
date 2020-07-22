@@ -1,0 +1,12 @@
+{
+  "name": "ferrari-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch public/assets/sass:public/assets/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
