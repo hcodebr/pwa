@@ -35,6 +35,11 @@
             color: var(--white);
             text-transform: uppercase;
             text-decoration: none;
+            &:hover {
+                background-color: var(--white);
+                color: var(--black);
+                cursor: pointer;
+            }
         }
     }
     .gallery {
@@ -52,7 +57,7 @@
                 position: absolute;
                 left: 0;
                 bottom: 20px;
-                background-color: var(--black75);
+                background-color: var(--black-75);
                 color: var(--white);
                 padding: .3em 1em;
                 h2 {

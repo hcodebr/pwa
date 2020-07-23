@@ -32,6 +32,7 @@
   --white: #FFFFFF;
   --black: #000000;
   --black-10: #0000001a;
+  --black-75: #000000bf;
   --dark-0: #333333;
   --dark-1: #000000BF;
   --gray: #79756C;
@@ -46,6 +47,7 @@
   --gray-8: #DDDDDD;
   --gray-9: #999999;
   --gray-10: #EEEEEE;
+  --gray-11: #444444;
   --red: #E32119;
   --red-hover: #E4423B;
   --red-active: #C91D16;
@@ -608,6 +610,11 @@ form button:active {
   text-transform: uppercase;
   text-decoration: none;
 }
+#home header a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
 #home .gallery {
   min-width: 320px;
   flex-direction: column;
@@ -625,7 +632,7 @@ form button:active {
   position: absolute;
   left: 0;
   bottom: 20px;
-  background-color: var(--black75);
+  background-color: var(--black-75);
   color: var(--white);
   padding: 0.3em 1em;
 }
@@ -673,7 +680,7 @@ form button:active {
   }
 }
 #service {
-  margin: 20px 0;
+  margin-top: 20px;
   flex-direction: column;
 }
 #service h2 {
@@ -684,14 +691,25 @@ form button:active {
   color: var(--dark-0);
   text-transform: uppercase;
 }
+#service h2 small {
+  color: var(--gray-2);
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+#service .calendar {
+  margin-top: 35px;
+}
 
 @media (min-width: 992px) {
   #service h2 {
     font-size: 60px;
   }
+  #service h2 small {
+    font-size: 35px;
+  }
 }
 #contact {
-  margin: 20px 0;
   flex-direction: column;
 }
 #contact p {
@@ -1027,6 +1045,114 @@ form button:active {
   }
   #profile main form {
     max-width: 400px;
+  }
+}
+.calendar {
+  flex-direction: column;
+  padding: 0 15px;
+}
+.calendar .month {
+  font-size: 6vw;
+  font-weight: 600;
+  color: var(--gray-2);
+  justify-content: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.calendar .weekdays {
+  font-size: 2vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+.calendar .weekdays li {
+  justify-content: center;
+  padding: 8px 0;
+}
+.calendar .days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 12vw 12vw 12vw 12vw 12vw;
+  grid-gap: 10px;
+  font-size: 4vw;
+  color: var(--gray-11);
+  margin: 0;
+  padding: 0;
+}
+.calendar .days li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.calendar .days li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.calendar .days .month-prev, .calendar .days .month-next {
+  color: var(--gray-2);
+}
+.calendar .days .active {
+  background-color: var(--green);
+  color: var(--white);
+}
+.calendar .days .active:hover {
+  background-color: var(--green-hover);
+}
+
+.schedules {
+  flex-direction: column;
+  padding: 0 15px;
+}
+.schedules h3 {
+  font-size: 16px;
+  color: var(--gray-2);
+  text-transform: uppercase;
+  text-align: center;
+}
+.schedules ul {
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.schedules ul li {
+  width: calc(50% - 10px);
+  background-color: var(--gray-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-0);
+  height: 70px;
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.schedules ul li.active {
+  background-color: var(--green);
+  color: var(--white);
+}
+.schedules ul li.active:hover {
+  background-color: var(--green-hover);
+}
+.schedules ul li:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 992px) {
+  .calendar .days {
+    grid-template-rows: 13.8vw 13.8vw 13.8vw 13.8vw 13.8vw;
+  }
+
+  .schedules ul li {
+    width: calc(25% - 10px);
   }
 }
 

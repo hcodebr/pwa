@@ -1,0 +1,113 @@
+.calendar {
+    flex-direction: column;
+    padding: 0 15px;
+    .month {
+        font-size: 6vw;
+        font-weight: 600;
+        color: var(--gray-2);
+        justify-content: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .weekdays {
+        font-size: 2vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--gray-2);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 0;
+        padding: 0;
+        li {
+            justify-content: center;
+            padding: 8px 0;
+        }
+    }
+    .days {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 12vw 12vw 12vw 12vw 12vw;
+        grid-gap: 10px;
+        font-size: 4vw;
+        color: var(--gray-11);
+        margin: 0;
+        padding: 0;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .1s ease-in-out;
+            &:hover {
+                background-color: rgba(0, 0, 0, .1);
+            }
+        }
+        .month-prev, .month-next {
+            color: var(--gray-2);
+        }
+        .active {
+            background-color: var(--green);
+            color: var(--white);
+            &:hover {
+                background-color: var(--green-hover);
+            }
+        }
+    }
+}
+
+.schedules {
+    flex-direction: column;
+    padding: 0 15px;
+    h3 {
+        font-size: 16px;
+        color: var(--gray-2);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        li {
+            width: calc(50% - 10px);
+            background-color: var(--gray-10);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark-0);
+            height: 70px;
+            font-size: 32px;
+            cursor: pointer;
+            border-radius: 5px;
+            &.active {
+                background-color: var(--green);
+                color: var(--white);
+                &:hover {
+                    background-color: var(--green-hover);
+                }
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0, .15);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .calendar {
+        .days {
+            grid-template-rows: 13.8vw 13.8vw 13.8vw 13.8vw 13.8vw;
+        }
+    }
+    .schedules {
+        ul {
+            li {
+                width: calc(25% - 10px);
+            }
+        }
+    }
+}

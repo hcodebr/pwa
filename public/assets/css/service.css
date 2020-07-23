@@ -1,5 +1,5 @@
 #service {
-  margin: 20px 0;
+  margin-top: 20px;
   flex-direction: column;
 }
 #service h2 {
@@ -10,10 +10,22 @@
   color: var(--dark-0);
   text-transform: uppercase;
 }
+#service h2 small {
+  color: var(--gray-2);
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+#service .calendar {
+  margin-top: 35px;
+}
 
 @media (min-width: 992px) {
   #service h2 {
     font-size: 60px;
+  }
+  #service h2 small {
+    font-size: 35px;
   }
 }
 
