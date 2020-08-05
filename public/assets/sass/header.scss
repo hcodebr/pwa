@@ -35,6 +35,8 @@
         }
         .btn-register {
             @include button-green;
+            margin: 20px;
+            width: calc(300px - 40px);
         }
         hr {
             width: 100%;
@@ -163,9 +165,6 @@
         }
         ul {
             width: auto;
-            li {
-
-            }
         }
         .menu {
             width: 100%;
@@ -180,6 +179,7 @@
                 width: 100%;
             }
             .btn-register {
+                margin: 0;
                 margin-right: 30px;
                 width: 200px;
             }

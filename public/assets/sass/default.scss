@@ -65,7 +65,7 @@ header {
 }
 
 @mixin button {
-    min-width: 200px;
+    min-width: 150px;
     background-color: var(--green);
     color: var(--white);
     border: none;
@@ -79,11 +79,15 @@ header {
     outline: none;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
     &:hover {
         background-color: var(--green-hover);
     }
     &:active {
         background-color: var(--green-active);
+    }
+    @media (min-width: 768px) {
+        min-width: 200px;
     }
 }
 

@@ -167,16 +167,8 @@ form .actions {
   align-items: center;
   flex-direction: row;
 }
-form .actions button, form .actions a {
-  width: 170px;
-  height: 60px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
 form button {
-  min-width: 200px;
+  min-width: 150px;
   background-color: var(--green);
   color: var(--white);
   border: none;
@@ -190,12 +182,18 @@ form button {
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 form button:hover {
   background-color: var(--green-hover);
 }
 form button:active {
   background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  form button {
+    min-width: 200px;
+  }
 }
 form button:hover {
   background-color: var(--green-hover);
@@ -253,7 +251,7 @@ form button:active {
   display: none;
 }
 #header .menu .btn-register {
-  min-width: 200px;
+  min-width: 150px;
   background-color: var(--green);
   color: var(--white);
   border: none;
@@ -267,12 +265,20 @@ form button:active {
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+  margin: 20px;
+  width: calc(300px - 40px);
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
 }
 #header .menu .btn-register:active {
   background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  #header .menu .btn-register {
+    min-width: 200px;
+  }
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
@@ -419,6 +425,7 @@ form button:active {
     width: 100%;
   }
   #header .menu .btn-register {
+    margin: 0;
     margin-right: 30px;
     width: 200px;
   }
@@ -711,7 +718,7 @@ form button:active {
   flex-direction: column;
 }
 #service > div a {
-  min-width: 200px;
+  min-width: 150px;
   background-color: var(--green);
   color: var(--white);
   border: none;
@@ -725,6 +732,7 @@ form button:active {
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   margin: 0 20px;
 }
 #service > div a:hover {
@@ -732,6 +740,11 @@ form button:active {
 }
 #service > div a:active {
   background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  #service > div a {
+    min-width: 200px;
+  }
 }
 #service > div a:hover {
   background-color: var(--green-hover);
