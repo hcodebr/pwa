@@ -9,7 +9,7 @@ form {
         position: relative;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 30px;
         label {
             color: var(--gray-3);
             font-size: 14px;
@@ -55,24 +55,7 @@ form {
         }
     }
     button {
-        width: 100%;
-        background-color: var(--green);
-        color: var(--white);
-        border: none;
-        padding: .5em 1em;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        font-weight: bold;
-        border-radius: 5px;
-        outline: none;
-        text-transform: uppercase;
-        &:hover {
-            background-color: var(--green-hover);
-        }
-        &:active {
-            background-color: var(--green-active);
-        }
+        @include button-green;
     }
 }
 

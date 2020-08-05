@@ -1,32 +1,17 @@
-#service {
-  margin-top: 20px;
-  flex-direction: column;
-}
-#service h2 {
-  padding: 0 15px;
-  margin: 0;
-  font-size: 27px;
-  font-weight: bold;
-  color: var(--dark-0);
-  text-transform: uppercase;
-}
-#service h2 small {
-  color: var(--gray-2);
+/* Error: Undefined mixin.
+ *    ,
+ * 25 |             @include button-green;
+ *    |             ^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   public\assets\sass\service.scss 25:13  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  font-size: 20px;
-  font-weight: 600;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 25 \2502              @include button-green;\d\a    \2502              ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   public\\assets\\sass\\service.scss 25:13  root stylesheet";
 }
-#service .calendar {
-  margin-top: 35px;
-}
-
-@media (min-width: 992px) {
-  #service h2 {
-    font-size: 60px;
-  }
-  #service h2 small {
-    font-size: 35px;
-  }
-}
-
-/*# sourceMappingURL=service.css.map */

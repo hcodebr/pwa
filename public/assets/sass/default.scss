@@ -63,3 +63,36 @@ header {
         }
     }
 }
+
+@mixin button {
+    min-width: 200px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--green-hover);
+    }
+    &:active {
+        background-color: var(--green-active);
+    }
+}
+
+@mixin button-green {
+    @include button;
+    &:hover {
+        background-color: var(--green-hover);
+    }
+    &:active {
+        background-color: var(--green-active);
+    }
+}

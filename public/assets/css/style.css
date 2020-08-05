@@ -130,7 +130,7 @@ form .field {
   position: relative;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 form .field label {
   color: var(--gray-3);
@@ -176,18 +176,26 @@ form .actions button, form .actions a {
   cursor: pointer;
 }
 form button {
-  width: 100%;
+  min-width: 200px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 0.5em 1em;
+  padding: 14px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   outline: none;
   text-transform: uppercase;
+  text-decoration: none;
+}
+form button:hover {
+  background-color: var(--green-hover);
+}
+form button:active {
+  background-color: var(--green-active);
 }
 form button:hover {
   background-color: var(--green-hover);
@@ -245,20 +253,26 @@ form button:active {
   display: none;
 }
 #header .menu .btn-register {
-  margin: 15px;
-  display: flex;
-  text-decoration: none;
-  width: calc(100% - 30px);
-  height: 50px;
+  min-width: 200px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 0.5em 1em;
+  padding: 14px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#header .menu .btn-register:hover {
+  background-color: var(--green-hover);
+}
+#header .menu .btn-register:active {
+  background-color: var(--green-active);
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
@@ -388,6 +402,9 @@ form button:active {
   #header #btn-open, #header #btn-close {
     display: none;
   }
+  #header ul {
+    width: auto;
+  }
   #header .menu {
     width: 100%;
     height: initial;
@@ -402,29 +419,21 @@ form button:active {
     width: 100%;
   }
   #header .menu .btn-register {
+    margin-right: 30px;
     width: 200px;
-    margin: 1.55em;
-  }
-  #header .menu .btn-register:hover {
-    background-color: var(--green-hover);
-  }
-  #header .menu .btn-register:active {
-    background-color: var(--green-active);
   }
   #header .menu ul {
     margin: 0;
     margin-top: 0;
     padding: 0;
-    width: 100%;
     flex-direction: row;
     align-items: center;
   }
-  #header .menu ul li {
-    flex: 1;
-    max-width: 200px;
-  }
   #header .menu ul li a {
-    font-size: 1.25em;
+    font-size: 14px;
+    min-width: 100px;
+    padding: 10px 0;
+    text-align: center;
   }
   #header .menu ul li a:hover {
     color: var(--black);
@@ -438,9 +447,6 @@ form button:active {
   }
   #header .menu .menus ul {
     flex-direction: row;
-  }
-  #header .menu .menus ul li {
-    font-size: 0.7rem;
   }
   #header .menu .footer {
     width: initial;
@@ -697,10 +703,79 @@ form button:active {
   font-size: 20px;
   font-weight: 600;
 }
-#service .calendar {
-  margin-top: 35px;
+#service > img {
+  width: 100%;
+  margin: 30px 0;
+}
+#service > div {
+  flex-direction: column;
+}
+#service > div a {
+  min-width: 200px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 20px;
+}
+#service > div a:hover {
+  background-color: var(--green-hover);
+}
+#service > div a:active {
+  background-color: var(--green-active);
+}
+#service > div a:hover {
+  background-color: var(--green-hover);
+}
+#service > div a:active {
+  background-color: var(--green-active);
+}
+#service > div .icons {
+  flex-direction: column;
+}
+#service > div .icons figure {
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+#service > div .icons figure img {
+  width: 100px;
+}
+#service > div .icons figure figcaption {
+  margin: 30px auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--gray-0);
 }
 
+@media (min-width: 768px) {
+  #service > div {
+    flex-direction: column-reverse;
+  }
+  #service > div .icons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #service > div .icons figure {
+    margin: 100px 0;
+  }
+  #service > div .icons figure img {
+    width: 150px;
+  }
+  #service > div a {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 992px) {
   #service h2 {
     font-size: 60px;

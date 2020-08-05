@@ -1,97 +1,17 @@
-form {
-  flex-direction: column;
-  padding: 15px;
-  width: 100%;
-}
-form .fields {
-  flex-direction: column;
-}
-form .field {
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 32px;
-}
-form .field label {
-  color: var(--gray-3);
-  font-size: 14px;
-  position: absolute;
-  z-index: 2;
-  left: 10px;
-  top: 10px;
-  transition: color 0.3s ease-in-out;
-}
-form .field input, form .field textarea {
-  line-height: 1.5em;
-  padding: 10px;
-  padding-top: 33px;
-  font-size: 16px;
-  color: var(--dark-0);
-  outline: none;
-  font-family: "Open Sans";
-  border: var(--gray-3) 1px solid;
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  transition: border-color 0.3s ease-in-out;
-}
-form .field input:focus, form .field textarea:focus {
-  border-color: var(--green);
-}
-form .field input:focus + label, form .field textarea:focus + label {
-  color: var(--green);
-}
-form .actions {
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-}
-form .actions button, form .actions a {
-  width: 170px;
-  height: 60px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-form button {
-  width: 100%;
-  background-color: var(--green);
-  color: var(--white);
-  border: none;
-  padding: 0.5em 1em;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 5px;
-  outline: none;
-  text-transform: uppercase;
-}
-form button:hover {
-  background-color: var(--green-hover);
-}
-form button:active {
-  background-color: var(--green-active);
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 58 |         @include button-green;
+ *    |         ^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   public\assets\sass\form.scss 58:9  root stylesheet */
 
-@media (min-width: 992px) {
-  form .fields {
-    flex-direction: row;
-  }
-  form .fields .field {
-    margin-right: 32px;
-  }
-  form .fields .field:last-child {
-    margin-right: 0;
-  }
-  form .fields .field textarea {
-    min-height: 250px;
-  }
-  form button {
-    max-width: 340px;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 58 \2502          @include button-green;\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   public\\assets\\sass\\form.scss 58:9  root stylesheet";
 }
-
-/*# sourceMappingURL=form.css.map */

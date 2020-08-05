@@ -15,8 +15,55 @@
             font-weight: 600;
         }
     }
-    .calendar {
-        margin-top: 35px;
+    > img {
+        width: 100%;
+        margin: 30px 0;
+    }
+    > div {
+        flex-direction: column;
+        a {
+            @include button-green;
+            margin: 0 20px;
+        }
+        .icons {
+            flex-direction: column;
+            figure {
+                margin-top: 30px;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 100px;
+                }
+                figcaption {
+                    margin: 30px auto;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: var(--gray-0);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #service {
+        > div {
+            flex-direction: column-reverse;
+            .icons {
+                flex-direction: row;
+                justify-content: space-around;
+                figure {
+                    margin: 100px 0;
+                    img {
+                        width: 150px;
+                    }
+                }
+            }
+            a {
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
     }
 }
 
@@ -28,5 +75,6 @@
                 font-size: 35px;
             }
         }
+        
     }
 }
