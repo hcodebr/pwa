@@ -21,6 +21,7 @@
   background-image: url("../images/mapa.png");
   height: 263px;
   width: 100%;
+  margin-top: 20px;
 }
 #contact .contacts {
   margin: 0;

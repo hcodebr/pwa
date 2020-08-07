@@ -348,7 +348,7 @@ form button:active {
     flex-direction: row;
   }
   form .fields .field {
-    margin-right: 32px;
+    margin-right: 20px;
   }
   form .fields .field:last-child {
     margin-right: 0;
@@ -967,6 +967,7 @@ form button:active {
   background-image: url("../images/mapa.png");
   height: 263px;
   width: 100%;
+  margin-top: 20px;
 }
 #contact .contacts {
   margin: 0;
@@ -1226,6 +1227,68 @@ form button:active {
 
   .schedules ul li {
     width: calc(25% - 10px);
+  }
+}
+#error .desktop {
+  display: none;
+}
+#error header {
+  margin: 0;
+  margin-top: 120px;
+  padding: 0 3em;
+  height: initial;
+}
+#error header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+#error header h1 b {
+  color: var(--red);
+}
+#error p {
+  padding: 0 3em;
+  font-size: 20px;
+  color: var(--gray-0);
+}
+#error img {
+  width: 100%;
+  margin-bottom: 3em;
+}
+#error .columns, #error .column {
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  #error header {
+    height: initial;
+    min-height: initial;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #error {
+    min-height: calc(100vh - 325px);
+  }
+  #error .desktop {
+    display: flex;
+  }
+  #error .mobile {
+    display: none;
+  }
+  #error p {
+    font-size: 16px;
+  }
+  #error .columns {
+    flex-direction: row;
+    align-items: center;
+  }
+  #error .column {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 396px);
   }
 }
 #change-photo form {
