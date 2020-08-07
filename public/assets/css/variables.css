@@ -1,6 +1,8 @@
 :root {
   --white: #FFFFFF;
   --black: #000000;
+  --black-hover: #111111;
+  --black-active: #222222;
   --black-10: #0000001a;
   --black-75: #000000bf;
   --dark-0: #333333;
@@ -18,6 +20,7 @@
   --gray-9: #999999;
   --gray-10: #EEEEEE;
   --gray-11: #444444;
+  --gray-12: #E8E8E8;
   --red: #E32119;
   --red-hover: #E4423B;
   --red-active: #C91D16;

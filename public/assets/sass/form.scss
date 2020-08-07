@@ -1,6 +1,6 @@
 form {
     flex-direction: column;
-    padding: 15px;
+    padding: 0 20px;
     width: 100%;
     .fields {
         flex-direction: column;
@@ -9,7 +9,7 @@ form {
         position: relative;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         label {
             color: var(--gray-3);
             font-size: 14px;
@@ -33,6 +33,8 @@ form {
             z-index: 1;
             top: 0;
             transition: border-color .3s ease-in-out;
+            width: 100%;
+            background-color: transparent;
             &:focus {
                 border-color: var(--green);
                 + label {
@@ -47,7 +49,7 @@ form {
         flex-direction: row;
     }
     button {
-        @include button-green;
+        @include button;
     }
 }
 

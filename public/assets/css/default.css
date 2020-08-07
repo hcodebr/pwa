@@ -23,14 +23,6 @@ a:hover {
   color: var(--black);
 }
 
-hr .italy {
-  background-image: url("../images/bg-italy.svg");
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 18px;
-  margin: 0;
-  border: none;
-}
 hr.divider {
   background-color: var(--gray-3);
   height: 1px;
@@ -58,6 +50,154 @@ header.page-title hr {
   border: none;
   border-top: 4px solid var(--red);
   margin: 10px 0;
+}
+
+.page {
+  flex-direction: column;
+  margin-bottom: 93px;
+  height: calc(100vh - 153px);
+  overflow: auto;
+}
+.page .page-title {
+  margin: 20px;
+  width: calc(100% - 40px);
+}
+.page form .page-title {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.page > header {
+  width: 100%;
+  height: 130px;
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+.page > header h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.page > main {
+  flex-direction: column;
+}
+.page footer.fixed {
+  width: 100%;
+  height: 93px;
+  background-color: var(--gray-12);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.page footer.fixed button {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--gray-3);
+  color: var(--gray-0);
+}
+.page footer.fixed button:hover {
+  background-color: var(--green-hover);
+}
+.page footer.fixed button:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page footer.fixed button {
+    min-width: 150px;
+  }
+}
+.page footer.fixed button:hover {
+  background-color: var(--gray-8);
+}
+.page footer.fixed button:active {
+  background-color: var(--gray-9);
+}
+.page footer.fixed button[type=submit] {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+}
+.page footer.fixed button[type=submit]:hover {
+  background-color: var(--green-hover);
+}
+.page footer.fixed button[type=submit]:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page footer.fixed button[type=submit] {
+    min-width: 150px;
+  }
+}
+.page footer.fixed button[type=submit]:hover {
+  background-color: var(--black-hover);
+}
+.page footer.fixed button[type=submit]:active {
+  background-color: var(--black-active);
+}
+
+@media (min-width: 992px) {
+  .page form {
+    max-width: 400px;
+  }
+  .page footer.fixed {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .page footer.fixed button + button {
+    margin-right: 20px;
+  }
+  .page footer.fixed button {
+    order: 1;
+  }
+  .page footer.fixed button:first-child {
+    order: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .page {
+    height: calc(100vh - 193px);
+  }
+  .page > header {
+    justify-content: flex-start;
+    padding-left: 300px;
+    height: 160px;
+  }
+  .page > header h1 {
+    font-size: 32px;
+  }
 }
 
 /*# sourceMappingURL=default.css.map */

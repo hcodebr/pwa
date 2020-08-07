@@ -31,6 +31,8 @@
 :root {
   --white: #FFFFFF;
   --black: #000000;
+  --black-hover: #111111;
+  --black-active: #222222;
   --black-10: #0000001a;
   --black-75: #000000bf;
   --dark-0: #333333;
@@ -48,6 +50,7 @@
   --gray-9: #999999;
   --gray-10: #EEEEEE;
   --gray-11: #444444;
+  --gray-12: #E8E8E8;
   --red: #E32119;
   --red-hover: #E4423B;
   --red-active: #C91D16;
@@ -81,14 +84,6 @@ a:hover {
   color: var(--black);
 }
 
-hr .italy {
-  background-image: url("../images/bg-italy.svg");
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 18px;
-  margin: 0;
-  border: none;
-}
 hr.divider {
   background-color: var(--gray-3);
   height: 1px;
@@ -118,9 +113,156 @@ header.page-title hr {
   margin: 10px 0;
 }
 
+.page {
+  flex-direction: column;
+  margin-bottom: 93px;
+  height: calc(100vh - 153px);
+  overflow: auto;
+}
+.page .page-title {
+  margin: 20px;
+  width: calc(100% - 40px);
+}
+.page form .page-title {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.page > header {
+  width: 100%;
+  height: 130px;
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+.page > header h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.page > main {
+  flex-direction: column;
+}
+.page footer.fixed {
+  width: 100%;
+  height: 93px;
+  background-color: var(--gray-12);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.page footer.fixed button {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--gray-3);
+  color: var(--gray-0);
+}
+.page footer.fixed button:hover {
+  background-color: var(--green-hover);
+}
+.page footer.fixed button:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page footer.fixed button {
+    min-width: 150px;
+  }
+}
+.page footer.fixed button:hover {
+  background-color: var(--gray-8);
+}
+.page footer.fixed button:active {
+  background-color: var(--gray-9);
+}
+.page footer.fixed button[type=submit] {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+}
+.page footer.fixed button[type=submit]:hover {
+  background-color: var(--green-hover);
+}
+.page footer.fixed button[type=submit]:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page footer.fixed button[type=submit] {
+    min-width: 150px;
+  }
+}
+.page footer.fixed button[type=submit]:hover {
+  background-color: var(--black-hover);
+}
+.page footer.fixed button[type=submit]:active {
+  background-color: var(--black-active);
+}
+
+@media (min-width: 992px) {
+  .page form {
+    max-width: 400px;
+  }
+  .page footer.fixed {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .page footer.fixed button + button {
+    margin-right: 20px;
+  }
+  .page footer.fixed button {
+    order: 1;
+  }
+  .page footer.fixed button:first-child {
+    order: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .page {
+    height: calc(100vh - 193px);
+  }
+  .page > header {
+    justify-content: flex-start;
+    padding-left: 300px;
+    height: 160px;
+  }
+  .page > header h1 {
+    font-size: 32px;
+  }
+}
 form {
   flex-direction: column;
-  padding: 15px;
+  padding: 0 20px;
   width: 100%;
 }
 form .fields {
@@ -130,7 +272,7 @@ form .field {
   position: relative;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 form .field label {
   color: var(--gray-3);
@@ -155,6 +297,8 @@ form .field input, form .field textarea {
   z-index: 1;
   top: 0;
   transition: border-color 0.3s ease-in-out;
+  width: 100%;
+  background-color: transparent;
 }
 form .field input:focus, form .field textarea:focus {
   border-color: var(--green);
@@ -168,11 +312,11 @@ form .actions {
   flex-direction: row;
 }
 form button {
-  min-width: 150px;
+  min-width: 130px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 14px;
+  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,14 +336,8 @@ form button:active {
 }
 @media (min-width: 768px) {
   form button {
-    min-width: 200px;
+    min-width: 150px;
   }
-}
-form button:hover {
-  background-color: var(--green-hover);
-}
-form button:active {
-  background-color: var(--green-active);
 }
 
 @media (min-width: 992px) {
@@ -233,10 +371,10 @@ form button:active {
   position: absolute;
   top: 52px;
   background-color: var(--white);
-  height: 12px;
+  height: 18px;
   border: none;
-  border-top: var(--green) 4px solid;
-  border-bottom: var(--red) 4px solid;
+  border-top: var(--green) 6px solid;
+  border-bottom: var(--red) 6px solid;
 }
 #header .menu {
   transition: right 0.5s ease-in-out;
@@ -262,11 +400,11 @@ form button:active {
   display: none;
 }
 #header .menu .btn-register {
-  min-width: 150px;
+  min-width: 130px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 14px;
+  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,14 +426,8 @@ form button:active {
 }
 @media (min-width: 768px) {
   #header .menu .btn-register {
-    min-width: 200px;
+    min-width: 150px;
   }
-}
-#header .menu .btn-register:hover {
-  background-color: var(--green-hover);
-}
-#header .menu .btn-register:active {
-  background-color: var(--green-active);
 }
 #header .menu hr {
   width: 100%;
@@ -376,10 +508,10 @@ form button:active {
 #header .logo {
   position: absolute;
   transition: all 1s ease-in-out;
-  right: calc(50vw - 60px);
+  right: calc(50vw - 36px);
   top: 15px;
   z-index: 5;
-  width: 120px;
+  width: 72px;
 }
 #header .overlay {
   transition: all 0.5s ease-in-out;
@@ -405,6 +537,7 @@ form button:active {
 .open-menu #header .logo {
   left: initial;
   right: 87px;
+  width: 120px;
 }
 
 @media (min-width: 1200px) {
@@ -418,6 +551,7 @@ form button:active {
     right: calc(100vw - 200px);
     top: 17px;
     transition: none;
+    width: 120px;
   }
   #header #btn-open, #header #btn-close {
     display: none;
@@ -451,7 +585,7 @@ form button:active {
     align-items: center;
   }
   #header .menu ul li a {
-    font-size: 14px;
+    font-size: 18px;
     min-width: 100px;
     padding: 10px 0;
     text-align: center;
@@ -732,11 +866,11 @@ form button:active {
   flex-direction: column;
 }
 #service > div a {
-  min-width: 150px;
+  min-width: 130px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 14px;
+  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -757,14 +891,8 @@ form button:active {
 }
 @media (min-width: 768px) {
   #service > div a {
-    min-width: 200px;
+    min-width: 150px;
   }
-}
-#service > div a:hover {
-  background-color: var(--green-hover);
-}
-#service > div a:active {
-  background-color: var(--green-active);
 }
 #service > div .icons {
   flex-direction: column;
@@ -987,168 +1115,6 @@ form button:active {
     padding-top: 100px;
   }
 }
-#profile > nav {
-  display: none;
-}
-#profile main {
-  flex-direction: column;
-  width: 100%;
-  padding: 15px;
-  margin-top: 120px;
-  margin-bottom: 20px;
-  min-height: calc(100vh - 588px);
-}
-#profile main > section {
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 50px;
-}
-#profile main > section header {
-  margin-bottom: 20px;
-}
-#profile main > section form {
-  padding: 0;
-}
-#profile main > section .profile-photo {
-  flex-direction: column;
-  align-items: center;
-}
-#profile main > section .profile-photo .actions {
-  justify-content: center;
-  margin-top: 20px;
-}
-#profile main > section .profile-photo .actions button {
-  width: 256px;
-}
-#profile main > section #photo {
-  width: 256px;
-  height: 256px;
-}
-#profile main > section .schedules {
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-}
-#profile main > section .schedules li {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-#profile main > section .schedules li section {
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-#profile main > section .schedules li section > div {
-  width: 50%;
-  flex-direction: column;
-  font-size: 16px;
-  justify-content: flex-start;
-}
-#profile main > section .schedules li section > div label {
-  color: var(--gray-2);
-  padding: 10px 0;
-}
-#profile main > section .schedules li section > div span {
-  color: var(--dark-0);
-  padding: 10px 0;
-}
-#profile main > section .schedules button {
-  min-width: 150px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  outline: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-#profile main > section .schedules button.cancel {
-  background-color: var(--red);
-  color: var(--white);
-}
-#profile main > section .schedules button:hover {
-  background-color: var(--red-hover);
-}
-#profile main > section .schedules button:active {
-  background-color: var(--red-active);
-}
-
-@media (min-width: 1200px) {
-  #profile > nav {
-    display: flex;
-    margin-top: 120px;
-    min-width: 300px;
-    padding: 0 15px;
-    border-right: var(--gray-3) 1px solid;
-  }
-  #profile > nav ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    flex-direction: column;
-  }
-  #profile > nav ul .active a {
-    color: var(--green);
-  }
-  #profile > nav ul a {
-    font-size: 25px;
-    text-decoration: none;
-    display: flex;
-    padding: 15px 0;
-    width: 100%;
-    color: var(--gray-0);
-  }
-  #profile > nav ul a:hover {
-    font-weight: bold;
-  }
-  #profile > nav ul a:active {
-    color: var(--green);
-  }
-  #profile main {
-    flex-direction: row;
-    min-height: calc(100vh - 465px);
-  }
-  #profile main > section {
-    margin: 15px;
-  }
-  #profile main > section .schedules li {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  #profile main > section .schedules li section {
-    flex-wrap: nowrap;
-    border-bottom: var(--gray-10) 1px solid;
-  }
-  #profile main > section .schedules li section > div {
-    flex: 1;
-    width: initial;
-  }
-  #profile main > section .schedules li section > div label {
-    display: none;
-  }
-  #profile main > section .schedules li section > div.service {
-    flex: 2;
-  }
-  #profile main > section .schedules li:first-child section > div span {
-    border-top: var(--gray-10) 1px solid;
-  }
-  #profile main > section .schedules li:first-child section > div label {
-    display: flex;
-  }
-  #profile main > section .schedules button {
-    min-width: 100px;
-    font-size: 11px;
-    height: 31px;
-    margin: 6px 0;
-  }
-  #profile main form {
-    max-width: 400px;
-  }
-}
 .calendar {
   flex-direction: column;
   padding: 0 15px;
@@ -1256,6 +1222,14 @@ form button:active {
   .schedules ul li {
     width: calc(25% - 10px);
   }
+}
+#change-photo form {
+  align-items: center;
+  display: flex;
+}
+#change-photo form .choose-photo {
+  margin-top: 20px;
+  width: 256px;
 }
 
 /*# sourceMappingURL=style.css.map */

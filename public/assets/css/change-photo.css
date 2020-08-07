@@ -1,0 +1,10 @@
+#change-photo form {
+  align-items: center;
+  display: flex;
+}
+#change-photo form .choose-photo {
+  margin-top: 20px;
+  width: 256px;
+}
+
+/*# sourceMappingURL=change-photo.css.map */

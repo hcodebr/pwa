@@ -14,9 +14,11 @@ const closeMenu = document.querySelectorAll('[data-close="menu"]')
 const btnFooter = document.querySelector('#footer button')
 const menuLinks = document.querySelectorAll('.menu a')
 
-btnFooter.addEventListener('click', e => {
-    window.scrollTo(0, 0)
-})
+if (btnFooter) {
+    btnFooter.addEventListener('click', e => {
+        window.scrollTo(0, 0)
+    })
+}
 
 btnOpen.addEventListener('click', e => {
     body.classList.add('open-menu')

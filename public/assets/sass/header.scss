@@ -11,10 +11,10 @@
         position: absolute;
         top: 52px;
         background-color: var(--white);
-        height: 12px;
+        height: 18px;
         border: none;
-        border-top: var(--green) 4px solid;
-        border-bottom: var(--red) 4px solid;
+        border-top: var(--green) 6px solid;
+        border-bottom: var(--red) 6px solid;
     }
     .menu {
         transition: right .5s ease-in-out;
@@ -45,7 +45,7 @@
             }
         }
         .btn-register {
-            @include button-green;
+            @include button;
             margin: 20px;
             width: calc(300px - 40px);
         }
@@ -129,10 +129,10 @@
     .logo {
         position: absolute;
         transition: all 1s ease-in-out;
-        right: calc(50vw - 60px);
+        right: calc(50vw - 36px);
         top: 15px;
         z-index: 5;
-        width: 120px;
+        width: 72px;
     }
     .overlay {
         transition: all .5s ease-in-out;
@@ -159,6 +159,7 @@
         .logo {
             left: initial;
             right: 87px;
+            width: 120px;
         }
     }
 }
@@ -173,6 +174,7 @@
             right: calc(100vw - 200px);
             top: 17px;
             transition: none;
+            width: 120px;
         }
         #btn-open, #btn-close {
             display: none;
@@ -205,7 +207,7 @@
                 align-items: center;
                 li {
                     a {
-                        font-size: 14px;
+                        font-size: 18px;
                         min-width: 100px;
                         padding: 10px 0;
                         text-align: center;
