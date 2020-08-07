@@ -69,7 +69,7 @@ header.page-title hr {
 }
 .page > header {
   width: 100%;
-  height: 130px;
+  min-height: 130px;
   background-color: var(--black);
   color: var(--white);
   font-weight: bold;
@@ -95,12 +95,12 @@ header.page-title hr {
   align-items: center;
   padding: 20px;
 }
-.page footer.fixed button {
+.page footer.fixed button, .page footer.fixed a {
   min-width: 130px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 16px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,33 +110,34 @@ header.page-title hr {
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 0 20px;
   cursor: pointer;
   background-color: var(--gray-3);
   color: var(--gray-0);
 }
-.page footer.fixed button:hover {
+.page footer.fixed button:hover, .page footer.fixed a:hover {
   background-color: var(--green-hover);
 }
-.page footer.fixed button:active {
+.page footer.fixed button:active, .page footer.fixed a:active {
   background-color: var(--green-active);
 }
 @media (min-width: 768px) {
-  .page footer.fixed button {
+  .page footer.fixed button, .page footer.fixed a {
     min-width: 150px;
   }
 }
-.page footer.fixed button:hover {
+.page footer.fixed button:hover, .page footer.fixed a:hover {
   background-color: var(--gray-8);
 }
-.page footer.fixed button:active {
+.page footer.fixed button:active, .page footer.fixed a:active {
   background-color: var(--gray-9);
 }
-.page footer.fixed button[type=submit] {
+.page footer.fixed button[type=submit], .page footer.fixed a.black {
   min-width: 130px;
   background-color: var(--green);
   color: var(--white);
   border: none;
-  padding: 16px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,25 +147,26 @@ header.page-title hr {
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 0 20px;
   cursor: pointer;
   background-color: var(--black);
   color: var(--white);
 }
-.page footer.fixed button[type=submit]:hover {
+.page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
   background-color: var(--green-hover);
 }
-.page footer.fixed button[type=submit]:active {
+.page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
   background-color: var(--green-active);
 }
 @media (min-width: 768px) {
-  .page footer.fixed button[type=submit] {
+  .page footer.fixed button[type=submit], .page footer.fixed a.black {
     min-width: 150px;
   }
 }
-.page footer.fixed button[type=submit]:hover {
+.page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
   background-color: var(--black-hover);
 }
-.page footer.fixed button[type=submit]:active {
+.page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
   background-color: var(--black-active);
 }
 
@@ -176,13 +178,13 @@ header.page-title hr {
     justify-content: flex-start;
     flex-direction: row;
   }
-  .page footer.fixed button + button {
+  .page footer.fixed button + button, .page footer.fixed a + a, .page footer.fixed a + button, .page footer.fixed button + a {
     margin-right: 20px;
   }
-  .page footer.fixed button {
+  .page footer.fixed button, .page footer.fixed a {
     order: 1;
   }
-  .page footer.fixed button:first-child {
+  .page footer.fixed button:first-child, .page footer.fixed a:first-child {
     order: 2;
   }
 }
@@ -193,7 +195,7 @@ header.page-title hr {
   .page > header {
     justify-content: flex-start;
     padding-left: 300px;
-    height: 160px;
+    min-height: 160px;
   }
   .page > header h1 {
     font-size: 32px;

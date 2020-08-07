@@ -2,6 +2,10 @@
     form {
         align-items: center;
         display: flex;
+        img {
+            width: 256px;
+            height: 256px;
+        }
         .choose-photo {
             margin-top: 20px;
             width: 256px;

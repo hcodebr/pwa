@@ -1,0 +1,83 @@
+#schedules {
+    padding-bottom: 20px;
+    footer.fixed {
+        justify-content: center;
+    }
+    ul {
+        margin: 0;
+        padding: 0 20px;
+        flex-direction: column;
+        li {
+            flex-direction: column;
+            > section {
+                flex-wrap: wrap;
+                > div {
+                    width: 50%;
+                    flex-direction: column;
+                    label, span {
+                        font-size: 16px;
+                        margin: 10px 0;
+                    }
+                    label {
+                        color: var(--gray-2);
+                    }
+                    span {
+                        color: var(--dark-0);
+                    }
+                }
+            }
+            button {
+                @include button-red;
+                max-width: 150px;
+                align-self: center;
+            }
+        }
+        li + li {
+            border-top: var(--gray-10) 1px solid;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #schedules {
+        footer.fixed {
+            justify-content: flex-start;
+        }
+        ul {
+            li {
+                flex-direction: row;
+                justify-content: space-between;
+                width: fit-content;
+                > section {
+                    flex-wrap: nowrap;
+                    flex: 1;
+                    max-width: 1000px;
+                    > div {
+                        width: initial;
+                        min-width: 200px;
+                        label {
+                            display: none;
+                        }
+                        &.service {
+                            flex: 1;
+                        }
+                    }
+                }
+                button {
+                    align-self: flex-end;
+                }
+                &:first-child {
+                    > section {
+                        > div {
+                            label {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
