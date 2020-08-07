@@ -169,6 +169,78 @@ header.page-title hr {
 .page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
   background-color: var(--black-active);
 }
+.page.blue > header {
+  background-color: var(--blue);
+}
+.page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background-color: var(--blue);
+  color: var(--white);
+}
+.page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
+  background-color: var(--green-hover);
+}
+.page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
+    min-width: 150px;
+  }
+}
+.page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
+  background-color: var(--blue-hover);
+}
+.page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
+  background-color: var(--blue-active);
+}
+.page.green > header {
+  background-color: var(--green);
+}
+.page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
+  min-width: 130px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
+  background-color: var(--green-hover);
+}
+.page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
+  background-color: var(--green-active);
+}
+@media (min-width: 768px) {
+  .page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
+    min-width: 150px;
+  }
+}
 
 @media (min-width: 992px) {
   .page form {
