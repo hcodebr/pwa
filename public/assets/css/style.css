@@ -227,6 +227,17 @@ form button:active {
   position: relative;
   z-index: 3;
 }
+#header .italy {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 52px;
+  background-color: var(--white);
+  height: 12px;
+  border: none;
+  border-top: var(--green) 4px solid;
+  border-bottom: var(--red) 4px solid;
+}
 #header .menu {
   transition: right 0.5s ease-in-out;
   width: 300px;
@@ -399,6 +410,9 @@ form button:active {
 @media (min-width: 1200px) {
   #header {
     height: 100px;
+  }
+  #header .italy {
+    top: 92px;
   }
   #header .logo {
     right: calc(100vw - 200px);

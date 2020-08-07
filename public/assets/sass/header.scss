@@ -5,6 +5,17 @@
     background-color: var(--gray-5);
     position: relative;
     z-index: 3;
+    .italy {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 52px;
+        background-color: var(--white);
+        height: 12px;
+        border: none;
+        border-top: var(--green) 4px solid;
+        border-bottom: var(--red) 4px solid;
+    }
     .menu {
         transition: right .5s ease-in-out;
         width: 300px;
@@ -155,6 +166,9 @@
 @media (min-width: 1200px) {
     #header {
         height: 100px;
+        .italy {
+            top: 92px;
+        }
         .logo {
             right: calc(100vw - 200px);
             top: 17px;
