@@ -22,7 +22,7 @@
     > div {
         flex-direction: column;
         a {
-            @include button;
+            @include button-green;
             margin: 0 20px;
         }
         .icons {

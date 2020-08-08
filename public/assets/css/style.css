@@ -118,7 +118,7 @@ header.page-title hr {
 
 .page {
   flex-direction: column;
-  margin-bottom: 93px;
+  margin-bottom: 80px;
   height: calc(100vh - 153px);
   overflow: auto;
 }
@@ -150,7 +150,7 @@ header.page-title hr {
 }
 .page footer.fixed {
   width: 100%;
-  height: 93px;
+  height: 80px;
   background-color: var(--gray-12);
   position: fixed;
   bottom: 0;
@@ -161,8 +161,6 @@ header.page-title hr {
 }
 .page footer.fixed button, .page footer.fixed a {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -176,14 +174,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--gray-3);
   color: var(--gray-0);
 }
 .page footer.fixed button:hover, .page footer.fixed a:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page footer.fixed button:active, .page footer.fixed a:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page footer.fixed button, .page footer.fixed a {
@@ -198,8 +197,6 @@ header.page-title hr {
 }
 .page footer.fixed button[type=submit], .page footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -213,14 +210,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--black);
   color: var(--white);
 }
 .page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page footer.fixed button[type=submit], .page footer.fixed a.black {
@@ -238,8 +236,6 @@ header.page-title hr {
 }
 .page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -253,14 +249,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--blue);
   color: var(--white);
 }
 .page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
@@ -278,8 +275,6 @@ header.page-title hr {
 }
 .page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -293,12 +288,13 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
 }
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
@@ -326,7 +322,7 @@ header.page-title hr {
 }
 @media (min-width: 1200px) {
   .page {
-    height: calc(100vh - 193px);
+    height: calc(100vh - 180px);
   }
   .page > header {
     justify-content: flex-start;
@@ -390,8 +386,6 @@ form .actions {
 }
 form button {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -405,17 +399,26 @@ form button {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
+  background-color: var(--green);
+  color: var(--white);
+}
+form button:hover {
+  background-color: #00000010;
+}
+form button:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  form button {
+    min-width: 150px;
+  }
 }
 form button:hover {
   background-color: var(--green-hover);
 }
 form button:active {
   background-color: var(--green-active);
-}
-@media (min-width: 768px) {
-  form button {
-    min-width: 150px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -479,8 +482,6 @@ form button:active {
 }
 #header .menu .btn-register {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -494,19 +495,28 @@ form button:active {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
+  background-color: var(--green);
+  color: var(--white);
   margin: 20px;
   width: calc(300px - 40px);
+}
+#header .menu .btn-register:hover {
+  background-color: #00000010;
+}
+#header .menu .btn-register:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #header .menu .btn-register {
+    min-width: 150px;
+  }
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
 }
 #header .menu .btn-register:active {
   background-color: var(--green-active);
-}
-@media (min-width: 768px) {
-  #header .menu .btn-register {
-    min-width: 150px;
-  }
 }
 #header .menu hr {
   width: 100%;
@@ -843,17 +853,39 @@ form button:active {
   line-height: 1.25em;
 }
 #home header a {
-  border: var(--white) 2px solid;
-  border-radius: 8px;
-  padding: 10px 32px;
-  color: var(--white);
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  border: var(--white) 2px solid;
+  border-radius: 8px;
+  color: var(--white);
+}
+#home header a:hover {
+  background-color: #00000010;
+}
+#home header a:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #home header a {
+    min-width: 150px;
+  }
 }
 #home header a:hover {
   background-color: var(--white);
   color: var(--black);
-  cursor: pointer;
 }
 #home .gallery {
   min-width: 320px;
@@ -946,8 +978,6 @@ form button:active {
 }
 #service > div a {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -961,18 +991,27 @@ form button:active {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
+  background-color: var(--green);
+  color: var(--white);
   margin: 0 20px;
+}
+#service > div a:hover {
+  background-color: #00000010;
+}
+#service > div a:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #service > div a {
+    min-width: 150px;
+  }
 }
 #service > div a:hover {
   background-color: var(--green-hover);
 }
 #service > div a:active {
   background-color: var(--green-active);
-}
-@media (min-width: 768px) {
-  #service > div a {
-    min-width: 150px;
-  }
 }
 #service > div .icons {
   flex-direction: column;
@@ -1196,114 +1235,6 @@ form button:active {
     padding-top: 100px;
   }
 }
-.calendar {
-  flex-direction: column;
-  padding: 0 15px;
-}
-.calendar .month {
-  font-size: 6vw;
-  font-weight: 600;
-  color: var(--gray-2);
-  justify-content: center;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-.calendar .weekdays {
-  font-size: 2vw;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--gray-2);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 0;
-  padding: 0;
-}
-.calendar .weekdays li {
-  justify-content: center;
-  padding: 8px 0;
-}
-.calendar .days {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 12vw 12vw 12vw 12vw 12vw;
-  grid-gap: 10px;
-  font-size: 4vw;
-  color: var(--gray-11);
-  margin: 0;
-  padding: 0;
-}
-.calendar .days li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-.calendar .days li:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.calendar .days .month-prev, .calendar .days .month-next {
-  color: var(--gray-2);
-}
-.calendar .days .active {
-  background-color: var(--green);
-  color: var(--white);
-}
-.calendar .days .active:hover {
-  background-color: var(--green-hover);
-}
-
-.schedules {
-  flex-direction: column;
-  padding: 0 15px;
-}
-.schedules h3 {
-  font-size: 16px;
-  color: var(--gray-2);
-  text-transform: uppercase;
-  text-align: center;
-}
-.schedules ul {
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.schedules ul li {
-  width: calc(50% - 10px);
-  background-color: var(--gray-10);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--dark-0);
-  height: 70px;
-  font-size: 32px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.schedules ul li.active {
-  background-color: var(--green);
-  color: var(--white);
-}
-.schedules ul li.active:hover {
-  background-color: var(--green-hover);
-}
-.schedules ul li:hover {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 992px) {
-  .calendar .days {
-    grid-template-rows: 13.8vw 13.8vw 13.8vw 13.8vw 13.8vw;
-  }
-
-  .schedules ul li {
-    width: calc(25% - 10px);
-  }
-}
 #error .desktop {
   display: none;
 }
@@ -1412,8 +1343,6 @@ form button:active {
 }
 #schedules ul li button {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -1427,16 +1356,17 @@ form button:active {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--red);
   color: var(--white);
   max-width: 150px;
   align-self: center;
 }
 #schedules ul li button:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 #schedules ul li button:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   #schedules ul li button {
@@ -1485,6 +1415,255 @@ form button:active {
   #schedules ul li:first-child > section > div label {
     display: flex;
   }
+}
+.calendar {
+  flex-direction: column;
+  padding: 0 20px;
+}
+.calendar .month {
+  color: var(--gray-2);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.calendar .month h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+.calendar .month button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  border: var(--gray-2) 2px solid;
+  border-radius: 8px;
+  color: var(--gray-2);
+}
+.calendar .month button:hover {
+  background-color: #00000010;
+}
+.calendar .month button:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  .calendar .month button {
+    min-width: 150px;
+  }
+}
+.calendar .month nav button {
+  min-width: 50px;
+}
+.calendar .month nav button + button {
+  margin-left: 10px;
+}
+.calendar .month .btn-today {
+  display: none;
+}
+.calendar .weekdays {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--gray-0);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+.calendar .weekdays li {
+  justify-content: center;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+.calendar .days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 12vw 12vw 12vw 12vw 12vw;
+  grid-gap: 10px;
+  color: var(--gray-11);
+  margin: 0;
+  padding: 0;
+}
+.calendar .days li {
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.calendar .days li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.calendar .days .month-prev, .calendar .days .month-next {
+  color: var(--gray-2);
+}
+.calendar .days .active {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.calendar .days .active:hover {
+  background-color: var(--blue-hover);
+}
+.calendar .days .active:active {
+  background-color: var(--blue-active);
+}
+
+@media (min-width: 992px) {
+  .calendar {
+    max-width: 992px;
+  }
+  .calendar .month {
+    margin: 30px 0;
+  }
+  .calendar .month h2 {
+    font-size: 44px;
+  }
+  .calendar .month .btn-today {
+    display: flex;
+  }
+  .calendar .weekdays li {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .calendar .days {
+    grid-template-rows: 128px 128px 128px 128px 128px 128px;
+  }
+  .calendar .days li {
+    font-size: 38px;
+  }
+}
+#time-options h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+#time-options .options {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#time-options .options label {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+#time-options .options label span {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  width: 100%;
+  background-color: var(--gray-10);
+  color: --dark-0;
+}
+#time-options .options label span:hover {
+  background-color: #00000010;
+}
+#time-options .options label span:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #time-options .options label span {
+    min-width: 150px;
+  }
+}
+#time-options .options label input {
+  display: none;
+}
+#time-options .options label input:checked + span {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+@media (min-width: 992px) {
+  #time-options.page form {
+    min-width: 900px;
+  }
+  #time-options .options {
+    justify-content: flex-start;
+  }
+  #time-options .options label {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+  }
+  #time-options h3 {
+    font-size: 22px;
+  }
+}
+#schedules-services .options {
+  margin-top: 20px;
+  flex-direction: column;
+}
+#schedules-services .options label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20PX;
+}
+#schedules-services .options label .square {
+  width: 24px;
+  height: 24px;
+  border: var(--gray-10) 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+#schedules-services .options label .square > div {
+  width: 14px;
+  height: 14px;
+  background-color: var(--gray);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#schedules-services .options label:hover .square {
+  border: var(--gray-8) 2px solid;
+}
+#schedules-services .options label:hover .square > div {
+  opacity: 0.2;
+}
+#schedules-services .options label input {
+  display: none;
+}
+#schedules-services .options label input:checked + .square > div {
+  opacity: 1;
+  background-color: var(--blue);
+}
+#schedules-services .options label .content {
+  flex-direction: column;
+  padding-left: 10px;
+  font-size: 16px;
+  color: var(--dark-0);
+  line-height: 24px;
+}
+#schedules-services .options label .content .description {
+  font-size: 14px;
+  color: var(--gray-2);
+}
+#schedules-services .options label .content .price {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

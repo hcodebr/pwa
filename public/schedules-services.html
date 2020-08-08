@@ -88,77 +88,59 @@
         <hr class="italy" />
 
     </header>
-    <section class="page blue">
+    <section id="schedules-services" class="page blue">
 
         <header>
-            <h1>Escolha a Data</h1>
+            <h1>Escolha os Serviços</h1>
         </header>
 
         <main>
 
-            <div class="calendar">
-                <div class="month">
-                    <button type="button" class="btn-today">Hoje</button>
-                    <h2>Junho 2020</h2>
-                    <nav>
-                        <button type="button" class="btn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="7.41" height="12" viewBox="0 0 7.41 12"><path d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" transform="translate(16 18) rotate(180)" fill="#9a9a99"/></svg></button>
-                        <button type="button" class="btn-next"><svg xmlns="http://www.w3.org/2000/svg" width="7.41" height="12" viewBox="0 0 7.41 12"><path d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" transform="translate(-8.59 -6)" fill="#9a9a99"/></svg></button>
-                    </nav>
-                </div>
-                <ul class="weekdays">
-                    <li>Dom</li>
-                    <li>Seg</li>
-                    <li>Ter</li>
-                    <li>Qua</li>
-                    <li>Qui</li>
-                    <li>Sex</li>
-                    <li>Sáb</li>
-                </ul>
-                <ul class="days">
-                    
-                    <li class="month-prev">28</li>
-                    <li class="month-prev">29</li>
-                    <li class="month-prev">30</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li class="active">23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                    <li class="month-next">1</li>
-                </ul>
-            </div>
+            <form action="schedules-payment.html">
 
-            <form action="schedules-time-options.html">
+                <div class="options">
+
+                    <label>
+                        <input type="checkbox" name="service" value="1" />
+                        <div class="square">
+                            <div></div>
+                        </div>
+                        <div class="content">
+                            <span class="name">Revisão</span>
+                            <span class="description">Verificação mínima necessária.</span>
+                            <span class="price">R$ 100,00</span>
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="service" value="2" />
+                        <div class="square">
+                            <div></div>
+                        </div>
+                        <div class="content">
+                            <span class="name">Alinhamento</span>
+                            <span class="description">Alinhamento e balanceamento.</span>
+                            <span class="price">R$ 400,00</span>
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="service" value="3" />
+                        <div class="square">
+                            <div></div>
+                        </div>
+                        <div class="content">
+                            <span class="name">Filtros</span>
+                            <span class="description">Troca do filtro de ar e combustível.</span>
+                            <span class="price">R$ 200,00</span>
+                        </div>
+                    </label>
+
+                </div>
 
                 <footer class="fixed">
         
-                    <a href="index.html#service">Voltar</a>
+                    <a href="schedules-time-options.html">Voltar</a>
                     <button type="submit">Continuar</button>
         
                 </footer>

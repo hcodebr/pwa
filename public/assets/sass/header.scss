@@ -45,7 +45,7 @@
             }
         }
         .btn-register {
-            @include button;
+            @include button-green;
             margin: 20px;
             width: calc(300px - 40px);
         }

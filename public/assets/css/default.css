@@ -54,7 +54,7 @@ header.page-title hr {
 
 .page {
   flex-direction: column;
-  margin-bottom: 93px;
+  margin-bottom: 80px;
   height: calc(100vh - 153px);
   overflow: auto;
 }
@@ -86,7 +86,7 @@ header.page-title hr {
 }
 .page footer.fixed {
   width: 100%;
-  height: 93px;
+  height: 80px;
   background-color: var(--gray-12);
   position: fixed;
   bottom: 0;
@@ -97,8 +97,6 @@ header.page-title hr {
 }
 .page footer.fixed button, .page footer.fixed a {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -112,14 +110,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--gray-3);
   color: var(--gray-0);
 }
 .page footer.fixed button:hover, .page footer.fixed a:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page footer.fixed button:active, .page footer.fixed a:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page footer.fixed button, .page footer.fixed a {
@@ -134,8 +133,6 @@ header.page-title hr {
 }
 .page footer.fixed button[type=submit], .page footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -149,14 +146,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--black);
   color: var(--white);
 }
 .page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page footer.fixed button[type=submit], .page footer.fixed a.black {
@@ -174,8 +172,6 @@ header.page-title hr {
 }
 .page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -189,14 +185,15 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
   background-color: var(--blue);
   color: var(--white);
 }
 .page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
@@ -214,8 +211,6 @@ header.page-title hr {
 }
 .page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
   min-width: 130px;
-  background-color: var(--green);
-  color: var(--white);
   border: none;
   height: 50px;
   display: flex;
@@ -229,12 +224,13 @@ header.page-title hr {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
+  background: transparent;
 }
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
-  background-color: var(--green-hover);
+  background-color: #00000010;
 }
 .page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
-  background-color: var(--green-active);
+  background-color: #00000020;
 }
 @media (min-width: 768px) {
   .page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
@@ -262,7 +258,7 @@ header.page-title hr {
 }
 @media (min-width: 1200px) {
   .page {
-    height: calc(100vh - 193px);
+    height: calc(100vh - 180px);
   }
   .page > header {
     justify-content: flex-start;

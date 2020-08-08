@@ -29,16 +29,13 @@
             line-height: 1.25em;
         }
         a {
+            @include button;
             border: var(--white) 2px solid;
             border-radius: 8px;
-            padding: 10px 32px;
             color: var(--white);
-            text-transform: uppercase;
-            text-decoration: none;
             &:hover {
                 background-color: var(--white);
                 color: var(--black);
-                cursor: pointer;
             }
         }
     }

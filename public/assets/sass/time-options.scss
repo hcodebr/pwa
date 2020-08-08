@@ -1,0 +1,50 @@
+#time-options {
+    h3 {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .options {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        label {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            span {
+                @include button;
+                display: flex;
+                width: 100%;
+                background-color: var(--gray-10);
+                color: --dark-0;
+            }
+            input {
+                display: none;
+                &:checked + span {
+                    background-color: var(--blue);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #time-options {
+        &.page {
+            form {
+                min-width: 900px;
+            }
+        }
+        .options {
+            justify-content: flex-start;
+            label {
+                width: calc(25% - 20px);
+                margin-right: 20px;
+            }
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+}

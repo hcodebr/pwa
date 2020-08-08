@@ -49,7 +49,7 @@ form {
         flex-direction: row;
     }
     button {
-        @include button;
+        @include button-green;
     }
 }
 

@@ -1,7 +1,7 @@
 /* Error: Undefined mixin.
  *    ,
- * 48 |             @include button;
- *    |             ^^^^^^^^^^^^^^^
+ * 48 |             @include button-green;
+ *    |             ^^^^^^^^^^^^^^^^^^^^^
  *    '
  *   public\assets\sass\header.scss 48:13  root stylesheet */
 
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 48 \2502              @include button;\d\a    \2502              ^^^^^^^^^^^^^^^\a    \2575 \a   public\\assets\\sass\\header.scss 48:13  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 48 \2502              @include button-green;\d\a    \2502              ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   public\\assets\\sass\\header.scss 48:13  root stylesheet";
 }
