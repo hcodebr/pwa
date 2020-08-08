@@ -1,53 +1,17 @@
-#schedules-services .options {
-  margin-top: 20px;
-  flex-direction: column;
-}
-#schedules-services .options label {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20PX;
-}
-#schedules-services .options label .square {
-  width: 24px;
-  height: 24px;
-  border: var(--gray-10) 2px solid;
-  justify-content: center;
-  align-items: center;
-}
-#schedules-services .options label .square > div {
-  width: 14px;
-  height: 14px;
-  background-color: var(--gray);
-  opacity: 0;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-#schedules-services .options label:hover .square {
-  border: var(--gray-8) 2px solid;
-}
-#schedules-services .options label:hover .square > div {
-  opacity: 0.2;
-}
-#schedules-services .options label input {
-  display: none;
-}
-#schedules-services .options label input:checked + .square > div {
-  opacity: 1;
-  background-color: var(--blue);
-}
-#schedules-services .options label .content {
-  flex-direction: column;
-  padding-left: 10px;
-  font-size: 16px;
-  color: var(--dark-0);
-  line-height: 24px;
-}
-#schedules-services .options label .content .description {
-  font-size: 14px;
-  color: var(--gray-2);
-}
-#schedules-services .options label .content .price {
-  font-weight: bold;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 97 |                 @include button;
+ *    |                 ^^^^^^^^^^^^^^^
+ *    '
+ *   public\assets\sass\schedules-services.scss 97:17  root stylesheet */
 
-/*# sourceMappingURL=schedules-services.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 97 \2502                  @include button;\d\a    \2502                  ^^^^^^^^^^^^^^^\a    \2575 \a   public\\assets\\sass\\schedules-services.scss 97:17  root stylesheet";
+}

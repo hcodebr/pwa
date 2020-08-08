@@ -54,4 +54,49 @@
             }
         }
     }
+    aside {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 78px;
+        height: calc(100vh - 158px);
+        background-color: var(--gray-12);
+        border-bottom: var(--gray-3) 1px solid;
+        flex-direction: column;
+        header {
+            font-size: 32px;
+            color: var(--dark-0);
+            height: 130px;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            flex: 1;
+            padding: 20px;
+            table {
+                width: 100%;
+                .price {
+                    text-align: right;
+                }
+            }
+        }
+        footer {
+            height: 50px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 18px;
+            color: var(--dark-0);
+            .total {
+                font-weight: bold;
+                margin-left: 20px;
+                text-align: right;
+            }
+            button {
+                @include button;
+                min-width: 50px;
+            }
+        }
+    }
 }

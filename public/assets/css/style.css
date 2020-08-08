@@ -1665,5 +1665,75 @@ form button:active {
 #schedules-services .options label .content .price {
   font-weight: bold;
 }
+#schedules-services aside {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 78px;
+  height: calc(100vh - 158px);
+  background-color: var(--gray-12);
+  border-bottom: var(--gray-3) 1px solid;
+  flex-direction: column;
+}
+#schedules-services aside header {
+  font-size: 32px;
+  color: var(--dark-0);
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+}
+#schedules-services aside section {
+  flex: 1;
+  padding: 20px;
+}
+#schedules-services aside section table {
+  width: 100%;
+}
+#schedules-services aside section table .price {
+  text-align: right;
+}
+#schedules-services aside footer {
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  color: var(--dark-0);
+}
+#schedules-services aside footer .total {
+  font-weight: bold;
+  margin-left: 20px;
+  text-align: right;
+}
+#schedules-services aside footer button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  min-width: 50px;
+}
+#schedules-services aside footer button:hover {
+  background-color: #00000010;
+}
+#schedules-services aside footer button:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #schedules-services aside footer button {
+    min-width: 150px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
