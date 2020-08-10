@@ -122,6 +122,9 @@ header.page-title hr {
   height: calc(100vh - 153px);
   overflow: auto;
 }
+.page.page-summary {
+  height: calc(100vh - 191px);
+}
 .page .page-title {
   margin: 20px;
   width: calc(100% - 40px);
@@ -1669,11 +1672,12 @@ form button:active {
   width: 100%;
   position: absolute;
   right: 0;
-  top: 78px;
-  height: calc(100vh - 158px);
+  bottom: 80px;
+  height: 50px;
   background-color: var(--gray-12);
   border-bottom: var(--gray-3) 1px solid;
   flex-direction: column;
+  transition: all 0.2s ease-in-out;
 }
 #schedules-services aside header {
   font-size: 32px;
@@ -1681,16 +1685,26 @@ form button:active {
   height: 130px;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 #schedules-services aside section {
+  padding: 0 20px;
+  display: none;
   flex: 1;
-  padding: 20px;
+  max-height: calc(100vh - 339px);
+  overflow: auto;
 }
 #schedules-services aside section table {
+  border-collapse: collapse;
   width: 100%;
+  border-bottom: var(--gray-3) 1px solid;
 }
 #schedules-services aside section table .price {
   text-align: right;
+}
+#schedules-services aside section table td {
+  padding: 20px 0;
+  border-top: var(--gray-3) 1px solid;
 }
 #schedules-services aside footer {
   height: 50px;
@@ -1723,6 +1737,7 @@ form button:active {
   cursor: pointer;
   background: transparent;
   min-width: 50px;
+  width: 50px;
 }
 #schedules-services aside footer button:hover {
   background-color: #00000010;
@@ -1733,6 +1748,51 @@ form button:active {
 @media (min-width: 768px) {
   #schedules-services aside footer button {
     min-width: 150px;
+  }
+}
+#schedules-services aside footer button svg {
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+#schedules-services aside.open {
+  height: calc(100vh - 158px);
+}
+#schedules-services aside.open header, #schedules-services aside.open section {
+  display: flex;
+}
+#schedules-services aside.open footer button svg {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+  #schedules-services > header, #schedules-services > main {
+    width: calc(100% - 358px);
+  }
+  #schedules-services aside, #schedules-services aside.open {
+    width: 375px;
+    height: calc(100vh - 118px);
+    bottom: 0;
+  }
+  #schedules-services aside header, #schedules-services aside section, #schedules-services aside.open header, #schedules-services aside.open section {
+    display: flex;
+  }
+  #schedules-services aside header, #schedules-services aside.open header {
+    height: 160px;
+  }
+  #schedules-services aside footer, #schedules-services aside.open footer {
+    height: 80px;
+  }
+  #schedules-services aside footer > div, #schedules-services aside.open footer > div {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+  }
+  #schedules-services aside footer > div .total, #schedules-services aside.open footer > div .total {
+    font-size: 29px;
+  }
+  #schedules-services aside footer button, #schedules-services aside.open footer button {
+    display: none;
   }
 }
 

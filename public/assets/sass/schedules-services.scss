@@ -58,25 +58,36 @@
         width: 100%;
         position: absolute;
         right: 0;
-        top: 78px;
-        height: calc(100vh - 158px);
+        bottom: 80px;
+        height: 50px;
         background-color: var(--gray-12);
         border-bottom: var(--gray-3) 1px solid;
         flex-direction: column;
+        transition: all .2s ease-in-out;
         header {
             font-size: 32px;
             color: var(--dark-0);
             height: 130px;
             justify-content: center;
             align-items: center;
+            display: none;
         }
         section {
+            padding: 0 20px;
+            display: none;
             flex: 1;
-            padding: 20px;
+            max-height: calc(100vh - 339px);
+            overflow: auto;
             table {
+                border-collapse: collapse;
                 width: 100%;
+                border-bottom: var(--gray-3) 1px solid;
                 .price {
                     text-align: right;
+                }
+                td {
+                    padding: 20px 0;
+                    border-top: var(--gray-3) 1px solid;
                 }
             }
         }
@@ -96,7 +107,59 @@
             button {
                 @include button;
                 min-width: 50px;
+                width: 50px;
+                svg {
+                    transform: rotate(0deg);
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+        &.open {
+            height: calc(100vh - 158px);
+            header, section {
+                display: flex;
+            }
+            footer {
+                button {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
     }
+}
+
+@media (min-width: 1200px) {
+    #schedules-services {
+        > header, > main {
+            width: calc(100% - 358px);
+        }
+        aside, aside.open {
+            width: 375px;
+            height: calc(100vh - 118px);
+            bottom: 0;
+            header, section {
+                display: flex;
+            }
+            header {
+                height: 160px;
+            }
+            footer {
+                height: 80px;
+                > div {
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 22px;
+                    .total {
+                        font-size: 29px;
+                    }
+                }
+                button {
+                    display: none;
+                }
+            }
+        }
+    }   
 }

@@ -13,6 +13,13 @@ const btnOpen = document.getElementById('btn-open')
 const closeMenu = document.querySelectorAll('[data-close="menu"]')
 const btnFooter = document.querySelector('#footer button')
 const menuLinks = document.querySelectorAll('.menu a')
+const btnSummaryToggle = document.getElementById('btn-summary-toggle')
+
+if (btnSummaryToggle) {
+    btnSummaryToggle.addEventListener('click', e => {
+        btnSummaryToggle.closest('aside').classList.toggle('open')
+    })
+}
 
 if (btnFooter) {
     btnFooter.addEventListener('click', e => {
