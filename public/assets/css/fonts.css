@@ -28,5 +28,17 @@
   font-weight: 800;
   src: url("../fonts/OpenSans-ExtraBold.ttf"), format("truetype");
 }
+@font-face {
+  font-family: "Nothing";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/NothingYouCouldDo-Regular.ttf"), format("truetype");
+}
+@font-face {
+  font-family: "Teko";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Teko-Regular.ttf"), format("truetype");
+}
 
 /*# sourceMappingURL=fonts.css.map */

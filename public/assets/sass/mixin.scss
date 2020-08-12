@@ -1,0 +1,86 @@
+@mixin button {
+    min-width: 130px;
+    border: none;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 20px;
+    cursor: pointer;
+    background: transparent;
+    &:hover {
+        background-color: #00000010;
+    }
+    &:active {
+        background-color: #00000020;
+    }
+    @media (min-width: 768px) {
+        min-width: 150px;
+    }
+}
+
+@mixin button-green {
+    @include button;
+    background-color: var(--green);
+    color: var(--white);
+    &:hover {
+        background-color: var(--green-hover);
+    }
+    &:active {
+        background-color: var(--green-active);
+    }
+}
+
+@mixin button-black {
+    @include button;
+    background-color: var(--black);
+    color: var(--white);
+    &:hover {
+        background-color: var(--black-hover);
+    }
+    &:active {
+        background-color: var(--black-active);
+    }
+}
+
+@mixin button-gray {
+    @include button;
+    background-color: var(--gray-3);
+    color: var(--gray-0);
+    &:hover {
+        background-color: var(--gray-8);
+    }
+    &:active {
+        background-color: var(--gray-9);
+    }
+}
+
+@mixin button-red {
+    @include button;
+    background-color: var(--red);
+    color: var(--white);
+    &:hover {
+        background-color: var(--red-hover);
+    }
+    &:active {
+        background-color: var(--red-active);
+    }
+}
+
+@mixin button-blue {
+    @include button;
+    background-color: var(--blue);
+    color: var(--white);
+    &:hover {
+        background-color: var(--blue-hover);
+    }
+    &:active {
+        background-color: var(--blue-active);
+    }
+}

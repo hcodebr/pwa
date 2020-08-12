@@ -28,6 +28,18 @@
   font-weight: 800;
   src: url("../fonts/OpenSans-ExtraBold.ttf"), format("truetype");
 }
+@font-face {
+  font-family: "Nothing";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/NothingYouCouldDo-Regular.ttf"), format("truetype");
+}
+@font-face {
+  font-family: "Teko";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Teko-Regular.ttf"), format("truetype");
+}
 :root {
   --white: #FFFFFF;
   --black: #000000;
@@ -1721,6 +1733,8 @@ form button:active {
   text-align: right;
 }
 #schedules-services aside footer button {
+  min-width: 50px;
+  width: 50px;
   min-width: 130px;
   border: none;
   height: 50px;
@@ -1736,8 +1750,6 @@ form button:active {
   padding: 0 20px;
   cursor: pointer;
   background: transparent;
-  min-width: 50px;
-  width: 50px;
 }
 #schedules-services aside footer button:hover {
   background-color: #00000010;
@@ -1793,6 +1805,98 @@ form button:active {
   }
   #schedules-services aside footer button, #schedules-services aside.open footer button {
     display: none;
+  }
+}
+#schedules-payment {
+  position: relative;
+}
+#schedules-payment .name {
+  text-transform: uppercase;
+}
+#schedules-payment .nametspan {
+  text-transform: capitalize;
+}
+#schedules-payment > header {
+  height: 260px;
+}
+#schedules-payment > header h1 {
+  display: none;
+}
+#schedules-payment > main {
+  align-items: center;
+}
+#schedules-payment > main form {
+  max-width: 400px;
+}
+#schedules-payment > main form .form-creditcard {
+  margin-top: 20px;
+}
+#schedules-payment > main form .form-creditcard .form-fields {
+  flex-direction: column;
+  width: 100%;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields {
+  flex-direction: row;
+  justify-content: space-between;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields .field {
+  width: calc(50% - 10px);
+}
+#schedules-payment > main form .form-creditcard .form-card {
+  perspective: 1000px;
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  width: 300px;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces.flipped {
+  transform: rotateY(180deg);
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg {
+  width: 300px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces .back {
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 992px) {
+  #schedules-payment {
+    position: static;
+  }
+  #schedules-payment > header {
+    height: 130px;
+  }
+  #schedules-payment > header h1 {
+    display: block;
+  }
+  #schedules-payment > main {
+    align-items: flex-start;
+  }
+  #schedules-payment > main form {
+    max-width: 900px;
+    justify-content: space-between;
+  }
+  #schedules-payment > main form .form-creditcard .form-card {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces {
+    width: 100%;
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces svg {
+    width: 398px;
+    position: absolute;
   }
 }
 

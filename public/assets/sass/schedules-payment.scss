@@ -1,0 +1,94 @@
+#schedules-payment {
+    position: relative;
+    .name {
+        text-transform: uppercase;
+        &tspan {
+            text-transform: capitalize;
+        }
+    }
+    > header {
+        height: 260px;
+        h1 {
+            display: none;
+        }
+    }
+    > main {
+        align-items: center;
+        form {
+            max-width: 400px;
+            .form-creditcard {
+                margin-top: 20px;
+                .form-fields {
+                    flex-direction: column;
+                    width: 100%;
+                    .fields {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .field {
+                            width: calc(50% - 10px);
+                        }
+                    }
+                }
+                .form-card {
+                    perspective: 1000px;
+                    position: absolute;
+                    top: 32px;
+                    width: 100%;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    .faces {
+                        transform-style: preserve-3d;
+                        transition: transform 0.6s;
+                        width: 300px;
+                        &.flipped {
+                            transform: rotateY(180deg);
+                        }
+                        svg {
+                            width: 300px;
+                            backface-visibility: hidden;
+                            position: absolute;
+                        }
+                        .back {
+                            transform: rotateY(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #schedules-payment {
+        position: static;
+        > header {
+            height: 130px;
+            h1 {
+                display: block;
+            }
+        }
+        > main {
+            align-items: flex-start;
+            form {
+                max-width: 900px;
+                justify-content: space-between;
+                .form-creditcard {
+                    .form-card {
+                        position: static;
+                        display: flex;
+                        justify-content: center;
+                        padding-left: 20px;
+                        .faces {
+                            width: 100%;
+                            svg {
+                                width: 398px;
+                                position: absolute;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

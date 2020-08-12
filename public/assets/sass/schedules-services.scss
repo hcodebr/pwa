@@ -105,9 +105,9 @@
                 text-align: right;
             }
             button {
-                @include button;
                 min-width: 50px;
                 width: 50px;
+                @include button;
                 svg {
                     transform: rotate(0deg);
                     transition: all .2s ease-in-out;
