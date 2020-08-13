@@ -105,17 +105,3 @@
         }
     }    
 }
-
-@media (prefers-color-scheme: dark) {
-    #home {
-        header {
-            h1 {
-                color: var(--black);
-            }
-            a {
-                border: var(--black) 2px solid;
-                color: var(--black);
-            }
-        }
-    }
-}

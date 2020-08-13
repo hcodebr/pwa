@@ -103,22 +103,3 @@
         }
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    #footer {
-        color: var(--black50);
-        .links {
-            a {
-                color: var(--black50);
-                &:hover {
-                    color: var(--black);
-                }
-            }
-        }
-        button {
-            background: var(--black50);
-            color: var(--gray-6);
-            box-shadow: var(--white) 0 3px 6px;
-        }
-    } 
-}

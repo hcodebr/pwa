@@ -88,17 +88,3 @@
         }
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    #contact {
-        .contacts {
-            li {
-                border: var(--black50) 1px solid;
-                color: var(--black50);
-                img {
-                    background-color: var(--gray-6);
-                }
-            }
-        }
-    }
-}
