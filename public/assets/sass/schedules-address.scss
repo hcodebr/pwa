@@ -1,0 +1,79 @@
+#schedules-address {
+    main {
+        margin-top: 20px;
+        form {
+            hr {
+                margin: 20px auto;
+                border: none;
+                border-top: var(--gray-3) 1px solid;
+            }
+            .btn-create {
+                @include button-green;
+            }
+            .btn-update {
+                @include button-gray;
+            }
+            .addresses {
+                flex-direction: column;
+                label {
+                    cursor: pointer;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    address {
+                        font-style: normal;
+                        margin-left: 10px;
+                    }
+                    .circle {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: var(--gray-10) 2px solid;
+                        justify-content: center;
+                        align-items: center;
+                        > div {
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 50%;
+                            background-color: var(--gray);
+                            opacity: 0;
+                            transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        }
+                    }
+                    &:hover {
+                        .circle {
+                            border: var(--gray-8) 2px solid;
+                            > div {
+                                opacity: .2;
+                            }
+                        }
+                    }
+                    input {
+                        display: none;
+                        &:checked + .circle {
+                            > div {
+                                opacity: 1;
+                                background-color: var(--blue);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #schedules-address {
+        main {
+            form {
+                max-width: 600px;
+                .btn-create {
+                    width: max-content;
+                }
+            }
+        }
+    }
+}
