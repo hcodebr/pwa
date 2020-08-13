@@ -1,0 +1,39 @@
+#schedules-address-form {
+    main {
+        margin-top: 20px;
+        .fields {
+            &.zipcode {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .field {
+                    width: calc(50% - 10px);
+                }
+                #btn-search {
+                    @include button-gray;
+                    height: 69px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #schedules-address-form {
+        main {
+            .fields {
+                &.address-number {
+                    .field {
+                        &:first-child {
+                            flex: 1;
+                            width: initial;
+                        }
+                        &:last-child {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

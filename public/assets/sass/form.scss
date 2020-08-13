@@ -35,6 +35,18 @@ form {
             transition: border-color .3s ease-in-out;
             width: 100%;
             background-color: transparent;
+            &[readonly] {
+                border: none;
+                color: var(-black);
+                font-weight: bold;
+                font-size: 22px;
+                padding-bottom: 0;
+                text-transform: uppercase;
+                + label {
+                    color: var(--gray-0);
+                    text-transform: uppercase;
+                }
+            }
             &:focus {
                 border-color: var(--green);
                 + label {

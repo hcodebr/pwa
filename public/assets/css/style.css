@@ -160,6 +160,11 @@ header.page-title hr {
   font-size: 23px;
   text-transform: uppercase;
 }
+.page > header h1 small {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
 .page > main {
   flex-direction: column;
 }
@@ -387,6 +392,18 @@ form .field input, form .field textarea {
   transition: border-color 0.3s ease-in-out;
   width: 100%;
   background-color: transparent;
+}
+form .field input[readonly], form .field textarea[readonly] {
+  border: none;
+  color: var(-black);
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+}
+form .field input[readonly] + label, form .field textarea[readonly] + label {
+  color: var(--gray-0);
+  text-transform: uppercase;
 }
 form .field input:focus, form .field textarea:focus {
   border-color: var(--green);
@@ -2030,6 +2047,64 @@ form button:active {
   }
   #schedules-address main form .btn-create {
     width: max-content;
+  }
+}
+#schedules-address-form main {
+  margin-top: 20px;
+}
+#schedules-address-form main .fields.zipcode {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#schedules-address-form main .fields.zipcode .field {
+  width: calc(50% - 10px);
+}
+#schedules-address-form main .fields.zipcode #btn-search {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  background-color: var(--gray-3);
+  color: var(--gray-0);
+  height: 69px;
+}
+#schedules-address-form main .fields.zipcode #btn-search:hover {
+  background-color: #00000010;
+}
+#schedules-address-form main .fields.zipcode #btn-search:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #schedules-address-form main .fields.zipcode #btn-search {
+    min-width: 150px;
+  }
+}
+#schedules-address-form main .fields.zipcode #btn-search:hover {
+  background-color: var(--gray-8);
+}
+#schedules-address-form main .fields.zipcode #btn-search:active {
+  background-color: var(--gray-9);
+}
+
+@media (min-width: 992px) {
+  #schedules-address-form main .fields.address-number .field:first-child {
+    flex: 1;
+    width: initial;
+  }
+  #schedules-address-form main .fields.address-number .field:last-child {
+    width: 100px;
   }
 }
 

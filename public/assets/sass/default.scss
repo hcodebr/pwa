@@ -87,6 +87,11 @@ header {
         h1 {
             font-size: 23px;
             text-transform: uppercase;
+            small {
+                display: block;
+                font-size: 14px;
+                font-weight: 600;
+            }
         }
     }
     > main {
