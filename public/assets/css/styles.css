@@ -840,22 +840,6 @@ form button:active {
     font-size: 14px;
   }
 }
-@media (prefers-color-scheme: dark) {
-  #footer {
-    color: var(--black50);
-  }
-  #footer .links a {
-    color: var(--black50);
-  }
-  #footer .links a:hover {
-    color: var(--black);
-  }
-  #footer button {
-    background: var(--black50);
-    color: var(--gray-6);
-    box-shadow: var(--white) 0 3px 6px;
-  }
-}
 #home {
   flex-direction: column;
   margin-top: -80px;
@@ -976,15 +960,6 @@ form button:active {
 @media (min-width: 1920px) {
   #home header {
     background-image: url("../images/ferrari-vermelha@2x.webp");
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #home header h1 {
-    color: var(--black);
-  }
-  #home header a {
-    border: var(--black) 2px solid;
-    color: var(--black);
   }
 }
 #service {
@@ -1179,15 +1154,6 @@ form button:active {
   }
   #contact textarea {
     height: 245px;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #contact .contacts li {
-    border: var(--black50) 1px solid;
-    color: var(--black50);
-  }
-  #contact .contacts li img {
-    background-color: var(--gray-6);
   }
 }
 #auth {
@@ -2167,4 +2133,4 @@ form button:active {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,7 @@
 const CACHE_NAME = 'ferrari-cache';
 const urlsToCache = [
     '/',
-    '/assets/css/style.css',
+    '/assets/css/styles.css',
     '/main.js'
 ]
 

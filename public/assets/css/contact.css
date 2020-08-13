@@ -85,14 +85,5 @@
     height: 245px;
   }
 }
-@media (prefers-color-scheme: dark) {
-  #contact .contacts li {
-    border: var(--black50) 1px solid;
-    color: var(--black50);
-  }
-  #contact .contacts li img {
-    background-color: var(--gray-6);
-  }
-}
 
 /*# sourceMappingURL=contact.css.map */
