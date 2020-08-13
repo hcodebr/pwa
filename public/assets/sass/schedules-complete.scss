@@ -1,0 +1,34 @@
+#schedules-complete {
+    main {
+        p {
+            margin: 0 20px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: var(--gray-0);
+            small {
+                display: block;
+                font-size: 16px;
+            }
+        }
+        footer {
+            &.fixed {
+                justify-content: center;
+                a {
+                    @include button-green;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #schedules-complete {
+        main {
+            footer {
+                &.fixed {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

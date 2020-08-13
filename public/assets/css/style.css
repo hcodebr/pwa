@@ -164,6 +164,7 @@ header.page-title hr {
   display: block;
   font-size: 14px;
   font-weight: 600;
+  text-align: center;
 }
 .page > main {
   flex-direction: column;
@@ -351,6 +352,9 @@ header.page-title hr {
   }
   .page > header h1 {
     font-size: 32px;
+  }
+  .page > header h1 small {
+    text-align: left;
   }
 }
 form {
@@ -2105,6 +2109,61 @@ form button:active {
   }
   #schedules-address-form main .fields.address-number .field:last-child {
     width: 100px;
+  }
+}
+#schedules-complete main p {
+  margin: 0 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: var(--gray-0);
+}
+#schedules-complete main p small {
+  display: block;
+  font-size: 16px;
+}
+#schedules-complete main footer.fixed {
+  justify-content: center;
+}
+#schedules-complete main footer.fixed a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+  background: transparent;
+  background-color: var(--green);
+  color: var(--white);
+}
+#schedules-complete main footer.fixed a:hover {
+  background-color: #00000010;
+}
+#schedules-complete main footer.fixed a:active {
+  background-color: #00000020;
+}
+@media (min-width: 768px) {
+  #schedules-complete main footer.fixed a {
+    min-width: 150px;
+  }
+}
+#schedules-complete main footer.fixed a:hover {
+  background-color: var(--green-hover);
+}
+#schedules-complete main footer.fixed a:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 1200px) {
+  #schedules-complete main footer.fixed {
+    justify-content: flex-start;
   }
 }
 
