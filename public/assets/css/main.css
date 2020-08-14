@@ -1183,6 +1183,7 @@ form button:active {
 }
 #auth > section p {
   color: var(--gray-9);
+  font-size: 16px;
 }
 #auth > section form {
   margin-top: 170px;
@@ -1218,6 +1219,26 @@ form button:active {
 #auth > section form .field {
   width: 100%;
 }
+#auth > section form .actions {
+  justify-content: space-between;
+}
+#auth > section form .actions .link {
+  font-size: 14px;
+  color: var(--dark-0);
+  text-decoration: none;
+}
+#auth > section form .actions .link:hover {
+  color: var(--gray-11);
+}
+#auth > section form .actions .link:active {
+  color: var(--black);
+}
+#auth > section form.register .actions button {
+  width: 100%;
+}
+#auth > section form.forget .actions {
+  justify-content: flex-end;
+}
 
 @media (min-width: 500px) {
   #auth > section {
@@ -1233,6 +1254,12 @@ form button:active {
     width: 100%;
     padding: 50px;
     padding-top: 100px;
+  }
+  #auth > section form.register .actions {
+    justify-content: flex-end;
+  }
+  #auth > section form.register .actions button {
+    width: initial;
   }
 }
 #error .desktop {

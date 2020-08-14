@@ -25,6 +25,7 @@
         }
         p {
             color: var(--gray-9);
+            font-size: 16px;
         }
         form {
             margin-top: 170px;
@@ -59,6 +60,32 @@
             .field {
                 width: 100%;
             }
+            .actions {
+                justify-content: space-between;
+                .link {
+                    font-size: 14px;
+                    color: var(--dark-0);
+                    text-decoration: none;
+                    &:hover {
+                        color: var(--gray-11);
+                    }
+                    &:active {
+                        color: var(--black);
+                    }
+                }
+            }
+            &.register {
+                .actions {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+            &.forget {
+                .actions {
+                    justify-content: flex-end;
+                }
+            }
         }
     }
 }
@@ -79,6 +106,14 @@
                 width: 100%;
                 padding: 50px;
                 padding-top: 100px;
+                &.register {
+                    .actions {
+                        justify-content: flex-end;
+                        button {
+                            width: initial;
+                        }
+                    }
+                }
             }
         }
     }
