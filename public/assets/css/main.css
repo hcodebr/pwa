@@ -1797,6 +1797,9 @@ form button:active {
   margin-bottom: 0;
   height: calc(100vh - 60px);
 }
+#schedules-payment.keyboard-open > main form {
+  max-width: 100%;
+}
 #schedules-payment.keyboard-open footer {
   position: static;
   width: 100vw;
@@ -1820,7 +1823,7 @@ form button:active {
   align-items: center;
 }
 #schedules-payment > main form {
-  max-width: 400px;
+  max-width: 100%;
 }
 #schedules-payment > main form .form-creditcard {
   margin-top: 20px;
@@ -1868,6 +1871,15 @@ form button:active {
 @media (min-width: 992px) {
   #schedules-payment {
     position: static;
+  }
+  #schedules-payment.keyboard-open {
+    margin-bottom: 0;
+    height: calc(100vh - 60px);
+  }
+  #schedules-payment.keyboard-open footer {
+    position: fixed;
+    width: 100%;
+    margin-left: initial;
   }
   #schedules-payment > header {
     height: 130px;

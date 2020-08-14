@@ -3,6 +3,11 @@
     &.keyboard-open {
         margin-bottom: 0;
         height: calc(100vh - 60px);;
+        > main {
+            form {
+                max-width: 100%;
+            }
+        }
         footer {
             position: static;
             width: 100vw;
@@ -26,7 +31,7 @@
     > main {
         align-items: center;
         form {
-            max-width: 400px;
+            max-width: 100%;
             .form-creditcard {
                 margin-top: 20px;
                 .form-fields {
@@ -78,6 +83,15 @@
 @media (min-width: 992px) {
     #schedules-payment {
         position: static;
+        &.keyboard-open {
+            margin-bottom: 0;
+            height: calc(100vh - 60px);
+            footer {
+                position: fixed;
+                width: 100%;
+                margin-left: initial;
+            }
+        }
         > header {
             height: 130px;
             h1 {
