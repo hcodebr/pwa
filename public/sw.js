@@ -1,7 +1,6 @@
 const CACHE_NAME = 'ferrari-cache-hcode-lab';
 const urlsToCache = [
 	"/404.html",
-	"/assets",
 	"/auth.html",
 	"/change-password.html",
 	"/change-photo.html",
@@ -19,7 +18,6 @@ const urlsToCache = [
 	"/schedules-summary.html",
 	"/schedules-time-options.html",
 	"/schedules.html",
-	"/sw.js",
 	"/assets/css/main.css",
 	"/assets/css/main.css.map",
 	"/assets/fonts/NothingYouCouldDo-Regular.ttf",
