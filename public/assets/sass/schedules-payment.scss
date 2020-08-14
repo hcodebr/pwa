@@ -86,6 +86,11 @@
         &.keyboard-open {
             margin-bottom: 0;
             height: calc(100vh - 60px);
+            > main {
+                form {
+                    max-width: 900px;
+                }
+            }
             footer {
                 position: fixed;
                 width: 100%;

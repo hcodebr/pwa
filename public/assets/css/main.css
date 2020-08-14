@@ -1878,6 +1878,9 @@ form button:active {
     margin-bottom: 0;
     height: calc(100vh - 60px);
   }
+  #schedules-payment.keyboard-open > main form {
+    max-width: 900px;
+  }
   #schedules-payment.keyboard-open footer {
     position: fixed;
     width: 100%;
