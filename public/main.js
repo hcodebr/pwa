@@ -55,7 +55,19 @@ if (schedulesPayment) {
     })
     inputExpiry.addEventListener('keyup', e => cardExpiry[0].innerHTML = inputExpiry.value)
     inputCvv.addEventListener('keyup', e => cardCvv[0].innerHTML = inputCvv.value)
+    
+    schedulesPayment.querySelectorAll('input').forEach(el => {
 
+        el.addEventListener('focus', e => {
+            schedulesPayment.classList.add('keyboard-open')
+        })
+
+        el.addEventListener('blur', e => {
+            schedulesPayment.classList.remove('keyboard-open')
+        })
+
+    })
+    
 }
 
 if (creditCard) {

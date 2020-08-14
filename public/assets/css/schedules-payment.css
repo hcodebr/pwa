@@ -1,6 +1,15 @@
 #schedules-payment {
   position: relative;
 }
+#schedules-payment.keyboard-open {
+  margin-bottom: 0;
+  height: calc(100vh - 60px);
+}
+#schedules-payment.keyboard-open footer {
+  position: static;
+  width: 100vw;
+  margin-left: -20px;
+}
 #schedules-payment .name {
   text-transform: uppercase;
 }
@@ -9,6 +18,8 @@
 }
 #schedules-payment > header {
   height: 260px;
+  min-height: 260px;
+  position: relative;
 }
 #schedules-payment > header h1 {
   display: none;
@@ -54,6 +65,9 @@
   width: 300px;
   backface-visibility: hidden;
   position: absolute;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg.back .name {
+  text-transform: capitalize;
 }
 #schedules-payment > main form .form-creditcard .form-card .faces .back {
   transform: rotateY(180deg);

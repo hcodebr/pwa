@@ -1,5 +1,14 @@
 #schedules-payment {
     position: relative;
+    &.keyboard-open {
+        margin-bottom: 0;
+        height: calc(100vh - 60px);;
+        footer {
+            position: static;
+            width: 100vw;
+            margin-left: -20px;
+        }
+    }
     .name {
         text-transform: uppercase;
         &tspan {
@@ -8,6 +17,8 @@
     }
     > header {
         height: 260px;
+        min-height: 260px;
+        position: relative;
         h1 {
             display: none;
         }
@@ -48,6 +59,11 @@
                             width: 300px;
                             backface-visibility: hidden;
                             position: absolute;
+                            &.back {
+                                .name {
+                                    text-transform: capitalize;
+                                }
+                            }
                         }
                         .back {
                             transform: rotateY(180deg);
