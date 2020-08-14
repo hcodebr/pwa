@@ -1334,12 +1334,10 @@ form button:active {
 #schedules ul li > section > div label, #schedules ul li > section > div span {
   font-size: 16px;
   margin: 10px 0;
+  color: var(--dark-0);
 }
 #schedules ul li > section > div label {
-  color: var(--gray-2);
-}
-#schedules ul li > section > div span {
-  color: var(--dark-0);
+  font-weight: bold;
 }
 #schedules ul li button {
   min-width: 130px;

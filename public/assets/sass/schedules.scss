@@ -17,12 +17,10 @@
                     label, span {
                         font-size: 16px;
                         margin: 10px 0;
+                        color: var(--dark-0);
                     }
                     label {
-                        color: var(--gray-2);
-                    }
-                    span {
-                        color: var(--dark-0);
+                        font-weight: bold;
                     }
                 }
             }
