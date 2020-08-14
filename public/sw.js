@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ferrari-cache-hcode-lab';
+const CACHE_NAME = 'ferrari-cache-hcodelab';
 const urlsToCache = [
 	"/404.html",
 	"/auth.html",
@@ -6,7 +6,6 @@ const urlsToCache = [
 	"/change-photo.html",
 	"/index.html",
 	"/main.js",
-	"/manifest.json",
 	"/profile.html",
 	"/schedules-address-create.html",
 	"/schedules-address-update.html",
@@ -54,7 +53,6 @@ const urlsToCache = [
 	"/assets/images/arrow-right.svg",
 	"/assets/images/arrow-up-small.svg",
 	"/assets/images/arrow-up.svg",
-	"/assets/images/browserconfig.xml",
 	"/assets/images/calendar.svg",
 	"/assets/images/check-circle.svg",
 	"/assets/images/CreditCardBack.svg",
@@ -94,7 +92,6 @@ const urlsToCache = [
 	"/assets/images/instagram.svg",
 	"/assets/images/logo_256.png",
 	"/assets/images/logo_512.png",
-	"/assets/images/manifest.json",
 	"/assets/images/mapa.png",
 	"/assets/images/mapa.webp",
 	"/assets/images/mapa@2x.png",
