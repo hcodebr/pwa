@@ -1750,7 +1750,7 @@ form button:active {
   transition: all 0.2s ease-in-out;
 }
 #schedules-services aside.open {
-  height: calc(100vh - 158px);
+  height: calc(100vh - 200px);
 }
 #schedules-services aside.open header, #schedules-services aside.open section {
   display: flex;
