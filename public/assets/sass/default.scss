@@ -59,7 +59,7 @@ header {
 .page {
     flex-direction: column;
     margin-bottom: 80px;
-    height: calc(100vh - 153px);
+    height: calc(100vh - 140px);
     overflow: auto;
     &.page-summary {
         height: calc(100vh - 191px);
