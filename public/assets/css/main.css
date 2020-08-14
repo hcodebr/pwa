@@ -682,13 +682,15 @@ form button:active {
   }
   #header .menu {
     width: 100%;
-    height: initial;
+    height: 100px;
     background-color: initial;
     position: static;
     right: initial;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-left: 200px;
+    padding-bottom: 0;
   }
   #header .menu > div {
     width: 100%;
