@@ -1113,7 +1113,7 @@ form button:active {
   margin-top: -60px;
   padding: 0 15px;
 }
-#contact .contacts li h3 {
+#contact .contacts li .title {
   font-weight: 600;
   margin: 0;
   font-size: 24px;
