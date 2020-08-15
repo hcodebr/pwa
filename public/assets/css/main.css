@@ -1422,6 +1422,9 @@ form button:active {
   margin-top: 20px;
   width: 256px;
 }
+#change-photo form button {
+  margin-bottom: 20px;
+}
 #change-photo form.cropping img {
   height: auto;
   border-radius: 0;
