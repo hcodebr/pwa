@@ -1,6 +1,7 @@
 .calendar {
     flex-direction: column;
     padding: 0 20px;
+    margin-bottom: 20px;
     .month {
         color: var(--gray-2);
         justify-content: space-between;
@@ -60,6 +61,7 @@
             border-radius: 50%;
             cursor: pointer;
             transition: all .1s ease-in-out;
+            height: 12vw;
             &:hover {
                 background-color: rgba(0, 0, 0, .1);
             }
@@ -76,6 +78,10 @@
             &:active {
                 background-color: var(--blue-active);
             }
+        }
+        .selected {
+            background-color: var(--green)!important;
+            color: var(--white);
         }
     }
 }

@@ -62,6 +62,9 @@
             }
             .actions {
                 justify-content: space-between;
+                a {
+                    display: block;
+                }
                 .link {
                     font-size: 14px;
                     color: var(--dark-0);

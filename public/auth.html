@@ -59,12 +59,20 @@
                 <hr />
 
                 <div class="field">
+                    <input type="email" name="email" id="email-login" readonly />
+                    <label for="email-login">E-mail</label>
+                </div>
+
+                <div class="field">
                     <input type="password" name="password" id="password" />
                     <label for="password">Digite sua Senha</label>
                 </div>
 
                 <div class="actions">
-                    <a href="#forget" class="link">Esqueceu sua senha?</a>
+                    <div>
+                        <a href="#forget" class="link">Esqueceu sua senha?</a>
+                        <a href="#email" class="link">Este não é o seu e-mail?</a>
+                    </div>
                     <button type="submit">Login</button>
                 </div>
 
@@ -75,6 +83,11 @@
                 <h1>Criar conta</h1>
             
                 <hr />
+
+                <div class="field">
+                    <input type="email" name="email" id="email-register" />
+                    <label for="email-register">E-mail</label>
+                </div>
 
                 <div class="field">
                     <input type="text" name="name" id="name" />
@@ -139,7 +152,8 @@
 
     </main>
 
-    <script src="main.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/auth.js"></script>
    
 </body>
 </html>

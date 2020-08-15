@@ -39,7 +39,6 @@ form {
                 border: none;
                 color: var(-black);
                 font-weight: bold;
-                font-size: 22px;
                 padding-bottom: 0;
                 text-transform: uppercase;
                 + label {
@@ -59,6 +58,15 @@ form {
         justify-content: flex-end;
         align-items: center;
         flex-direction: row;
+        > div {
+            flex-direction: column;
+            a {
+                width: 100%;
+                + a {
+                    padding-top: 10px;
+                }
+            }
+        }
     }
     button {
         @include button-green;
