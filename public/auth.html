@@ -34,7 +34,7 @@
 
             <a href="index.html"><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari" /></a>
 
-            <form class="hide">
+            <form id="auth-email">
 
                 <h1>Autenticação</h1>
         
@@ -46,13 +46,13 @@
                 </div>
 
                 <div class="actions">
-                    <a href="#" class="link">Criar uma Conta</a>
+                    <a href="auth.html#register" class="link">Criar uma Conta</a>
                     <button type="submit">Próxima</button>
                 </div>
 
             </form>
             
-            <form class="">
+            <form id="auth-login" class="hide">
 
                 <h1>Fazer login</h1>
             
@@ -64,13 +64,13 @@
                 </div>
 
                 <div class="actions">
-                    <a href="#" class="link">Esqueceu sua senha?</a>
+                    <a href="#forget" class="link">Esqueceu sua senha?</a>
                     <button type="submit">Login</button>
                 </div>
 
             </form>
 
-            <form class="register hide">
+            <form id="auth-register" class="register hide">
 
                 <h1>Criar conta</h1>
             
@@ -87,8 +87,8 @@
                 </div>
 
                 <div class="field">
-                    <input type="password" name="password" id="password" />
-                    <label for="password">Crie uma Senha</label>
+                    <input type="password" name="password" id="password_new" />
+                    <label for="password_new">Crie uma Senha</label>
                 </div>
 
                 <div class="field">
@@ -97,12 +97,13 @@
                 </div>
 
                 <div class="actions">
+                    <a href="auth.html#login" class="link">Já tem uma conta?</a>
                     <button type="submit">Cadastrar</button>
                 </div>
 
             </form>
 
-            <form class="hide">
+            <form id="auth-forget" class="hide">
 
                 <h1>Esqueci a senha</h1>
             
@@ -115,15 +116,15 @@
 
             </form>
 
-            <form class="forget hide">
+            <form id="auth-reset" class="forget hide">
 
                 <h1>Redefinir senha</h1>
             
                 <hr />
 
                 <div class="field">
-                    <input type="password" name="password" id="password" />
-                    <label for="password">Crie uma Nova Senha</label>
+                    <input type="password" name="password" id="password_reset" />
+                    <label for="password_reset">Crie uma Nova Senha</label>
                 </div>
 
                 <div class="actions">
@@ -137,6 +138,8 @@
         </section>
 
     </main>
+
+    <script src="main.js"></script>
    
 </body>
 </html>

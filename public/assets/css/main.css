@@ -1233,9 +1233,6 @@ form button:active {
 #auth > section form .actions .link:active {
   color: var(--black);
 }
-#auth > section form.register .actions button {
-  width: 100%;
-}
 #auth > section form.forget .actions {
   justify-content: flex-end;
 }
@@ -1254,12 +1251,6 @@ form button:active {
     width: 100%;
     padding: 50px;
     padding-top: 100px;
-  }
-  #auth > section form.register .actions {
-    justify-content: flex-end;
-  }
-  #auth > section form.register .actions button {
-    width: initial;
   }
 }
 #error .desktop {

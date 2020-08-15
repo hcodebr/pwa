@@ -88,18 +88,74 @@ if (btnFooter) {
     })
 }
 
-btnOpen.addEventListener('click', e => {
-    body.classList.add('open-menu')
-})
-
-closeMenu.forEach(el => {
-    el.addEventListener('click', e => {
-        body.classList.remove('open-menu')
+if (btnOpen) {
+    btnOpen.addEventListener('click', e => {
+        body.classList.add('open-menu')
     })
-})
+}
 
-menuLinks.forEach(el => {
-    el.addEventListener('click', e => {
-        body.classList.remove('open-menu')
+if (closeMenu) {
+    closeMenu.forEach(el => {
+        el.addEventListener('click', e => {
+            body.classList.remove('open-menu')
+        })
     })
+}
+
+if (menuLinks) {
+    menuLinks.forEach(el => {
+        el.addEventListener('click', e => {
+            body.classList.remove('open-menu')
+        })
+    })
+}
+
+const hideAuthForms = () => {
+
+    document.querySelectorAll('#auth form').forEach(el => el.classList.add('hide'))
+
+}
+
+const showAuthForm = id => {
+
+    document.getElementById(id).classList.remove('hide')
+
+}
+
+const authHash = () => {
+
+    console.log('authHash')
+
+    hideAuthForms()
+
+    console.log(window.location.hash)
+
+    switch (window.location.hash) {
+        case '#register':
+            showAuthForm('auth-register')
+            break
+
+        case '#login':
+            showAuthForm('auth-login')
+            break
+
+        case '#forget':
+            showAuthForm('auth-forget')
+            break
+
+        case '#reset':
+            showAuthForm('auth-reset')
+            break
+
+        default:
+            showAuthForm('auth-email')
+    }
+
+}
+
+window.addEventListener('load', e => {
+    authHash()
+})
+window.addEventListener('hashchange', e => {
+    authHash()
 })

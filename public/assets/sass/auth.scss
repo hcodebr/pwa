@@ -74,13 +74,6 @@
                     }
                 }
             }
-            &.register {
-                .actions {
-                    button {
-                        width: 100%;
-                    }
-                }
-            }
             &.forget {
                 .actions {
                     justify-content: flex-end;
@@ -106,14 +99,6 @@
                 width: 100%;
                 padding: 50px;
                 padding-top: 100px;
-                &.register {
-                    .actions {
-                        justify-content: flex-end;
-                        button {
-                            width: initial;
-                        }
-                    }
-                }
             }
         }
     }
