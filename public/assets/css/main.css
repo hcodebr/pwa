@@ -1422,6 +1422,10 @@ form button:active {
   margin-top: 20px;
   width: 256px;
 }
+#change-photo form.cropping img {
+  height: auto;
+  border-radius: 0;
+}
 
 #schedules {
   padding-bottom: 20px;

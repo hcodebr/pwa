@@ -18,7 +18,20 @@ inputFile.addEventListener('change', e => {
 
         reader.onload = () => {
 
+            photoPreview.closest('form').classList.add('cropping')
             photoPreview.src = reader.result
+
+            new Cropper(photoPreview, {
+                aspectRatio: 1 / 1,
+                crop(event) {
+
+                    document.querySelector('[name=x]').value = event.detail.x
+                    document.querySelector('[name=y]').value = event.detail.y
+                    document.querySelector('[name=width]').value = event.detail.width
+                    document.querySelector('[name=height]').value = event.detail.height
+                    
+                }
+            })
 
         }
 

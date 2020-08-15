@@ -14,5 +14,11 @@
             margin-top: 20px;
             width: 256px;
         }
+        &.cropping {
+            img {
+                height: auto;
+                border-radius: 0;
+            }
+        }
     }
 }

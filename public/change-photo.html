@@ -9,6 +9,7 @@
     <link rel="alternate icon" href="assets/images/ferrari-logo.ico">
     <meta name="theme-color" content="#eceae7">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/cropperjs/cropper.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
@@ -107,6 +108,11 @@
 
                 <input type="file" name="photo" id="file" />
 
+                <input type="hidden" name="x" />
+                <input type="hidden" name="y" />
+                <input type="hidden" name="width" />
+                <input type="hidden" name="height" />
+
                 <button type="button" class="choose-photo">Escolher Foto</button>
 
                 <footer class="fixed">
@@ -122,6 +128,7 @@
 
     </section>
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/vendor/cropperjs/cropper.min.js"></script>
     <script src="assets/scripts/change-photo.js"></script>
 </body>
 </html>
