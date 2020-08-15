@@ -1413,6 +1413,10 @@ form button:active {
 #change-photo form img {
   width: 256px;
   height: 256px;
+  border-radius: 50%;
+}
+#change-photo form #file {
+  display: none;
 }
 #change-photo form .choose-photo {
   margin-top: 20px;
