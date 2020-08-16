@@ -1409,10 +1409,11 @@ form button:active {
 #change-photo form {
   align-items: center;
   display: flex;
+  margin: 20px 0;
 }
 #change-photo form img {
-  width: 256px;
-  height: 256px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 #change-photo form #file {
@@ -1422,14 +1423,17 @@ form button:active {
   margin-top: 20px;
   width: 256px;
 }
-#change-photo form button {
-  margin-bottom: 20px;
-}
 #change-photo form.cropping img {
   height: auto;
   border-radius: 0;
 }
 
+@media (min-width: 1200px) {
+  #change-photo form img {
+    width: 256px;
+    height: 256px;
+  }
+}
 #schedules {
   padding-bottom: 20px;
 }
@@ -1642,7 +1646,7 @@ form button:active {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  height: 12vw;
+  height: 120px;
 }
 .calendar .days li:hover {
   background-color: rgba(0, 0, 0, 0.1);

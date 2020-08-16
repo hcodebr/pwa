@@ -2,9 +2,10 @@
     form {
         align-items: center;
         display: flex;
+        margin: 20px 0;
         img {
-            width: 256px;
-            height: 256px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
         }
         #file {
@@ -14,13 +15,21 @@
             margin-top: 20px;
             width: 256px;
         }
-        button {
-            margin-bottom: 20px;
-        }
         &.cropping {
             img {
                 height: auto;
                 border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #change-photo {
+        form {
+            img {
+                width: 256px;
+                height: 256px;
             }
         }
     }

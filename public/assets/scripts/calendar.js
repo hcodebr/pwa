@@ -4,13 +4,14 @@ document.querySelectorAll('.calendar').forEach(el => {
 
     const calendar = el
     const today = moment()
-    const startMonth = today.clone().startOf('month')
+    let startMonth = today.clone().startOf('month')
     let startAt = startMonth.clone().startOf('week')
     let endAt = startMonth.clone().endOf('month').endOf('week')
     const title = calendar.querySelector('h2')
     const days = calendar.querySelector('.days')
     const bntPrev = calendar.querySelector('.btn-prev')
     const bntNext = calendar.querySelector('.btn-next')
+    const bntToday = calendar.querySelector('.btn-today')
     
     bntPrev.addEventListener('click', e => {
         startMonth.subtract(1, 'months')
@@ -21,6 +22,13 @@ document.querySelectorAll('.calendar').forEach(el => {
 
     bntNext.addEventListener('click', e => {
         startMonth.add(1, 'months')
+        startAt = startMonth.clone().startOf('week')
+        endAt = startMonth.clone().endOf('month').endOf('week')
+        render()
+    })
+
+    bntToday.addEventListener('click', e => {
+        startMonth = today.clone().startOf('month')
         startAt = startMonth.clone().startOf('week')
         endAt = startMonth.clone().endOf('month').endOf('week')
         render()
