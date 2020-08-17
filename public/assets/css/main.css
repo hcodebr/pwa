@@ -1420,7 +1420,7 @@ form button:active {
   display: none;
 }
 #change-photo form .choose-photo {
-  margin-top: 20px;
+  margin: 20px 0;
   width: 256px;
 }
 #change-photo form.cropping img {
@@ -1646,7 +1646,6 @@ form button:active {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  height: 120px;
 }
 .calendar .days li:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -1690,6 +1689,7 @@ form button:active {
     grid-template-rows: 128px 128px 128px 128px 128px 128px;
   }
   .calendar .days li {
+    height: 120px;
     font-size: 38px;
   }
 }
