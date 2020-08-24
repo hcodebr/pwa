@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css"
+    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "author": "",
