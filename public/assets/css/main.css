@@ -277,7 +277,9 @@ header.page-title hr {
   align-items: center;
   padding: 20px;
   border: 1px solid transparent;
-  transition: 1s;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.page .toast.open {
   transform: translateY(-80px);
 }
 .page .toast .close {
