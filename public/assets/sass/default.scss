@@ -126,8 +126,10 @@ header {
         align-items: center;
         padding: 20px;
         border: 1px solid transparent;
-        transition: 1s;
-        transform: translateY(-80px);
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+        &.open {
+            transform: translateY(-80px);
+        }
         .close {
             position: absolute;
             top: 0;
