@@ -646,7 +646,6 @@ form button:active {
 }
 #header .menu.logged .menus .hide-guest {
   display: flex;
-  flex-direction: column;
   width: 100%;
 }
 #header .menu.logged .footer > div {
@@ -656,11 +655,14 @@ form button:active {
   flex-direction: column;
   display: flex;
 }
+#header .menu.logged .footer > div > button {
+  cursor: pointer;
+}
+#header .menu.logged .footer > div > button:hover {
+  opacity: 0.8;
+}
 #header .menu.logged .footer > a {
   display: none;
-}
-#header .menu.logged .footer > button {
-  cursor: pointer;
 }
 #header .menu .btn-register {
   min-width: 130px;
@@ -821,6 +823,19 @@ form button:active {
 }
 
 @media (min-width: 1200px) {
+  .open-menu {
+    overflow: initial;
+  }
+  .open-menu #header .overlay {
+    display: none;
+  }
+  .open-menu #header .logo {
+    right: calc(100vw - 200px);
+    top: 17px;
+    transition: none;
+    width: 120px;
+  }
+
   #header {
     height: 100px;
   }

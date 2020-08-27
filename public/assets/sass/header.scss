@@ -32,7 +32,6 @@
             .menus {
                 .hide-guest {
                     display: flex;
-                    flex-direction: column;
                     width: 100%;
                 }
             }
@@ -43,12 +42,15 @@
                         flex-direction: column;
                         display: flex;
                     }
+                    > button {
+                        cursor: pointer;
+                        &:hover {
+                            opacity: .8;
+                        }
+                    }
                 }
                 > a {
                     display: none;
-                }
-                > button {
-                    cursor: pointer;
                 }
             }
         }
@@ -172,6 +174,20 @@
 }
 
 @media (min-width: 1200px) {
+    .open-menu {
+        overflow: initial;
+        #header  {
+            .overlay {
+                display: none;
+            }
+            .logo {
+                right: calc(100vw - 200px);
+                top: 17px;
+                transition: none;
+                width: 120px;
+            }
+        }
+    }
     #header {
         height: 100px;
         .italy {
