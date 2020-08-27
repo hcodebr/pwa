@@ -47,6 +47,9 @@
                 > a {
                     display: none;
                 }
+                > button {
+                    cursor: pointer;
+                }
             }
         }
         .btn-register {
@@ -110,7 +113,6 @@
                 flex-direction: column;
                 li {
                     padding: 14px 0;
-                    width: 100%;
                     list-style: none;
                     justify-content: center;
                     a {
@@ -211,11 +213,12 @@
                 margin-top: 0;
                 padding: 0;
                 flex-direction: row;
+                justify-content: flex-start;
                 align-items: center;
                 li {
                     a {
                         font-size: 18px;
-                        min-width: 100px;
+                        min-width: 120px;
                         padding: 10px 0;
                         text-align: center;
                         &:hover {

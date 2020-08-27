@@ -649,11 +649,18 @@ form button:active {
   flex-direction: column;
   width: 100%;
 }
-#header .menu.logged footer > div {
+#header .menu.logged .footer > div {
   display: flex;
 }
-#header .menu.logged footer > a {
+#header .menu.logged .footer > div a {
+  flex-direction: column;
+  display: flex;
+}
+#header .menu.logged .footer > a {
   display: none;
+}
+#header .menu.logged .footer > button {
+  cursor: pointer;
 }
 #header .menu .btn-register {
   min-width: 130px;
@@ -761,7 +768,6 @@ form button:active {
 }
 #header .menu .menus ul li {
   padding: 14px 0;
-  width: 100%;
   list-style: none;
   justify-content: center;
 }
@@ -858,11 +864,12 @@ form button:active {
     margin-top: 0;
     padding: 0;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
   #header .menu ul li a {
     font-size: 18px;
-    min-width: 100px;
+    min-width: 120px;
     padding: 10px 0;
     text-align: center;
   }
