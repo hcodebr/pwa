@@ -36,9 +36,13 @@
                     width: 100%;
                 }
             }
-            footer {
+            .footer {
                 > div {
                     display: flex;
+                    a {
+                        flex-direction: column;
+                        display: flex;
+                    }
                 }
                 > a {
                     display: none;
