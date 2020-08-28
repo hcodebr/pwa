@@ -1533,6 +1533,7 @@ form button:active {
 #change-photo form.cropping img {
   height: auto;
   border-radius: 0;
+  margin-top: 0;
 }
 
 @media (min-width: 1200px) {
@@ -2044,6 +2045,7 @@ form button:active {
     width: 375px;
     height: calc(100vh - 118px);
     bottom: 0;
+    z-index: 1;
   }
   #schedules-services aside header, #schedules-services aside section, #schedules-services aside.open header, #schedules-services aside.open section {
     display: flex;
