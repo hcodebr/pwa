@@ -139,6 +139,7 @@
             width: 375px;
             height: calc(100vh - 118px);
             bottom: 0;
+            z-index: 1;
             header, section {
                 display: flex;
             }
