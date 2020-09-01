@@ -500,7 +500,7 @@ form .field label {
   top: 10px;
   transition: color 0.3s ease-in-out;
 }
-form .field input, form .field textarea {
+form .field input, form .field textarea, form .field select {
   line-height: 1.5em;
   padding: 10px;
   padding-top: 33px;
@@ -517,21 +517,21 @@ form .field input, form .field textarea {
   width: 100%;
   background-color: transparent;
 }
-form .field input[readonly], form .field textarea[readonly] {
+form .field input[readonly], form .field textarea[readonly], form .field select[readonly] {
   border: none;
   color: var(-black);
   font-weight: bold;
   padding-bottom: 0;
   text-transform: uppercase;
 }
-form .field input[readonly] + label, form .field textarea[readonly] + label {
+form .field input[readonly] + label, form .field textarea[readonly] + label, form .field select[readonly] + label {
   color: var(--gray-0);
   text-transform: uppercase;
 }
-form .field input:focus, form .field textarea:focus {
+form .field input:focus, form .field textarea:focus, form .field select:focus {
   border-color: var(--green);
 }
-form .field input:focus + label, form .field textarea:focus + label {
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
   color: var(--green);
 }
 form .actions {
