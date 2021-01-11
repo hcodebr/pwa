@@ -1933,7 +1933,8 @@ form button:active {
 }
 #schedules-services aside {
   width: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   right: 0;
   bottom: 80px;
   height: 50px;
