@@ -2,6 +2,7 @@ import Cropper from 'cropperjs';
 
 document.querySelectorAll('#change-photo').forEach(changePhotoElement => {
 
+    let cropper = null
     const inputFile = changePhotoElement.querySelector('#file')
     const btnChoosePhoto = changePhotoElement.querySelector('.choose-photo')
     const photoPreview = changePhotoElement.querySelector('#photo-preview')
@@ -11,10 +12,24 @@ document.querySelectorAll('#change-photo').forEach(changePhotoElement => {
 
         e.preventDefault()
 
-        console.log(changePhotoElement.querySelector('[name=x]').value)
-        console.log(changePhotoElement.querySelector('[name=y]').value)
-        console.log(changePhotoElement.querySelector('[name=width]').value)
-        console.log(changePhotoElement.querySelector('[name=height]').value)
+        if (cropper) {
+
+            photoPreview.src = cropper.getCroppedCanvas().toDataURL("image/png")
+
+            cropper.getCroppedCanvas().toBlob(blob => {
+
+                console.log(blob)
+
+            })
+
+            cropper.destroy()
+
+            console.log(changePhotoElement.querySelector('[name=x]').value)
+            console.log(changePhotoElement.querySelector('[name=y]').value)
+            console.log(changePhotoElement.querySelector('[name=width]').value)
+            console.log(changePhotoElement.querySelector('[name=height]').value)
+
+        }
 
     })
 
@@ -37,15 +52,17 @@ document.querySelectorAll('#change-photo').forEach(changePhotoElement => {
                 photoPreview.closest('form').classList.add('cropping')
                 photoPreview.src = reader.result
 
-                new Cropper(photoPreview, {
+                cropper = new Cropper(photoPreview, {
                     aspectRatio: 1 / 1,
                     crop(event) {
 
-                        changePhotoElement.querySelector('[name=x]').value = event.detail.x
-                        changePhotoElement.querySelector('[name=y]').value = event.detail.y
-                        changePhotoElement.querySelector('[name=width]').value = event.detail.width
-                        changePhotoElement.querySelector('[name=height]').value = event.detail.height
-                        
+                        const { x, y, width, height } = event.detail
+
+                        changePhotoElement.querySelector('[name=x]').value = x
+                        changePhotoElement.querySelector('[name=y]').value = y
+                        changePhotoElement.querySelector('[name=width]').value = width
+                        changePhotoElement.querySelector('[name=height]').value = height
+
                     }
                 })
 
