@@ -93,6 +93,10 @@
 
             <form action="schedules-address.html">
 
+                <input type="hidden" name="schedule_at" />
+                <input type="hidden" name="option" />
+                <input type="hidden" name="service" />
+
                 <div class="form-creditcard">
 
                     <div class="form-fields">
@@ -125,7 +129,7 @@
                                 <option value="1">Itaú</option>
                                 <option value="2">Bradesco</option>
                             </select>
-                            <label for="issuers">Parcelas</label>
+                            <label for="issuers">Banco Emissor</label>
                         </div>
 
                         <div class="field">
@@ -160,8 +164,6 @@
         </main>
 
     </section>
-    <script src="assets/scripts/imask.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/creditcard.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
-const schedulesPayment = document.getElementById('schedules-payment')
-const creditCard = document.getElementById('credit-card')
+import IMask from 'imask';
+import { getQueryString, setFormValues } from './utils';
 
-if (schedulesPayment) {
+document.querySelectorAll("#schedules-payment").forEach(schedulesPayment => {
 
+    const form = schedulesPayment.querySelector('form')
+    const creditCard = schedulesPayment.querySelector('#credit-card')
     const cardName = schedulesPayment.querySelectorAll('svg .name')
     const cardNumber1 = schedulesPayment.querySelectorAll('svg .number-1')
     const cardNumber2 = schedulesPayment.querySelectorAll('svg .number-2')
@@ -14,6 +16,8 @@ if (schedulesPayment) {
     const inputNumber = schedulesPayment.querySelector('#number')
     const inputExpiry = schedulesPayment.querySelector('#expiry')
     const inputCvv = schedulesPayment.querySelector('#cvv')
+
+    setFormValues(form, getQueryString())
 
     inputCvv.addEventListener('focus', e => {
         creditCard.classList.add('flipped')
@@ -37,6 +41,7 @@ if (schedulesPayment) {
         cardNumber4[0].innerHTML = inputNumber.value.replace(/ /g, '').substr(12, 4)
 
     })
+    
     inputExpiry.addEventListener('keyup', e => cardExpiry[0].innerHTML = inputExpiry.value)
     inputCvv.addEventListener('keyup', e => cardCvv[0].innerHTML = inputCvv.value)
     
@@ -52,22 +57,22 @@ if (schedulesPayment) {
 
     })
 
-    var cardnumber_mask = new IMask(inputNumber, {
+    new IMask(inputNumber, {
         mask: '0000 0000 0000 0000'
     });
 
-    var expirationdate_mask = new IMask(inputExpiry, {
+    new IMask(inputExpiry, {
         mask: '00/00'
     })
     
-    var securitycode_mask = new IMask(inputCvv, {
+    new IMask(inputCvv, {
         mask: '000[0]'
     })
-    
-}
 
-if (creditCard) {
-    creditCard.addEventListener('click', () => {
-        creditCard.classList.toggle('flipped')
-    })
-}
+    if (creditCard) {
+        creditCard.addEventListener('click', () => {
+            creditCard.classList.toggle('flipped')
+        })
+    }
+
+})

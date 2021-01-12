@@ -1,42 +1,60 @@
-const inputFile = document.querySelector('#file')
-const btnChoosePhoto = document.querySelector('.choose-photo')
-const photoPreview = document.querySelector('#photo-preview')
+import Cropper from 'cropperjs';
 
-btnChoosePhoto.addEventListener('click', e => {
+document.querySelectorAll('#change-photo').forEach(changePhotoElement => {
 
-    inputFile.click()
+    const inputFile = changePhotoElement.querySelector('#file')
+    const btnChoosePhoto = changePhotoElement.querySelector('.choose-photo')
+    const photoPreview = changePhotoElement.querySelector('#photo-preview')
+    const form = changePhotoElement.querySelector('#form-change-photo')
 
-})
+    form.addEventListener('submit', e => {
 
-inputFile.addEventListener('change', e => {
+        e.preventDefault()
 
-    if (e.target.files.length) {
-        
-        const file = e.target.files[0]
+        console.log(changePhotoElement.querySelector('[name=x]').value)
+        console.log(changePhotoElement.querySelector('[name=y]').value)
+        console.log(changePhotoElement.querySelector('[name=width]').value)
+        console.log(changePhotoElement.querySelector('[name=height]').value)
 
-        const reader = new FileReader()
+    })
 
-        reader.onload = () => {
+    btnChoosePhoto.addEventListener('click', e => {
 
-            photoPreview.closest('form').classList.add('cropping')
-            photoPreview.src = reader.result
+        inputFile.click()
 
-            new Cropper(photoPreview, {
-                aspectRatio: 1 / 1,
-                crop(event) {
+    })
 
-                    document.querySelector('[name=x]').value = event.detail.x
-                    document.querySelector('[name=y]').value = event.detail.y
-                    document.querySelector('[name=width]').value = event.detail.width
-                    document.querySelector('[name=height]').value = event.detail.height
-                    
-                }
-            })
+    inputFile.addEventListener('change', e => {
+
+        if (e.target.files.length) {
+            
+            const file = e.target.files[0]
+
+            const reader = new FileReader()
+
+            reader.onload = () => {
+
+                photoPreview.closest('form').classList.add('cropping')
+                photoPreview.src = reader.result
+
+                new Cropper(photoPreview, {
+                    aspectRatio: 1 / 1,
+                    crop(event) {
+
+                        changePhotoElement.querySelector('[name=x]').value = event.detail.x
+                        changePhotoElement.querySelector('[name=y]').value = event.detail.y
+                        changePhotoElement.querySelector('[name=width]').value = event.detail.width
+                        changePhotoElement.querySelector('[name=height]').value = event.detail.height
+                        
+                    }
+                })
+
+            }
+
+            reader.readAsDataURL(file)
 
         }
 
-        reader.readAsDataURL(file)
+    })
 
-    }
-
-})
+});

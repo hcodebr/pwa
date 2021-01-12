@@ -2,20 +2,26 @@
   "name": "ferrari-2.0",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --watch --content-base public --hot"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "cropperjs": "^1.5.7",
-    "imask": "^6.0.5",
-    "moment": "^2.27.0"
+    "date-fns": "^2.16.1",
+    "imask": "^6.0.5"
   },
   "devDependencies": {
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   }
 }
