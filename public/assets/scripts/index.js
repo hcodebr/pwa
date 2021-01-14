@@ -1,3 +1,5 @@
+import "./../sass/main.scss";
+
 import "./menu";
 import "./auth";
 import "./calendar";
