@@ -75,12 +75,8 @@
         }
         .contacts {
             flex-direction: row;
-            li {
-                margin-right: 1em;
-                margin-bottom: 2em;
-                &:last-child {
-                    margin-right: 0;
-                }
+            li + li {
+                margin-left: var(--space);
             }
         }
         textarea {

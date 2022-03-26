@@ -15,20 +15,10 @@
     cursor: pointer;
     background: transparent;
     &:hover {
-        background-color: #00000010;
+        background-color: var(--black-10);
     }
     &:active {
-        background-color: #00000020;
-    }
-    &:disabled {
-        opacity: .5;
-        cursor: no-drop;
-        background-color: var(--gray-3);
-        color: var(--dark-0);
-        &:hover, &:active {
-            background-color: var(--gray-3);
-            color: var(--dark-0);
-        }
+        background-color: var(--black-75);
     }
     @media (min-width: 768px) {
         min-width: 150px;
