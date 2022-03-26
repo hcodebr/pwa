@@ -4,10 +4,11 @@
   "description": "",
   "private": true,
   "scripts": {
-    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "sass:build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed",
     "deploy": "firebase deploy",
-    "build": "webpack --mode=production",
-    "dev": "webpack serve --watch --content-base public --hot"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
@@ -25,8 +26,9 @@
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
-    "webpack": "^5.14.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.7.2",
+    "webpack-merge": "^5.8.0"
   }
 }

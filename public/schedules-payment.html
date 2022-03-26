@@ -1,169 +1,626 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a Ferrari Auto Center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça a Ferrari Auto Center" />
     <title>Ferrari - Hcode Lab</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/ferrari-logo.svg">
-    <link rel="alternate icon" href="assets/images/ferrari-logo.ico">
-    <meta name="theme-color" content="#eceae7">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/ferrari-logo.svg"
+    />
+    <link rel="alternate icon" href="assets/images/ferrari-logo.ico" />
+    <meta name="theme-color" content="#eceae7" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/images/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/images/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/images/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/images/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/images/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/images/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/images/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/images/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/images/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/images/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/images/ms-icon-144x144.png"
+    />
     <link href="manifest.json" rel="manifest" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <header id="header">
-
-        <div class="overlay" data-close="menu"></div>
-        <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" class="logo" alt="Logo" /></a>
-        <button type="button" id="btn-open" alt="Abrir Menu" aria-label="Abrir Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path d="M0,0H32V32H0Z" fill="none"/>
-                <path d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)"/>
+      <div class="overlay" data-close="menu"></div>
+      <a href="index.html#home"
+        ><img src="assets/images/ferrari-logo.svg" class="logo" alt="Logo"
+      /></a>
+      <button
+        type="button"
+        id="btn-open"
+        alt="Abrir Menu"
+        aria-label="Abrir Menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+        >
+          <path d="M0,0H32V32H0Z" fill="none" />
+          <path
+            d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z"
+            transform="translate(0 4)"
+          />
+        </svg>
+      </button>
+      <nav class="menu logged">
+        <div>
+          <button
+            type="button"
+            id="btn-close"
+            data-close="menu"
+            alt="Fechar Menu"
+            aria-label="fechar"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
+              />
+              <path d="M0,0H24V24H0Z" fill="none" />
             </svg>
-        </button>
-        <nav class="menu logged">
+          </button>
+          <div class="menus">
+            <ul>
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#service">Revisão</a></li>
+              <li><a href="index.html#contact">Contato</a></li>
+              <li class="hide-guest">
+                <a href="schedules.html">Agendamentos</a>
+              </li>
+              <li class="hide-guest">
+                <a href="profile.html">Editar Dados</a>
+              </li>
+              <li class="hide-guest">
+                <a href="change-photo.html">Mudar Foto</a>
+              </li>
+              <li class="hide-guest">
+                <a href="change-password.html">Alterar Senha</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">
+          <hr />
+          <div>
+            <picture>
+              <a href="#"
+                ><img src="assets/images/user.png" alt="João Rangel"
+              /></a>
+            </picture>
             <div>
-                <button type="button" id="btn-close" data-close="menu" alt="Fechar Menu" aria-label="fechar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"/>
-                        <path d="M0,0H24V24H0Z" fill="none"/>
-                    </svg>
-                </button>
-                <div class="menus">
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#service">Revisão</a></li>
-                        <li><a href="index.html#contact">Contato</a></li>
-                        <li class="hide-guest"><a href="schedules.html">Agendamentos</a></li>
-                        <li class="hide-guest"><a href="profile.html">Editar Dados</a></li>
-                        <li class="hide-guest"><a href="change-photo.html">Mudar Foto</a></li>
-                        <li class="hide-guest"><a href="change-password.html">Alterar Senha</a></li>
-                    </ul>
-                </div>
+              <a href="#">
+                <strong>João Rangel</strong>
+                <small>joao@hcode.com.br</small>
+              </a>
             </div>
-            <div class="footer">
-                <hr>
-                <div>
-                    <picture>
-                        <a href="#"><img src="assets/images/user.png" alt="João Rangel"></a>
-                    </picture>
-                    <div>
-                        <a href="#">
-                            <strong>João Rangel</strong>
-                            <small>joao@hcode.com.br</small>
-                        </a>
-                    </div>
-                    <button type="button" alt="botão svg" aria-label="botao">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
-                    </button>
-                </div>
-                <a  href="auth.html" class="btn-register">
-                    Minha Conta
-                </a>
-            </div>
-        </nav>
+            <button type="button" alt="botão svg" aria-label="botao">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0,0H24V24H0Z" fill="none" />
+                <path
+                  d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z"
+                  fill="#333"
+                />
+              </svg>
+            </button>
+          </div>
+          <a href="auth.html" class="btn-register"> Minha Conta </a>
+        </div>
+      </nav>
 
-        <hr class="italy" />
-
+      <hr class="italy" />
     </header>
     <section id="schedules-payment" class="page blue">
+      <header>
+        <h1>Dados do Cartão de Crédito</h1>
+      </header>
 
-        <header>
-            <h1>Dados do Cartão de Crédito</h1>
-        </header>
+      <main>
+        <form action="schedules-address.html">
+          <input type="hidden" name="schedule_at" />
+          <input type="hidden" name="option" />
+          <input type="hidden" name="service" />
 
-        <main>
-
-            <form action="schedules-address.html">
-
-                <input type="hidden" name="schedule_at" />
-                <input type="hidden" name="option" />
-                <input type="hidden" name="service" />
-
-                <div class="form-creditcard">
-
-                    <div class="form-fields">
-
-                        <a href="#number">
-                            <div class="field">
-                                <input type="text" name="number" id="number" maxlength="19" />
-                                <label for="number">Número do Cartão</label>
-                            </div>
-                        </a>
-
-                        <div class="fields">
-                            <div class="field">
-                                <input type="text" name="expiry" id="expiry" maxlength="5" />
-                                <label for="expiry">Validade</label>
-                            </div>
-                            <div class="field">
-                                <input type="text" name="cvv" id="cvv" maxlength="4" />
-                                <label for="cvv">Código de Segurança</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <input name="name" id="name" class="name" />
-                            <label for="name">Nome Impresso no Cartão</label>
-                        </div>
-
-                        <div class="field">
-                            <select name="issuers" id="issuers">
-                                <option value="1">Itaú</option>
-                                <option value="2">Bradesco</option>
-                            </select>
-                            <label for="issuers">Banco Emissor</label>
-                        </div>
-
-                        <div class="field">
-                            <select name="installments" id="installments">
-                                <option value="1">1 parcela de R$ 100,00 (R$ 100,00)</option>
-                                <option value="2">2 parcelas de R$ 52,26 (R$ 104,52)</option>
-                            </select>
-                            <label for="installments">Parcelas</label>
-                        </div>
-
-                    </div>
-
-                    
-                    <div class="form-card">
-                        <div class="faces" id="credit-card">
-                            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="397.843" height="246.639" viewBox="0 0 397.843 246.639"><defs><style>@font-face {font-family: "Teko";font-style: normal;font-weight: 400;src: local("Teko"), url("assets/fonts/Teko-Regular.ttf") format("truetype");}</style></defs><g transform="translate(-4292.083 3513.639)"><g transform="translate(4292.083 -3513.639)"><path d="M590.443,461.542a20.611,20.611,0,0,1-20.7,20.7H213.3a20.611,20.611,0,0,1-20.7-20.7V256.3a20.611,20.611,0,0,1,20.7-20.7H569.745a20.611,20.611,0,0,1,20.7,20.7Z" transform="translate(-192.6 -235.6)" fill="#f0f0f0"/><g transform="translate(36.795 70.715)"><g transform="translate(0 41.394)"><path d="M199,256.25a9.081,9.081,0,0,0,9.2,9.2h9.774V255.1H199Z" transform="translate(-199 -255.1)" fill="#d5d5d5"/></g><g transform="translate(0 27.596)"><rect width="18.972" height="10.349" fill="#d5d5d5"/></g><path d="M199,257.1v1.15h18.972V247.9H208.2A9.081,9.081,0,0,0,199,257.1Z" transform="translate(-199 -247.9)" fill="#d5d5d5"/><g transform="translate(21.847)"><path d="M228.671,247.9H202.8v51.743h13.223V258.249H237.87V257.1A9.081,9.081,0,0,0,228.671,247.9Z" transform="translate(-202.8 -247.9)" fill="#d5d5d5"/></g><g transform="translate(0 13.798)"><rect width="18.972" height="10.349" fill="#d5d5d5"/></g><g transform="translate(38.519 13.798)"><rect width="18.397" height="10.349" fill="#d5d5d5"/></g><g transform="translate(38.519 27.596)"><rect width="18.397" height="10.349" fill="#d5d5d5"/></g><g transform="translate(38.519 41.394)"><path d="M205.7,265.449h9.2a9.081,9.081,0,0,0,9.2-9.2V255.1H205.7v10.349Z" transform="translate(-205.7 -255.1)" fill="#d5d5d5"/></g></g><g transform="translate(304.706 188.573)"><g transform="translate(33.92 0.575)"><path d="M258.974,268.5a29.128,29.128,0,0,0-7.474,1.15c6.324,4.025,9.774,10.923,9.774,18.972a23.115,23.115,0,0,1-9.774,18.972c2.3,1.15,4.6,1.15,7.474,1.15a20.611,20.611,0,0,0,20.7-20.7A20.389,20.389,0,0,0,258.974,268.5Z" transform="translate(-251.5 -268.5)" fill="#f1c40f"/></g><path d="M286.994,289.1a20.3,20.3,0,0,0-10.349-17.822A19.854,19.854,0,0,0,266.3,268.4a20.7,20.7,0,1,0,0,41.394,21.517,21.517,0,0,0,10.348-2.875A20.3,20.3,0,0,0,286.994,289.1Z" transform="translate(-245.6 -268.4)" fill="#e74c3c"/></g><g transform="translate(33.717 25.487)"><path d="M226.523,259.447a11.478,11.478,0,0,1-5.174,1.15c-5.174,0-8.049-3.45-8.049-8.049a13.87,13.87,0,0,1,4.024-9.774A12.109,12.109,0,0,1,224.8,239.9c2.3,0,4.024.575,4.6,1.15l-.575,1.725c-.575-.575-2.3-.575-4.024-.575a7.381,7.381,0,0,0-5.749,2.3,10.929,10.929,0,0,0-2.875,7.474c0,3.449,1.725,6.324,6.324,6.324a32.412,32.412,0,0,0,4.024-.575Z" transform="translate(-136.052 -239.325)" fill="#536e86"/><path d="M225.2,255.373a8.545,8.545,0,0,1,.575-3.45h0c-1.725,2.875-3.45,4.024-5.749,4.024s-4.025-2.3-4.025-4.6c0-5.174,3.45-10.349,9.774-10.349a9.785,9.785,0,0,1,4.024.575l-1.725,7.474a30.379,30.379,0,0,0-.575,6.9h-2.3Zm1.725-12.648H225.2c-3.45,0-6.9,4.024-6.9,8.049,0,1.725.575,3.45,2.3,3.45,2.3,0,4.6-2.875,5.174-6.324Z" transform="translate(-123.229 -234.101)" fill="#536e86"/><path d="M218.7,255.848l1.725-9.2a17.734,17.734,0,0,0,.575-5.174h2.3c0,1.15,0,2.3-.575,2.875h0c1.15-1.725,2.3-3.45,4.6-3.45h.575l-.575,2.3h-.575c-2.3,0-4.024,2.3-4.6,5.749L221,255.273h-2.3Z" transform="translate(-110.407 -234.576)" fill="#536e86"/><path d="M234.773,239.8,231.9,256.473a12.658,12.658,0,0,0-.575,4.6h-2.3l.575-2.875h0a5.525,5.525,0,0,1-5.174,3.45c-2.875,0-4.024-2.3-4.024-5.174,0-5.174,4.024-9.774,8.624-9.774,1.15,0,1.725,0,2.3.575l1.15-6.9h2.3Zm-4.024,8.624c-.575-.575-1.15-.575-2.3-.575-3.449,0-6.324,3.45-6.324,7.474,0,1.725.575,3.45,2.875,3.45,1.725,0,4.024-2.3,4.6-5.174Z" transform="translate(-102.333 -239.8)" fill="#536e86"/><path d="M-52.267-10.984v4.949h7.553v-4.949a2.313,2.313,0,0,1,.477-1.591,1.608,1.608,0,0,1,1.255-.53,1.667,1.667,0,0,1,1.278.524,2.271,2.271,0,0,1,.489,1.6V2.625a2.276,2.276,0,0,1-.495,1.6,1.663,1.663,0,0,1-1.273.53,1.6,1.6,0,0,1-1.261-.536,2.356,2.356,0,0,1-.471-1.6V-3.183h-7.553V2.625a2.276,2.276,0,0,1-.495,1.6,1.663,1.663,0,0,1-1.273.53A1.6,1.6,0,0,1-55.3,4.222a2.356,2.356,0,0,1-.471-1.6V-10.984a2.352,2.352,0,0,1,.465-1.591,1.6,1.6,0,0,1,1.267-.53,1.667,1.667,0,0,1,1.278.524A2.271,2.271,0,0,1-52.267-10.984ZM-26.145.775A2.775,2.775,0,0,1-26.5,2.06a4.412,4.412,0,0,1-1.1,1.3,5.664,5.664,0,0,1-1.856,1,7.874,7.874,0,0,1-2.521.377A6.157,6.157,0,0,1-36.632,3,6.436,6.436,0,0,1-38.3-1.664a7.675,7.675,0,0,1,.766-3.5,5.5,5.5,0,0,1,2.215-2.351,6.854,6.854,0,0,1,3.464-.831,6.891,6.891,0,0,1,2.292.365,5.986,5.986,0,0,1,1.767.943,4.519,4.519,0,0,1,1.108,1.231,2.439,2.439,0,0,1,.383,1.22,1.286,1.286,0,0,1-.43.978,1.474,1.474,0,0,1-1.043.4,1.052,1.052,0,0,1-.666-.206,3.268,3.268,0,0,1-.6-.666,4.871,4.871,0,0,0-1.231-1.343,2.788,2.788,0,0,0-1.632-.448,2.777,2.777,0,0,0-2.3,1.113,4.818,4.818,0,0,0-.872,3.046,5.883,5.883,0,0,0,.224,1.667,3.789,3.789,0,0,0,.648,1.3,2.774,2.774,0,0,0,1.025.813,3.115,3.115,0,0,0,1.32.277A2.972,2.972,0,0,0-30.2,1.895,3.916,3.916,0,0,0-28.985.528a3.144,3.144,0,0,1,.636-.848,1.208,1.208,0,0,1,.837-.306,1.241,1.241,0,0,1,.978.448A1.434,1.434,0,0,1-26.145.775ZM-11.3-1.781A7.6,7.6,0,0,1-11.747.87a5.854,5.854,0,0,1-1.3,2.086,5.723,5.723,0,0,1-2.027,1.337,7.165,7.165,0,0,1-2.651.465,6.961,6.961,0,0,1-2.628-.471,5.835,5.835,0,0,1-2.021-1.349,5.833,5.833,0,0,1-1.3-2.074,7.582,7.582,0,0,1-.442-2.645,7.675,7.675,0,0,1,.448-2.675A5.82,5.82,0,0,1-22.375-6.53a5.662,5.662,0,0,1,2.027-1.326,7.156,7.156,0,0,1,2.628-.465,7.144,7.144,0,0,1,2.651.471,5.767,5.767,0,0,1,2.038,1.343,5.806,5.806,0,0,1,1.29,2.074A7.631,7.631,0,0,1-11.3-1.781Zm-3.228,0a4.827,4.827,0,0,0-.866-3.063,2.812,2.812,0,0,0-2.327-1.1,2.882,2.882,0,0,0-1.661.489,3.1,3.1,0,0,0-1.108,1.443,5.875,5.875,0,0,0-.389,2.227A5.828,5.828,0,0,0-20.5.422a3.16,3.16,0,0,0,1.1,1.443,2.846,2.846,0,0,0,1.679.5,2.807,2.807,0,0,0,2.327-1.1A4.811,4.811,0,0,0-14.527-1.781ZM.048,2.92V2.6A8.173,8.173,0,0,1-1.231,3.81,4.813,4.813,0,0,1-2.6,4.516a5.134,5.134,0,0,1-1.608.242,4.738,4.738,0,0,1-2.139-.489,4.992,4.992,0,0,1-1.7-1.4A6.366,6.366,0,0,1-9.137.74a9.106,9.106,0,0,1-.371-2.651,6.91,6.91,0,0,1,1.473-4.7A4.9,4.9,0,0,1-4.159-8.3a5.207,5.207,0,0,1,2.345.477A6.537,6.537,0,0,1,.048-6.353V-11.1a2.4,2.4,0,0,1,.395-1.5A1.343,1.343,0,0,1,1.568-13.1a1.394,1.394,0,0,1,1.125.465,2.074,2.074,0,0,1,.395,1.373V2.92A1.971,1.971,0,0,1,2.664,4.3a1.423,1.423,0,0,1-1.1.46,1.4,1.4,0,0,1-1.09-.477A1.964,1.964,0,0,1,.048,2.92ZM-6.279-1.8A5.489,5.489,0,0,0-5.873.422,3.1,3.1,0,0,0-4.76,1.806a2.751,2.751,0,0,0,1.544.465A2.848,2.848,0,0,0-1.667,1.83,3.038,3.038,0,0,0-.547.475,5.474,5.474,0,0,0-.129-1.8,5.331,5.331,0,0,0-.547-4.014,3.32,3.32,0,0,0-1.678-5.428,2.7,2.7,0,0,0-3.24-5.917a2.634,2.634,0,0,0-1.579.5A3.215,3.215,0,0,0-5.9-3.979,5.714,5.714,0,0,0-6.279-1.8Zm21.574.813H9A4.272,4.272,0,0,0,9.444.94,3.034,3.034,0,0,0,10.587,2.2a3.019,3.019,0,0,0,1.573.424,3.854,3.854,0,0,0,1.055-.136,3.435,3.435,0,0,0,.925-.424,7.056,7.056,0,0,0,.825-.619q.377-.33.978-.9A1.055,1.055,0,0,1,16.65.34a1.165,1.165,0,0,1,.8.271.969.969,0,0,1,.306.766A2.092,2.092,0,0,1,17.415,2.4a4.045,4.045,0,0,1-1.031,1.119,5.872,5.872,0,0,1-1.732.89,7.46,7.46,0,0,1-2.4.353A6.415,6.415,0,0,1,7.436,2.991a6.581,6.581,0,0,1-1.72-4.8A8,8,0,0,1,6.139-4.45,5.832,5.832,0,0,1,7.377-6.542a5.365,5.365,0,0,1,2-1.337,7.19,7.19,0,0,1,2.639-.465,6.259,6.259,0,0,1,3.234.8,5.232,5.232,0,0,1,2.021,2.056,5.406,5.406,0,0,1,.672,2.569q0,1.214-.7,1.573A4.332,4.332,0,0,1,15.295-.992ZM9-2.818h5.832a3.909,3.909,0,0,0-.89-2.468,2.663,2.663,0,0,0-2.033-.819,2.574,2.574,0,0,0-1.974.831A4.132,4.132,0,0,0,9-2.818Z" transform="translate(55.767 15.146)" fill="#536e86"/></g><text transform="translate(75.917 214.639)" fill="#536e86" font-size="20" font-family="Teko-Regular, Teko" ><tspan x="-39" y="0" style="font-family: 'Teko'" class="expiry"></tspan></text><text transform="translate(95.917 195.639)" fill="#536e86" font-size="20" font-family="Teko-Regular, Teko"><tspan x="0" y="19" style="font-family: 'Teko'" class="name"></tspan></text></g><g transform="translate(4576.005 -3490.748)"><path d="M246.892,279.6v8.626h2.082v-9.044c0-1.959-.974-6.85-6.315-6.877a6.91,6.91,0,0,0-5.087,2.34V263.788H235.49v24.435h2.081v-8.343c0-4.645,2.855-5.7,4.973-5.617,3.018.117,4.348,2.658,4.348,5.334" transform="translate(-235.49 -263.788)" fill="#536e86" fill-rule="evenodd"/><path d="M295.563,289.083a8.474,8.474,0,0,1,6.011,2.49l-1.472,1.472a6.419,6.419,0,1,0,0,9.078l1.472,1.472a8.5,8.5,0,1,1-6.011-14.512" transform="translate(-270.457 -280.938)" fill="#536e86" fill-rule="evenodd"/><path d="M350.33,291.165a6.419,6.419,0,1,1-6.419,6.419,6.419,6.419,0,0,1,6.419-6.419m0-2.082a8.5,8.5,0,1,1-8.5,8.5A8.5,8.5,0,0,1,350.33,289.083Z" transform="translate(-307.589 -280.938)" fill="#536e86" fill-rule="evenodd"/><path d="M419.248,280.419h-.007v-.28a6.42,6.42,0,1,0,.007.295Zm-6.419-8.486a8.481,8.481,0,0,1,6.413,2.92V263.788h2.085v16.42c0,.075,0,.15,0,.225a8.5,8.5,0,1,1-8.5-8.5Z" transform="translate(-349.964 -263.788)" fill="#536e86" fill-rule="evenodd"/><path d="M481.173,294.935a6.42,6.42,0,0,0-12.238,3.279Zm-8.05-5.566a8.5,8.5,0,0,1,10.62,7.033l-14.269,3.823a6.42,6.42,0,0,0,11.409.565l1.8,1.041a8.5,8.5,0,1,1-9.562-12.462Z" transform="translate(-392.335 -280.934)" fill="#536e86" fill-rule="evenodd"/></g><text transform="translate(4356 -3347)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="-27.3" y="0" style="font-family: 'Teko'" class="number-1"></tspan></text><text transform="translate(4446 -3347)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="-27.3" y="0" style="font-family: 'Teko'" class="number-2"></tspan></text><text transform="translate(4537 -3347)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="-27.3" y="0" style="font-family: 'Teko'" class="number-3"></tspan></text><text transform="translate(4627 -3347)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="-27.3" y="0" style="font-family: 'Teko'" class="number-4"></tspan></text></g></svg>
-                            <svg class="back" xmlns="http://www.w3.org/2000/svg" width="397.613" height="246.497" viewBox="0 0 397.613 246.497"><defs><style>@font-face {font-family: "Nothing";font-style: normal;font-weight: 300;src: local("Open Sans Regular"), url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");}@font-face {font-family: "Teko";font-style: normal;font-weight: 400;src: local("Teko"), url("assets/fonts/Teko-Regular.ttf") format("truetype");}</style></defs><g transform="translate(-4292.083 3734.497)"><g transform="translate(4292.083 -3734.497)"><path d="M590.213,409.912A20.6,20.6,0,0,1,569.527,430.6H213.285A20.6,20.6,0,0,1,192.6,409.912V204.785A20.6,20.6,0,0,1,213.285,184.1H569.527a20.6,20.6,0,0,1,20.685,20.685Z" transform="translate(-192.6 -184.1)" fill="#f0f0f0"/></g><g transform="translate(4292.657 -3709.215)"><rect width="397.038" height="64.353" fill="#333"/></g><g transform="translate(4309.39 -3625.305)"><rect width="304.157" height="47.116" fill="#fff"/></g><g transform="translate(4613.478 -3625.9)"><rect width="59.555" height="47.116" fill="#e5e3df"/></g><rect width="305" height="6" transform="translate(4309 -3613)" fill="#ccc"/><rect width="305" height="7" transform="translate(4309 -3599)" fill="#ccc"/><g transform="translate(4309.39 -3531.357)"><path d="M113.935,280.128c-5.782,0-9.206,1.923-9.206,7.472,0,2.3,2.115,4.681,4.234,6.665,1.989,1.861,4.03,3.6,4.972,3.6s2.983-1.736,4.972-3.6c2.119-1.983,4.234-4.369,4.234-6.665C123.141,282.051,119.717,280.128,113.935,280.128Zm-3.87,4.819a.9.9,0,1,1,.9.9A.9.9,0,0,1,110.065,284.947Zm3.87,7.584a2.189,2.189,0,1,1,2.643-2.141A2.432,2.432,0,0,1,113.935,292.531Zm2.968-6.682a.9.9,0,1,1,.9-.9A.9.9,0,0,1,116.9,285.849Z" transform="translate(-97.457 -271.226)" fill="#79756c" fill-rule="evenodd"/><path d="M95,285.079c-1.853.052-2.53-2.485-1.758-3.949.777-1.387,1.662-1.677,2.267-1.677a2.036,2.036,0,0,1,2.037,1.094A6.975,6.975,0,0,0,95,285.079" transform="translate(-88.631 -270.721)" fill="#79756c" fill-rule="evenodd"/><path d="M92.377,244.835c.53,0,.865,3.134,1.166,3.8.154.339.426.157.629-.359.522-1.326,1.546-3.048,1.794-2.982s.063,1.908-.086,3.288c-.066.616.16.7.535.21.122-.161.827-1.1,1.123-1.025.07.017.151.075.165.435.01.269.335.129.787-.295.669-.628,1.325-1.25,1.473-1.12s-.205,1.133-.527,2.066c-.2.587-.138.868.177.661.138-.091.623-.405.763-.226.036.046.1.113-.049.508-.1.276.213.213.739-.115.715-.446,1.431-.884,1.541-.783.146.134-.323.993-.827,1.922-.3.545.045.589.4.369a5.833,5.833,0,0,1,1.182-.531c.2-.048,1-.557.345,1.148-.114.3.194.384.461.32a6.275,6.275,0,0,1,1.839-.31.423.423,0,0,1,.372.138c.1.162,0,.417-1.02,1.464-.125.128-.1.243.27.322,2.216.469,2.073.868,2.039.98s-.467.259-1.03.545c-.394.2-.275.536.27.832,1.447.786,1.365,1.093,1.35,1.16s-.042.163-.358.246c-.245.064-.1.316.319.637.374.291.687.542.634.678s-.437.185-.91.264c-.522.084-.671.363-.36.682.472.482.4.607.349.667a.578.578,0,0,1-.441.111c-.248-.009-.157.09-.048.165.227.157,1.342,1.037,1.3,1.224-.016.085-.343.024-.8-.07s-.657-.186-.584.088-.295.444-.58.483a3.8,3.8,0,0,1-.517.027c-.545,0-.638.519-.941,1A8.6,8.6,0,0,1,99.64,267.1c1.559-1.679,3.009-3.743,3.009-5.886,0-.329-.012-.645-.034-.952,2.634-.054,3.678-3.415,2.574-5.51l-.006-.012-.007-.012a3.786,3.786,0,0,0-3.2-2.222,3.078,3.078,0,0,0-2.93,1.563,13.626,13.626,0,0,0-6.673-1.393,13.626,13.626,0,0,0-6.673,1.393,3.078,3.078,0,0,0-2.93-1.563,3.787,3.787,0,0,0-3.2,2.222l-.007.012-.006.012c-1.1,2.1-.059,5.456,2.575,5.51-.022.306-.034.623-.034.952,0,2.144,1.449,4.207,3.008,5.886a8.6,8.6,0,0,1-5.677-3.637c-.3-.484-.4-1-.941-1a3.79,3.79,0,0,1-.517-.027c-.285-.038-.653-.209-.58-.483s-.135-.177-.584-.088-.787.155-.8.07c-.04-.187,1.075-1.066,1.3-1.224.109-.075.2-.174-.048-.165a.579.579,0,0,1-.441-.111c-.053-.061-.122-.185.35-.667.31-.32.161-.6-.36-.682-.472-.079-.856-.129-.91-.264s.26-.386.634-.678c.415-.321.565-.573.319-.637-.316-.083-.345-.192-.358-.246s-.1-.374,1.349-1.16c.545-.3.664-.632.27-.832-.564-.286-1-.431-1.031-.545s-.177-.511,2.039-.98c.375-.079.4-.194.27-.322-1.022-1.047-1.123-1.3-1.02-1.464a.423.423,0,0,1,.372-.138,6.275,6.275,0,0,1,1.838.31c.267.064.575-.022.461-.32-.652-1.705.146-1.2.345-1.148a5.833,5.833,0,0,1,1.182.531c.351.22.692.177.4-.369-.5-.929-.973-1.788-.827-1.922.109-.1.826.337,1.541.783.526.328.84.39.739.115-.144-.4-.085-.462-.049-.508.139-.179.625.135.762.226.315.208.379-.074.177-.661-.322-.933-.664-1.945-.527-2.066s.8.492,1.473,1.12c.452.424.777.563.787.295.014-.36.095-.418.165-.435.3-.072,1,.865,1.123,1.025.375.494.6.407.536-.21-.149-1.381-.332-3.223-.086-3.288s1.272,1.655,1.794,2.982c.2.517.475.7.629.359.3-.661.635-3.791,1.166-3.8" transform="translate(-75.899 -244.835)" fill="#ff760c" fill-rule="evenodd"/><path d="M173.77,285.079c1.853.052,2.53-2.485,1.759-3.949-.777-1.387-1.662-1.677-2.267-1.677a2.036,2.036,0,0,0-2.037,1.094,6.974,6.974,0,0,1,2.545,4.532" transform="translate(-147.181 -270.721)" fill="#79756c" fill-rule="evenodd"/><path d="M136.669,316.689c-.848,0-1.537.466-1.537,1.04s.689,1.04,1.537,1.04,1.538-.465,1.538-1.04S137.518,316.689,136.669,316.689Zm0,.651c-.664,0-1.144.424-1.132.281.035-.411.681-.65,1.132-.65s1.1.239,1.132.65C137.813,317.764,137.333,317.34,136.669,317.34Z" transform="translate(-120.192 -298.565)" fill="#79756c" fill-rule="evenodd"/><path d="M244.422,276.172v6.757h1.631v-7.085c0-1.534-.763-5.366-4.947-5.387a5.413,5.413,0,0,0-3.985,1.833v-8.5h-1.63v19.141h1.63v-6.536c0-3.639,2.236-4.464,3.9-4.4,2.364.092,3.406,2.082,3.406,4.178" transform="translate(-195.237 -259.007)" fill="#ff760c" fill-rule="evenodd"/><path d="M293.722,289.083a6.638,6.638,0,0,1,4.709,1.951l-1.153,1.153a5.028,5.028,0,1,0,0,7.111l1.153,1.153a6.659,6.659,0,1,1-4.709-11.368" transform="translate(-233.801 -277.922)" fill="#79756c" fill-rule="evenodd"/><path d="M348.488,290.714a5.028,5.028,0,1,1-5.028,5.028,5.029,5.029,0,0,1,5.028-5.028m0-1.631a6.659,6.659,0,1,1-6.659,6.659A6.659,6.659,0,0,1,348.488,289.083Z" transform="translate(-274.754 -277.922)" fill="#79756c" fill-rule="evenodd"/><path d="M416.016,276.816h-.005V276.6a5.028,5.028,0,1,0,.005.231Zm-5.029-6.647a6.643,6.643,0,0,1,5.023,2.287v-8.668h1.634v12.863c0,.059,0,.117,0,.176a6.659,6.659,0,1,1-6.659-6.659Z" transform="translate(-321.489 -259.007)" fill="#79756c" fill-rule="evenodd"/><path d="M478.064,293.666a5.029,5.029,0,0,0-9.587,2.569Zm-6.306-4.36a6.659,6.659,0,0,1,8.156,4.709,6.732,6.732,0,0,1,.163.8L468.9,297.809a5.029,5.029,0,0,0,8.937.442l1.412.815a6.659,6.659,0,1,1-7.49-9.762Z" transform="translate(-368.219 -277.918)" fill="#79756c" fill-rule="evenodd"/></g><text transform="translate(4644 -3593)" fill="#333" font-size="27" font-family="Teko-Regular, Teko"><tspan x="-15.795" y="0" style="font-family: 'Teko'" class="cvv"></tspan></text><text transform="translate(4230 -3617)" fill="#333" font-size="22" font-family="NothingYouCouldDo, Nothing You Could Do"><tspan x="89.566" y="21" style="font-family: 'Nothing'" class="name"></tspan></text></g></svg>
-                        </div>
-                    </div>
-
+          <div class="form-creditcard">
+            <div class="form-fields">
+              <a href="#number">
+                <div class="field">
+                  <input type="text" name="number" id="number" maxlength="19" />
+                  <label for="number">Número do Cartão</label>
                 </div>
+              </a>
 
-                <footer class="fixed">
-        
-                    <a href="schedules-services.html">Voltar</a>
-                    <button type="submit">Continuar</button>
-        
-                </footer>
+              <div class="fields">
+                <div class="field">
+                  <input type="text" name="expiry" id="expiry" maxlength="5" />
+                  <label for="expiry">Validade</label>
+                </div>
+                <div class="field">
+                  <input type="text" name="cvv" id="cvv" maxlength="4" />
+                  <label for="cvv">Código de Segurança</label>
+                </div>
+              </div>
 
-            </form>
+              <div class="field">
+                <input name="name" id="name" class="name" />
+                <label for="name">Nome Impresso no Cartão</label>
+              </div>
 
-        </main>
+              <div class="field">
+                <select name="issuers" id="issuers">
+                  <option value="1">Itaú</option>
+                  <option value="2">Bradesco</option>
+                </select>
+                <label for="issuers">Banco Emissor</label>
+              </div>
 
+              <div class="field">
+                <select name="installments" id="installments">
+                  <option value="1">1 parcela de R$ 100,00 (R$ 100,00)</option>
+                  <option value="2">2 parcelas de R$ 52,26 (R$ 104,52)</option>
+                </select>
+                <label for="installments">Parcelas</label>
+              </div>
+            </div>
+
+            <div class="form-card">
+              <div class="faces" id="credit-card">
+                <svg
+                  class="front"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="397.843"
+                  height="246.639"
+                  viewBox="0 0 397.843 246.639"
+                >
+                  <defs>
+                    <style>
+                      @font-face {
+                        font-family: 'Teko';
+                        font-style: normal;
+                        font-weight: 400;
+                        src: local('Teko'),
+                          url('assets/fonts/Teko-Regular.ttf')
+                            format('truetype');
+                      }
+                    </style>
+                  </defs>
+                  <g transform="translate(-4292.083 3513.639)">
+                    <g transform="translate(4292.083 -3513.639)">
+                      <path
+                        d="M590.443,461.542a20.611,20.611,0,0,1-20.7,20.7H213.3a20.611,20.611,0,0,1-20.7-20.7V256.3a20.611,20.611,0,0,1,20.7-20.7H569.745a20.611,20.611,0,0,1,20.7,20.7Z"
+                        transform="translate(-192.6 -235.6)"
+                        fill="#f0f0f0"
+                      />
+                      <g transform="translate(36.795 70.715)">
+                        <g transform="translate(0 41.394)">
+                          <path
+                            d="M199,256.25a9.081,9.081,0,0,0,9.2,9.2h9.774V255.1H199Z"
+                            transform="translate(-199 -255.1)"
+                            fill="#d5d5d5"
+                          />
+                        </g>
+                        <g transform="translate(0 27.596)">
+                          <rect width="18.972" height="10.349" fill="#d5d5d5" />
+                        </g>
+                        <path
+                          d="M199,257.1v1.15h18.972V247.9H208.2A9.081,9.081,0,0,0,199,257.1Z"
+                          transform="translate(-199 -247.9)"
+                          fill="#d5d5d5"
+                        />
+                        <g transform="translate(21.847)">
+                          <path
+                            d="M228.671,247.9H202.8v51.743h13.223V258.249H237.87V257.1A9.081,9.081,0,0,0,228.671,247.9Z"
+                            transform="translate(-202.8 -247.9)"
+                            fill="#d5d5d5"
+                          />
+                        </g>
+                        <g transform="translate(0 13.798)">
+                          <rect width="18.972" height="10.349" fill="#d5d5d5" />
+                        </g>
+                        <g transform="translate(38.519 13.798)">
+                          <rect width="18.397" height="10.349" fill="#d5d5d5" />
+                        </g>
+                        <g transform="translate(38.519 27.596)">
+                          <rect width="18.397" height="10.349" fill="#d5d5d5" />
+                        </g>
+                        <g transform="translate(38.519 41.394)">
+                          <path
+                            d="M205.7,265.449h9.2a9.081,9.081,0,0,0,9.2-9.2V255.1H205.7v10.349Z"
+                            transform="translate(-205.7 -255.1)"
+                            fill="#d5d5d5"
+                          />
+                        </g>
+                      </g>
+                      <g transform="translate(304.706 188.573)">
+                        <g transform="translate(33.92 0.575)">
+                          <path
+                            d="M258.974,268.5a29.128,29.128,0,0,0-7.474,1.15c6.324,4.025,9.774,10.923,9.774,18.972a23.115,23.115,0,0,1-9.774,18.972c2.3,1.15,4.6,1.15,7.474,1.15a20.611,20.611,0,0,0,20.7-20.7A20.389,20.389,0,0,0,258.974,268.5Z"
+                            transform="translate(-251.5 -268.5)"
+                            fill="#f1c40f"
+                          />
+                        </g>
+                        <path
+                          d="M286.994,289.1a20.3,20.3,0,0,0-10.349-17.822A19.854,19.854,0,0,0,266.3,268.4a20.7,20.7,0,1,0,0,41.394,21.517,21.517,0,0,0,10.348-2.875A20.3,20.3,0,0,0,286.994,289.1Z"
+                          transform="translate(-245.6 -268.4)"
+                          fill="#e74c3c"
+                        />
+                      </g>
+                      <g transform="translate(33.717 25.487)">
+                        <path
+                          d="M226.523,259.447a11.478,11.478,0,0,1-5.174,1.15c-5.174,0-8.049-3.45-8.049-8.049a13.87,13.87,0,0,1,4.024-9.774A12.109,12.109,0,0,1,224.8,239.9c2.3,0,4.024.575,4.6,1.15l-.575,1.725c-.575-.575-2.3-.575-4.024-.575a7.381,7.381,0,0,0-5.749,2.3,10.929,10.929,0,0,0-2.875,7.474c0,3.449,1.725,6.324,6.324,6.324a32.412,32.412,0,0,0,4.024-.575Z"
+                          transform="translate(-136.052 -239.325)"
+                          fill="#536e86"
+                        />
+                        <path
+                          d="M225.2,255.373a8.545,8.545,0,0,1,.575-3.45h0c-1.725,2.875-3.45,4.024-5.749,4.024s-4.025-2.3-4.025-4.6c0-5.174,3.45-10.349,9.774-10.349a9.785,9.785,0,0,1,4.024.575l-1.725,7.474a30.379,30.379,0,0,0-.575,6.9h-2.3Zm1.725-12.648H225.2c-3.45,0-6.9,4.024-6.9,8.049,0,1.725.575,3.45,2.3,3.45,2.3,0,4.6-2.875,5.174-6.324Z"
+                          transform="translate(-123.229 -234.101)"
+                          fill="#536e86"
+                        />
+                        <path
+                          d="M218.7,255.848l1.725-9.2a17.734,17.734,0,0,0,.575-5.174h2.3c0,1.15,0,2.3-.575,2.875h0c1.15-1.725,2.3-3.45,4.6-3.45h.575l-.575,2.3h-.575c-2.3,0-4.024,2.3-4.6,5.749L221,255.273h-2.3Z"
+                          transform="translate(-110.407 -234.576)"
+                          fill="#536e86"
+                        />
+                        <path
+                          d="M234.773,239.8,231.9,256.473a12.658,12.658,0,0,0-.575,4.6h-2.3l.575-2.875h0a5.525,5.525,0,0,1-5.174,3.45c-2.875,0-4.024-2.3-4.024-5.174,0-5.174,4.024-9.774,8.624-9.774,1.15,0,1.725,0,2.3.575l1.15-6.9h2.3Zm-4.024,8.624c-.575-.575-1.15-.575-2.3-.575-3.449,0-6.324,3.45-6.324,7.474,0,1.725.575,3.45,2.875,3.45,1.725,0,4.024-2.3,4.6-5.174Z"
+                          transform="translate(-102.333 -239.8)"
+                          fill="#536e86"
+                        />
+                        <path
+                          d="M-52.267-10.984v4.949h7.553v-4.949a2.313,2.313,0,0,1,.477-1.591,1.608,1.608,0,0,1,1.255-.53,1.667,1.667,0,0,1,1.278.524,2.271,2.271,0,0,1,.489,1.6V2.625a2.276,2.276,0,0,1-.495,1.6,1.663,1.663,0,0,1-1.273.53,1.6,1.6,0,0,1-1.261-.536,2.356,2.356,0,0,1-.471-1.6V-3.183h-7.553V2.625a2.276,2.276,0,0,1-.495,1.6,1.663,1.663,0,0,1-1.273.53A1.6,1.6,0,0,1-55.3,4.222a2.356,2.356,0,0,1-.471-1.6V-10.984a2.352,2.352,0,0,1,.465-1.591,1.6,1.6,0,0,1,1.267-.53,1.667,1.667,0,0,1,1.278.524A2.271,2.271,0,0,1-52.267-10.984ZM-26.145.775A2.775,2.775,0,0,1-26.5,2.06a4.412,4.412,0,0,1-1.1,1.3,5.664,5.664,0,0,1-1.856,1,7.874,7.874,0,0,1-2.521.377A6.157,6.157,0,0,1-36.632,3,6.436,6.436,0,0,1-38.3-1.664a7.675,7.675,0,0,1,.766-3.5,5.5,5.5,0,0,1,2.215-2.351,6.854,6.854,0,0,1,3.464-.831,6.891,6.891,0,0,1,2.292.365,5.986,5.986,0,0,1,1.767.943,4.519,4.519,0,0,1,1.108,1.231,2.439,2.439,0,0,1,.383,1.22,1.286,1.286,0,0,1-.43.978,1.474,1.474,0,0,1-1.043.4,1.052,1.052,0,0,1-.666-.206,3.268,3.268,0,0,1-.6-.666,4.871,4.871,0,0,0-1.231-1.343,2.788,2.788,0,0,0-1.632-.448,2.777,2.777,0,0,0-2.3,1.113,4.818,4.818,0,0,0-.872,3.046,5.883,5.883,0,0,0,.224,1.667,3.789,3.789,0,0,0,.648,1.3,2.774,2.774,0,0,0,1.025.813,3.115,3.115,0,0,0,1.32.277A2.972,2.972,0,0,0-30.2,1.895,3.916,3.916,0,0,0-28.985.528a3.144,3.144,0,0,1,.636-.848,1.208,1.208,0,0,1,.837-.306,1.241,1.241,0,0,1,.978.448A1.434,1.434,0,0,1-26.145.775ZM-11.3-1.781A7.6,7.6,0,0,1-11.747.87a5.854,5.854,0,0,1-1.3,2.086,5.723,5.723,0,0,1-2.027,1.337,7.165,7.165,0,0,1-2.651.465,6.961,6.961,0,0,1-2.628-.471,5.835,5.835,0,0,1-2.021-1.349,5.833,5.833,0,0,1-1.3-2.074,7.582,7.582,0,0,1-.442-2.645,7.675,7.675,0,0,1,.448-2.675A5.82,5.82,0,0,1-22.375-6.53a5.662,5.662,0,0,1,2.027-1.326,7.156,7.156,0,0,1,2.628-.465,7.144,7.144,0,0,1,2.651.471,5.767,5.767,0,0,1,2.038,1.343,5.806,5.806,0,0,1,1.29,2.074A7.631,7.631,0,0,1-11.3-1.781Zm-3.228,0a4.827,4.827,0,0,0-.866-3.063,2.812,2.812,0,0,0-2.327-1.1,2.882,2.882,0,0,0-1.661.489,3.1,3.1,0,0,0-1.108,1.443,5.875,5.875,0,0,0-.389,2.227A5.828,5.828,0,0,0-20.5.422a3.16,3.16,0,0,0,1.1,1.443,2.846,2.846,0,0,0,1.679.5,2.807,2.807,0,0,0,2.327-1.1A4.811,4.811,0,0,0-14.527-1.781ZM.048,2.92V2.6A8.173,8.173,0,0,1-1.231,3.81,4.813,4.813,0,0,1-2.6,4.516a5.134,5.134,0,0,1-1.608.242,4.738,4.738,0,0,1-2.139-.489,4.992,4.992,0,0,1-1.7-1.4A6.366,6.366,0,0,1-9.137.74a9.106,9.106,0,0,1-.371-2.651,6.91,6.91,0,0,1,1.473-4.7A4.9,4.9,0,0,1-4.159-8.3a5.207,5.207,0,0,1,2.345.477A6.537,6.537,0,0,1,.048-6.353V-11.1a2.4,2.4,0,0,1,.395-1.5A1.343,1.343,0,0,1,1.568-13.1a1.394,1.394,0,0,1,1.125.465,2.074,2.074,0,0,1,.395,1.373V2.92A1.971,1.971,0,0,1,2.664,4.3a1.423,1.423,0,0,1-1.1.46,1.4,1.4,0,0,1-1.09-.477A1.964,1.964,0,0,1,.048,2.92ZM-6.279-1.8A5.489,5.489,0,0,0-5.873.422,3.1,3.1,0,0,0-4.76,1.806a2.751,2.751,0,0,0,1.544.465A2.848,2.848,0,0,0-1.667,1.83,3.038,3.038,0,0,0-.547.475,5.474,5.474,0,0,0-.129-1.8,5.331,5.331,0,0,0-.547-4.014,3.32,3.32,0,0,0-1.678-5.428,2.7,2.7,0,0,0-3.24-5.917a2.634,2.634,0,0,0-1.579.5A3.215,3.215,0,0,0-5.9-3.979,5.714,5.714,0,0,0-6.279-1.8Zm21.574.813H9A4.272,4.272,0,0,0,9.444.94,3.034,3.034,0,0,0,10.587,2.2a3.019,3.019,0,0,0,1.573.424,3.854,3.854,0,0,0,1.055-.136,3.435,3.435,0,0,0,.925-.424,7.056,7.056,0,0,0,.825-.619q.377-.33.978-.9A1.055,1.055,0,0,1,16.65.34a1.165,1.165,0,0,1,.8.271.969.969,0,0,1,.306.766A2.092,2.092,0,0,1,17.415,2.4a4.045,4.045,0,0,1-1.031,1.119,5.872,5.872,0,0,1-1.732.89,7.46,7.46,0,0,1-2.4.353A6.415,6.415,0,0,1,7.436,2.991a6.581,6.581,0,0,1-1.72-4.8A8,8,0,0,1,6.139-4.45,5.832,5.832,0,0,1,7.377-6.542a5.365,5.365,0,0,1,2-1.337,7.19,7.19,0,0,1,2.639-.465,6.259,6.259,0,0,1,3.234.8,5.232,5.232,0,0,1,2.021,2.056,5.406,5.406,0,0,1,.672,2.569q0,1.214-.7,1.573A4.332,4.332,0,0,1,15.295-.992ZM9-2.818h5.832a3.909,3.909,0,0,0-.89-2.468,2.663,2.663,0,0,0-2.033-.819,2.574,2.574,0,0,0-1.974.831A4.132,4.132,0,0,0,9-2.818Z"
+                          transform="translate(55.767 15.146)"
+                          fill="#536e86"
+                        />
+                      </g>
+                      <text
+                        transform="translate(75.917 214.639)"
+                        fill="#536e86"
+                        font-size="20"
+                        font-family="Teko-Regular, Teko"
+                      >
+                        <tspan
+                          x="-39"
+                          y="0"
+                          style="font-family: 'Teko'"
+                          class="expiry"
+                        ></tspan>
+                      </text>
+                      <text
+                        transform="translate(95.917 195.639)"
+                        fill="#536e86"
+                        font-size="20"
+                        font-family="Teko-Regular, Teko"
+                      >
+                        <tspan
+                          x="0"
+                          y="19"
+                          style="font-family: 'Teko'"
+                          class="name"
+                        ></tspan>
+                      </text>
+                    </g>
+                    <g transform="translate(4576.005 -3490.748)">
+                      <path
+                        d="M246.892,279.6v8.626h2.082v-9.044c0-1.959-.974-6.85-6.315-6.877a6.91,6.91,0,0,0-5.087,2.34V263.788H235.49v24.435h2.081v-8.343c0-4.645,2.855-5.7,4.973-5.617,3.018.117,4.348,2.658,4.348,5.334"
+                        transform="translate(-235.49 -263.788)"
+                        fill="#536e86"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M295.563,289.083a8.474,8.474,0,0,1,6.011,2.49l-1.472,1.472a6.419,6.419,0,1,0,0,9.078l1.472,1.472a8.5,8.5,0,1,1-6.011-14.512"
+                        transform="translate(-270.457 -280.938)"
+                        fill="#536e86"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M350.33,291.165a6.419,6.419,0,1,1-6.419,6.419,6.419,6.419,0,0,1,6.419-6.419m0-2.082a8.5,8.5,0,1,1-8.5,8.5A8.5,8.5,0,0,1,350.33,289.083Z"
+                        transform="translate(-307.589 -280.938)"
+                        fill="#536e86"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M419.248,280.419h-.007v-.28a6.42,6.42,0,1,0,.007.295Zm-6.419-8.486a8.481,8.481,0,0,1,6.413,2.92V263.788h2.085v16.42c0,.075,0,.15,0,.225a8.5,8.5,0,1,1-8.5-8.5Z"
+                        transform="translate(-349.964 -263.788)"
+                        fill="#536e86"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M481.173,294.935a6.42,6.42,0,0,0-12.238,3.279Zm-8.05-5.566a8.5,8.5,0,0,1,10.62,7.033l-14.269,3.823a6.42,6.42,0,0,0,11.409.565l1.8,1.041a8.5,8.5,0,1,1-9.562-12.462Z"
+                        transform="translate(-392.335 -280.934)"
+                        fill="#536e86"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <text
+                      transform="translate(4356 -3347)"
+                      fill="#536e86"
+                      font-size="35"
+                      font-family="Teko-Regular, Teko"
+                    >
+                      <tspan
+                        x="-27.3"
+                        y="0"
+                        style="font-family: 'Teko'"
+                        class="number-1"
+                      ></tspan>
+                    </text>
+                    <text
+                      transform="translate(4446 -3347)"
+                      fill="#536e86"
+                      font-size="35"
+                      font-family="Teko-Regular, Teko"
+                    >
+                      <tspan
+                        x="-27.3"
+                        y="0"
+                        style="font-family: 'Teko'"
+                        class="number-2"
+                      ></tspan>
+                    </text>
+                    <text
+                      transform="translate(4537 -3347)"
+                      fill="#536e86"
+                      font-size="35"
+                      font-family="Teko-Regular, Teko"
+                    >
+                      <tspan
+                        x="-27.3"
+                        y="0"
+                        style="font-family: 'Teko'"
+                        class="number-3"
+                      ></tspan>
+                    </text>
+                    <text
+                      transform="translate(4627 -3347)"
+                      fill="#536e86"
+                      font-size="35"
+                      font-family="Teko-Regular, Teko"
+                    >
+                      <tspan
+                        x="-27.3"
+                        y="0"
+                        style="font-family: 'Teko'"
+                        class="number-4"
+                      ></tspan>
+                    </text>
+                  </g>
+                </svg>
+                <svg
+                  class="back"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="397.613"
+                  height="246.497"
+                  viewBox="0 0 397.613 246.497"
+                >
+                  <defs>
+                    <style>
+                      @font-face {
+                        font-family: 'Nothing';
+                        font-style: normal;
+                        font-weight: 300;
+                        src: local('Open Sans Regular'),
+                          url('../fonts/NothingYouCouldDo-Regular.ttf')
+                            format('truetype');
+                      }
+                      @font-face {
+                        font-family: 'Teko';
+                        font-style: normal;
+                        font-weight: 400;
+                        src: local('Teko'),
+                          url('assets/fonts/Teko-Regular.ttf')
+                            format('truetype');
+                      }
+                    </style>
+                  </defs>
+                  <g transform="translate(-4292.083 3734.497)">
+                    <g transform="translate(4292.083 -3734.497)">
+                      <path
+                        d="M590.213,409.912A20.6,20.6,0,0,1,569.527,430.6H213.285A20.6,20.6,0,0,1,192.6,409.912V204.785A20.6,20.6,0,0,1,213.285,184.1H569.527a20.6,20.6,0,0,1,20.685,20.685Z"
+                        transform="translate(-192.6 -184.1)"
+                        fill="#f0f0f0"
+                      />
+                    </g>
+                    <g transform="translate(4292.657 -3709.215)">
+                      <rect width="397.038" height="64.353" fill="#333" />
+                    </g>
+                    <g transform="translate(4309.39 -3625.305)">
+                      <rect width="304.157" height="47.116" fill="#fff" />
+                    </g>
+                    <g transform="translate(4613.478 -3625.9)">
+                      <rect width="59.555" height="47.116" fill="#e5e3df" />
+                    </g>
+                    <rect
+                      width="305"
+                      height="6"
+                      transform="translate(4309 -3613)"
+                      fill="#ccc"
+                    />
+                    <rect
+                      width="305"
+                      height="7"
+                      transform="translate(4309 -3599)"
+                      fill="#ccc"
+                    />
+                    <g transform="translate(4309.39 -3531.357)">
+                      <path
+                        d="M113.935,280.128c-5.782,0-9.206,1.923-9.206,7.472,0,2.3,2.115,4.681,4.234,6.665,1.989,1.861,4.03,3.6,4.972,3.6s2.983-1.736,4.972-3.6c2.119-1.983,4.234-4.369,4.234-6.665C123.141,282.051,119.717,280.128,113.935,280.128Zm-3.87,4.819a.9.9,0,1,1,.9.9A.9.9,0,0,1,110.065,284.947Zm3.87,7.584a2.189,2.189,0,1,1,2.643-2.141A2.432,2.432,0,0,1,113.935,292.531Zm2.968-6.682a.9.9,0,1,1,.9-.9A.9.9,0,0,1,116.9,285.849Z"
+                        transform="translate(-97.457 -271.226)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M95,285.079c-1.853.052-2.53-2.485-1.758-3.949.777-1.387,1.662-1.677,2.267-1.677a2.036,2.036,0,0,1,2.037,1.094A6.975,6.975,0,0,0,95,285.079"
+                        transform="translate(-88.631 -270.721)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M92.377,244.835c.53,0,.865,3.134,1.166,3.8.154.339.426.157.629-.359.522-1.326,1.546-3.048,1.794-2.982s.063,1.908-.086,3.288c-.066.616.16.7.535.21.122-.161.827-1.1,1.123-1.025.07.017.151.075.165.435.01.269.335.129.787-.295.669-.628,1.325-1.25,1.473-1.12s-.205,1.133-.527,2.066c-.2.587-.138.868.177.661.138-.091.623-.405.763-.226.036.046.1.113-.049.508-.1.276.213.213.739-.115.715-.446,1.431-.884,1.541-.783.146.134-.323.993-.827,1.922-.3.545.045.589.4.369a5.833,5.833,0,0,1,1.182-.531c.2-.048,1-.557.345,1.148-.114.3.194.384.461.32a6.275,6.275,0,0,1,1.839-.31.423.423,0,0,1,.372.138c.1.162,0,.417-1.02,1.464-.125.128-.1.243.27.322,2.216.469,2.073.868,2.039.98s-.467.259-1.03.545c-.394.2-.275.536.27.832,1.447.786,1.365,1.093,1.35,1.16s-.042.163-.358.246c-.245.064-.1.316.319.637.374.291.687.542.634.678s-.437.185-.91.264c-.522.084-.671.363-.36.682.472.482.4.607.349.667a.578.578,0,0,1-.441.111c-.248-.009-.157.09-.048.165.227.157,1.342,1.037,1.3,1.224-.016.085-.343.024-.8-.07s-.657-.186-.584.088-.295.444-.58.483a3.8,3.8,0,0,1-.517.027c-.545,0-.638.519-.941,1A8.6,8.6,0,0,1,99.64,267.1c1.559-1.679,3.009-3.743,3.009-5.886,0-.329-.012-.645-.034-.952,2.634-.054,3.678-3.415,2.574-5.51l-.006-.012-.007-.012a3.786,3.786,0,0,0-3.2-2.222,3.078,3.078,0,0,0-2.93,1.563,13.626,13.626,0,0,0-6.673-1.393,13.626,13.626,0,0,0-6.673,1.393,3.078,3.078,0,0,0-2.93-1.563,3.787,3.787,0,0,0-3.2,2.222l-.007.012-.006.012c-1.1,2.1-.059,5.456,2.575,5.51-.022.306-.034.623-.034.952,0,2.144,1.449,4.207,3.008,5.886a8.6,8.6,0,0,1-5.677-3.637c-.3-.484-.4-1-.941-1a3.79,3.79,0,0,1-.517-.027c-.285-.038-.653-.209-.58-.483s-.135-.177-.584-.088-.787.155-.8.07c-.04-.187,1.075-1.066,1.3-1.224.109-.075.2-.174-.048-.165a.579.579,0,0,1-.441-.111c-.053-.061-.122-.185.35-.667.31-.32.161-.6-.36-.682-.472-.079-.856-.129-.91-.264s.26-.386.634-.678c.415-.321.565-.573.319-.637-.316-.083-.345-.192-.358-.246s-.1-.374,1.349-1.16c.545-.3.664-.632.27-.832-.564-.286-1-.431-1.031-.545s-.177-.511,2.039-.98c.375-.079.4-.194.27-.322-1.022-1.047-1.123-1.3-1.02-1.464a.423.423,0,0,1,.372-.138,6.275,6.275,0,0,1,1.838.31c.267.064.575-.022.461-.32-.652-1.705.146-1.2.345-1.148a5.833,5.833,0,0,1,1.182.531c.351.22.692.177.4-.369-.5-.929-.973-1.788-.827-1.922.109-.1.826.337,1.541.783.526.328.84.39.739.115-.144-.4-.085-.462-.049-.508.139-.179.625.135.762.226.315.208.379-.074.177-.661-.322-.933-.664-1.945-.527-2.066s.8.492,1.473,1.12c.452.424.777.563.787.295.014-.36.095-.418.165-.435.3-.072,1,.865,1.123,1.025.375.494.6.407.536-.21-.149-1.381-.332-3.223-.086-3.288s1.272,1.655,1.794,2.982c.2.517.475.7.629.359.3-.661.635-3.791,1.166-3.8"
+                        transform="translate(-75.899 -244.835)"
+                        fill="#ff760c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M173.77,285.079c1.853.052,2.53-2.485,1.759-3.949-.777-1.387-1.662-1.677-2.267-1.677a2.036,2.036,0,0,0-2.037,1.094,6.974,6.974,0,0,1,2.545,4.532"
+                        transform="translate(-147.181 -270.721)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M136.669,316.689c-.848,0-1.537.466-1.537,1.04s.689,1.04,1.537,1.04,1.538-.465,1.538-1.04S137.518,316.689,136.669,316.689Zm0,.651c-.664,0-1.144.424-1.132.281.035-.411.681-.65,1.132-.65s1.1.239,1.132.65C137.813,317.764,137.333,317.34,136.669,317.34Z"
+                        transform="translate(-120.192 -298.565)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M244.422,276.172v6.757h1.631v-7.085c0-1.534-.763-5.366-4.947-5.387a5.413,5.413,0,0,0-3.985,1.833v-8.5h-1.63v19.141h1.63v-6.536c0-3.639,2.236-4.464,3.9-4.4,2.364.092,3.406,2.082,3.406,4.178"
+                        transform="translate(-195.237 -259.007)"
+                        fill="#ff760c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M293.722,289.083a6.638,6.638,0,0,1,4.709,1.951l-1.153,1.153a5.028,5.028,0,1,0,0,7.111l1.153,1.153a6.659,6.659,0,1,1-4.709-11.368"
+                        transform="translate(-233.801 -277.922)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M348.488,290.714a5.028,5.028,0,1,1-5.028,5.028,5.029,5.029,0,0,1,5.028-5.028m0-1.631a6.659,6.659,0,1,1-6.659,6.659A6.659,6.659,0,0,1,348.488,289.083Z"
+                        transform="translate(-274.754 -277.922)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M416.016,276.816h-.005V276.6a5.028,5.028,0,1,0,.005.231Zm-5.029-6.647a6.643,6.643,0,0,1,5.023,2.287v-8.668h1.634v12.863c0,.059,0,.117,0,.176a6.659,6.659,0,1,1-6.659-6.659Z"
+                        transform="translate(-321.489 -259.007)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M478.064,293.666a5.029,5.029,0,0,0-9.587,2.569Zm-6.306-4.36a6.659,6.659,0,0,1,8.156,4.709,6.732,6.732,0,0,1,.163.8L468.9,297.809a5.029,5.029,0,0,0,8.937.442l1.412.815a6.659,6.659,0,1,1-7.49-9.762Z"
+                        transform="translate(-368.219 -277.918)"
+                        fill="#79756c"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <text
+                      transform="translate(4644 -3593)"
+                      fill="#333"
+                      font-size="27"
+                      font-family="Teko-Regular, Teko"
+                    >
+                      <tspan
+                        x="-15.795"
+                        y="0"
+                        style="font-family: 'Teko'"
+                        class="cvv"
+                      ></tspan>
+                    </text>
+                    <text
+                      transform="translate(4230 -3617)"
+                      fill="#333"
+                      font-size="22"
+                      font-family="NothingYouCouldDo, Nothing You Could Do"
+                    >
+                      <tspan
+                        x="89.566"
+                        y="21"
+                        style="font-family: 'Nothing'"
+                        class="name"
+                      ></tspan>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <footer class="fixed">
+            <a href="schedules-services.html">Voltar</a>
+            <button type="submit">Continuar</button>
+          </footer>
+        </form>
+      </main>
     </section>
     <script src="main.bundle.js"></script>
-</body>
+  </body>
 </html>

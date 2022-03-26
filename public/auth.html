@@ -1,168 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a Ferrari Auto Center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça a Ferrari Auto Center" />
     <title>Ferrari - Hcode Lab</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/ferrari-logo.svg">
-    <link rel="alternate icon" href="assets/images/ferrari-logo.ico">
-    <meta name="theme-color" content="#eceae7">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/ferrari-logo.svg"
+    />
+    <link rel="alternate icon" href="assets/images/ferrari-logo.ico" />
+    <meta name="theme-color" content="#eceae7" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/images/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/images/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/images/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/images/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/images/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/images/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/images/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/images/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/images/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/images/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/images/ms-icon-144x144.png"
+    />
     <link href="manifest.json" rel="manifest" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <main id="auth">
+      <section>
+        <a href="index.html"
+          ><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari"
+        /></a>
 
-        <section>
+        <form id="auth-email">
+          <h1>Autenticação</h1>
 
-            <a href="index.html"><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari" /></a>
+          <hr />
 
-            <form id="auth-email">
+          <div class="field">
+            <input type="email" name="email" id="email" />
+            <label for="email">E-mail</label>
+          </div>
 
-                <h1>Autenticação</h1>
-        
-                <hr />
+          <div class="actions">
+            <a href="auth.html#register" class="link">Criar uma Conta</a>
+            <button type="submit">Próxima</button>
+          </div>
+        </form>
 
-                <div class="field">
-                    <input type="email" name="email" id="email" />
-                    <label for="email">E-mail</label>
-                </div>
+        <form id="auth-login" class="hide">
+          <h1>Fazer login</h1>
 
-                <div class="actions">
-                    <a href="auth.html#register" class="link">Criar uma Conta</a>
-                    <button type="submit">Próxima</button>
-                </div>
+          <hr />
 
-            </form>
-            
-            <form id="auth-login" class="hide">
+          <div class="field">
+            <input type="email" name="email" id="email-login" readonly />
+            <label for="email-login">E-mail</label>
+          </div>
 
-                <h1>Fazer login</h1>
-            
-                <hr />
+          <div class="field">
+            <input type="password" name="password" id="password" />
+            <label for="password">Digite sua Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="email" name="email" id="email-login" readonly />
-                    <label for="email-login">E-mail</label>
-                </div>
+          <div class="actions">
+            <div>
+              <a href="#forget" class="link">Esqueceu sua senha?</a>
+              <a href="#email" class="link">Este não é o seu e-mail?</a>
+            </div>
+            <button type="submit">Login</button>
+          </div>
+        </form>
 
-                <div class="field">
-                    <input type="password" name="password" id="password" />
-                    <label for="password">Digite sua Senha</label>
-                </div>
+        <form id="auth-register" class="register hide">
+          <h1>Criar conta</h1>
 
-                <div class="actions">
-                    <div>
-                        <a href="#forget" class="link">Esqueceu sua senha?</a>
-                        <a href="#email" class="link">Este não é o seu e-mail?</a>
-                    </div>
-                    <button type="submit">Login</button>
-                </div>
+          <hr />
 
-            </form>
+          <div class="field">
+            <input type="email" name="email" id="email-register" />
+            <label for="email-register">E-mail</label>
+          </div>
 
-            <form id="auth-register" class="register hide">
+          <div class="field">
+            <input type="text" name="name" id="name" />
+            <label for="name">Nome Completo</label>
+          </div>
 
-                <h1>Criar conta</h1>
-            
-                <hr />
+          <div class="field">
+            <input type="date" name="birth_at" id="birth_at" />
+            <label for="birth_at">Data de Nascimento</label>
+          </div>
 
-                <div class="field">
-                    <input type="email" name="email" id="email-register" />
-                    <label for="email-register">E-mail</label>
-                </div>
+          <div class="field">
+            <input type="password" name="password" id="password_new" />
+            <label for="password_new">Crie uma Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="text" name="name" id="name" />
-                    <label for="name">Nome Completo</label>
-                </div>
+          <div class="field">
+            <input
+              type="password"
+              name="password_confirm"
+              id="password_confirm"
+            />
+            <label for="password_confirm">Confirme a Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="date" name="birth_at" id="birth_at" />
-                    <label for="birth_at">Data de Nascimento</label>
-                </div>
+          <div class="actions">
+            <a href="auth.html#login" class="link">Já tem uma conta?</a>
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
 
-                <div class="field">
-                    <input type="password" name="password" id="password_new" />
-                    <label for="password_new">Crie uma Senha</label>
-                </div>
+        <form id="auth-forget" class="hide">
+          <h1>Esqueci a senha</h1>
 
-                <div class="field">
-                    <input type="password" name="password_confirm" id="password_confirm" />
-                    <label for="password_confirm">Confirme a Senha</label>
-                </div>
+          <hr />
 
-                <div class="actions">
-                    <a href="auth.html#login" class="link">Já tem uma conta?</a>
-                    <button type="submit">Cadastrar</button>
-                </div>
+          <div class="loading-wrap">
+            <div class="loading">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>Por favor, aguarde...</p>
+          </div>
 
-            </form>
+          <div class="message">
+            <img src="assets/images/check-circle.svg" alt="Ok" />
+            <span>Verifique as instruções no seu e-mail.</span>
+          </div>
+        </form>
 
-            <form id="auth-forget" class="hide">
+        <form id="auth-reset" class="forget hide">
+          <h1>Redefinir senha</h1>
 
-                <h1>Esqueci a senha</h1>
-            
-                <hr />
+          <hr />
 
-                <div class="loading-wrap">
-                    <div class="loading">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <p>Por favor, aguarde...</p>
-                </div>
+          <div class="field">
+            <input type="password" name="password" id="password_reset" />
+            <label for="password_reset">Crie uma Nova Senha</label>
+          </div>
 
-                <div class="message">
-                    <img src="assets/images/check-circle.svg" alt="Ok">
-                    <span>Verifique as instruções no seu e-mail.</span>
-                </div>
+          <div class="actions">
+            <button type="submit">Redefinir</button>
+          </div>
+        </form>
 
-            </form>
-
-            <form id="auth-reset" class="forget hide">
-
-                <h1>Redefinir senha</h1>
-            
-                <hr />
-
-                <div class="field">
-                    <input type="password" name="password" id="password_reset" />
-                    <label for="password_reset">Crie uma Nova Senha</label>
-                </div>
-
-                <div class="actions">
-                    <button type="submit">Redefinir</button>
-                </div>
-
-            </form>
-            
-            <p>2020 © Hcode. All rights reserved.</p>
-
-        </section>
-
+        <p>2020 © Hcode. All rights reserved.</p>
+      </section>
     </main>
 
     <script src="main.bundle.js"></script>
-   
-</body>
+  </body>
 </html>

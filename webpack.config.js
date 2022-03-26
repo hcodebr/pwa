@@ -1,52 +1,49 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 module.exports = {
-  plugins: [new MiniCssExtractPlugin({
-    filename: '[name].css',
-    chunkFilename: '[name].css'
-  })],
-  mode: 'development',
   entry: './public/assets/scripts/index.js',
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'public'),
-  },
-  devtool: 'eval-source-map',
-  optimization: {
-    splitChunks: {
-        cacheGroups: {
-            styles: {
-                name: 'styles',
-                test: /\.css$/,
-                chunks: 'all',
-                enforce: true
-            }
-        }
-    }
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|ttf|svg|webp)$/i,
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/i,
         use: [
           {
             loader: 'file-loader',
           },
         ],
-      }
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
-  }
+  },
+  output: {
+    filename: 'main.bundle.js',
+  },
 };
